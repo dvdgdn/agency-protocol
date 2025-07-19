@@ -1,0 +1,877 @@
+#+TITLE: Agency Protocol
+#+SUBTITLE: Restoring Trust and Capability Through Domain-Specific Promises
+#+AUTHOR: David Joseph
+#+DATE: July 19, 2025
+
+
+
+
+#+BEGIN_CENTER
+/The author dedicates this disclosure to the public domain under CC0 4.0./
+#+END_CENTER
+
+#+TOC: headlines 2
+
+* Abstract
+
+Agency Protocol (AP) introduces a decentralized framework for establishing and verifying domain-specific trust through explicit promises and assessments. Unlike traditional reputation systems that aggregate feedback into simplified scores, AP enables granular credibility signals tied to specific domains of expertise or activity. By formalizing intentions, promises, and assessments—and by enforcing "skin in the game" through stake requirements—AP …creates economic conditions where honest behavior typically (76.7-79.9% in comprehensive ABM simulations) emerges as the focal, coalition-resistant, and dynamically stable equilibrium.
+
+This whitepaper presents the theoretical foundations and practical implementation of the Agency Protocol. We demonstrate how domain-specific merit, coupled with cryptographically verifiable promises and economic incentives, addresses fundamental limitations in existing trust systems. Through mathematical analysis and game theoretical modeling, we establish that AP creates a novel trust environment …where keeping promises becomes the utility-maximising strategy for most parameter settings—not through external enforcement but through aligned incentives and verifiable outcomes.
+
+
+The paper introduces concrete implementation pathways, from initial bootstrap mechanisms to sophisticated merit and credit systems that evolve toward collective intelligence.
+
+* Introduction
+
+** The Trust Problem in Modern Digital Systems
+
+Trust has always been the invisible infrastructure of human cooperation. From the earliest trades between prehistoric tribes to today's global digital marketplaces, our ability to work together hinges on one fundamental question: Can I trust you to do what you say?
+
+Yet trust doesn't scale easily. In small communities, reputation works naturally—if you break your promises, everyone knows. But in our increasingly complex, globalized world, direct knowledge of others' reliability has been replaced by proxy systems that often fail us in subtle but profound ways.
+
+Consider the restaurant with hundreds of five-star reviews that serves you a disappointing meal, or the highly-rated service provider who repeatedly misses deadlines. These experiences aren't anomalies—they reflect structural problems in how we currently quantify and communicate trustworthiness. When we collapse complex, domain-specific reliability into simplified metrics, we lose critical information and create perverse incentives.
+
+This information gap doesn't just inconvenience individuals—it creates economic inefficiencies on a massive scale. Markets with high information asymmetry often suffer from adverse selection, where low-quality providers drive out high-quality ones because consumers can't reliably distinguish between them. The result is a race to the bottom where honesty is penalized and manipulation rewarded.
+
+** Limitations of Current Approaches
+
+Current approaches to establishing trust online fall into three broad categories, each with significant limitations:
+
+*** Centralized Authorities
+
+These rely on platform operators or institutions to verify and enforce trustworthiness. While effective within their domains, these systems create single points of failure, vulnerability to capture and corruption, and often lack transparency.
+
+Consider how social media platforms can arbitrarily change verification standards, or how credit rating agencies famously failed during the 2008 financial crisis by assigning AAA ratings to fundamentally unsound instruments. When trust depends on a central authority, that authority becomes both a bottleneck and a vulnerability.
+
+*** Traditional Reputation Systems
+
+These aggregate user feedback into simplified metrics like star ratings or numerical scores. These systems suffer from three critical flaws:
+
+1. *One-dimensionality*: By collapsing diverse attributes into single scores, they obscure crucial context. A surgeon might have excellent bedside manner but poor surgical outcomes—averaging these into a single rating actively misleads patients.
+2. *Gaming vulnerability*: Without skin in the game, these systems are easily manipulated through fake reviews, review bombing, or strategic timing of feedback requests.
+3. *Feedback dilution*: Most users only leave feedback when extremely satisfied or dissatisfied, creating a bimodal distribution that fails to capture the nuanced middle.
+
+*** Blockchain and Decentralized Alternatives
+
+These address some issues of centralization but often focus narrowly on financial transactions or tokenized reputation that lacks domain specificity. Many implement "trustless" systems that eliminate the need for trust in certain narrow contexts but don't materially advance the broader trust problem across domains.
+
+For instance, blockchain systems can verify that a transaction occurred but can't tell you whether the service delivered was high quality. NFT marketplaces can confirm ownership but offer no insight into artistic merit or investment value. The technology solves one part of the trust equation while leaving other crucial aspects unaddressed.
+
+These limitations reveal a fundamental gap: we lack a *generalizable, decentralized trust system that can evaluate credibility across arbitrary domains using both *verifiable actions and *domain-specific merit*.
+
+** A New Paradigm Ground in Promise Theory
+
+The Agency Protocol proposes a fundamentally different approach to trust, built on the formal foundations of Promise Theory. This mathematical framework models systems of autonomous agents that interact through voluntary commitments, shifting the paradigm from top-down imposition to bottom-up cooperation. Rather than abstracting away the messy details of reliability, AP uses promises to create a structured, verifiable, and context-rich trust fabric.
+
+
+
+At its core, AP operationalizes the key tenets of Promise Theory  through several innovations:
+
+Explicit, Assessable Promises: Agents make clear, cryptographically signed commitments about their future behavior. This transforms vague intentions into durable records that any authorized agent can independently assess as kept or not kept, a direct application of Promise Theory's core loop.
+
+
+
+Agent Autonomy: Each agent is autonomous and can only make promises about its own behavior. Cooperation is never forced; it emerges from the alignment of voluntary promises, such as a promise to provide a service and a corresponding promise to use that service.
+
+Domain-Specific Merit: Trustworthiness is tracked within specific domains, preventing reputation laundering. A promise's type and body in Promise Theory  provide the formal basis for this domain separation.
+
+Skin in the Game: Both promise-makers and assessors stake resources on their claims. This provides the economic incentive for promise-keeping that complements the semantic structure of Promise Theory, creating the conditions for the evolution of cooperation.
+
+These elements combine to create what we call a "high-fidelity trust protocol"—a system that preserves the rich contextual nature of trustworthiness while enabling efficient verification and transfer of trust signals.
+
+** The Evolution of Agency
+
+The Agency Protocol draws inspiration from evolutionary systems, where adaptation and selection pressures create increasingly fit solutions over time. Just as natural selection has produced remarkably effective cooperation strategies in biological systems, AP creates an environment where trustworthy behavior is naturally selected for.
+
+This evolutionary perspective extends beyond individual agents to the protocol itself. As we'll explore in this paper, both the merit and credit systems undergo staged evolution from simple calculations to sophisticated collective intelligence mechanisms. The protocol's implementation strategy mirrors the gradual complexity increases we observe in natural systems.
+
+** Paper Overview
+
+In the following sections, we explore the theoretical foundations, technical architecture, and practical implementations of the Agency Protocol:
+
+- *Core Concepts & Theoretical Foundations*
+- *Technical Architecture*
+- *Economic Model*
+- *Security and Trust Emergence*
+- *Implementation Roadmap*
+- *Applications and Use Cases*
+- *AI and Agency*
+
+Together, these elements create a comprehensive framework for restoring trust in digital systems through domain-specific, verifiable promises.
+
+
+
+* Core Concepts & Theoretical Foundations
+The Agency Protocol builds on several foundational concepts that together create a novel approach to establishing and verifying trust. These concepts represent a fundamental rethinking of how we signal, measure, and propagate trustworthiness across complex networks.
+
+** The Promise Lifecycle: From Intention to Assessment
+
+At the heart of the Agency Protocol is a formal process flow derived from Promise Theory. This flow models how a commitment originates and is evaluated, providing a clear structure for accountability.
+
+#+BEGIN_SRC mermaid :file promise_lifecycle_ap.svg
+graph TD
+subgraph "Agent A - Promiser"
+A1(Internal Intention) -->|"Publicly Declares"| A2(Promise + Stake)
+end
+
+subgraph "Agent B - Promisee/Assessor"
+    B1(Receives/Observes Promise) -->|"Evaluates Outcome"| B2(Assessment + Evidence)
+end
+
+subgraph "Agency Protocol"
+    C1(Merit/Credit System)
+end
+
+A2 -->|"Transmitted to Scope"| B1
+B2 -->|"Informs"| C1
+C1 -->|"Updates"| A1
+
+style A1 fill:#cde,stroke:#333,stroke-width:2px
+style B2 fill:#cde,stroke:#333,stroke-width:2px
+style A2 fill:#9cf,stroke:#333,stroke-width:2px
+style C1 fill:#f99,stroke:#333,stroke-width:2px
+#+END_SRC
+
+This lifecycle consists of three core components:
+
+Intention: An agent internally forms an intention, which is a subject or type of possible behavior. This is a private state.
+
+
+Promise: The agent makes its intention public by issuing a promise—a verifiable and autonomous declaration about its own behavior. In AP, this promise is cryptographically signed and accompanied by a stake of credits. A crucial tenet is that agents can only make promises about themselves; they cannot impose promises on others.
+
+
+Assessment: Any other agent within the promise's scope can make its own independent assessment of whether the promise was kept or not kept. In AP, this assessment is also a signed object, backed by evidence and the assessor's own stake.
+
+Agency Protocol's primary innovation is the feedback loop: these assessments directly inform the Merit and Credit System, which in turn adjusts the promiser's standing and resources, influencing their future intentions.
+
+** The Merit Paradigm: A System of Valuation
+
+In the Agency Protocol, merit is a sophisticated valuation of an agent's trustworthiness within a specific domain. While a single assessment is a subjective judgment made by one agent, merit is a system-level aggregation of many such assessments over time, creating an objective and historically-grounded measure of reliability.
+
+*** Why Merit, Not Reputation?
+
+The term "merit" is chosen deliberately. Promise Theory makes a distinction between a simple assessment and the value an agent places on a promise. Merit represents this value, earned through the demonstrable action of keeping promises, whereas reputation can be influenced by subjective or irrelevant factors.
+
+
+** Context-Specificity: The Domain Advantage
+
+Perhaps the most powerful aspect of merit in the Agency Protocol is its domain-specificity. Promise Theory defines promises by a type and body, which constrain their meaning. AP uses these distinctions to create separate merit scores for different domains, preventing what we might call "reputation laundering"—using success in one area to mask failures in another.
+
+Consider a hypothetical case study:
+
+Dr. M is a surgeon known for her kind bedside manner, leaving patients at ease during consultations. However, her surgical performance has declined due to personal struggles. Most patient reviews reflect her personality, not her surgical outcomes. As a result, her general reputation remains positive while concerning performance patterns go unnoticed.
+
+This example highlights how traditional reputation systems fail. In the Agency Protocol, Dr. M would have separate merit scores for the domains of /healthcare/communication/_bedsideManner and /healthcare/surgery/_proceduralOutcomes, preventing high scores in one from masking problems in another.
+
+Domain-specific merit creates several powerful advantages:
+
+Precision: Merit reflects specific capabilities rather than general impressions.
+
+Resistance to gaming: Manipulating merit requires actually keeping promises in the relevant domain. In practice simulations show merit dilution attacks drop to < 5 % effectiveness once λ ≥ 4.
+
+Informational richness: Users can evaluate merit in exactly the domains they care about.
+
+Network effects: As the system grows, merit becomes an increasingly powerful predictor of future behavior.
+
+This approach aligns with how humans naturally think about expertise, capturing the nuance that flat reputation systems miss.
+
+* Evidence: The Foundation of Verifiable Assessment
+
+While merit represents the historical record, evidence provides the concrete proof upon which assessments are based. Promise Theory treats assessment as a decision, potentially based on observation or measurement. AP formalizes this observation process by defining a spectrum of evidence types.
+
+
+** Types of Evidence
+
+The protocol recognizes that different promises require different standards of proof:
+
+Experience-Based Assessments (No Formal Evidence): Many promises, like a restaurant's promise of "authentic Italian taste," are assessed based on direct, subjective experience. The assessment itself is the evidence of the promisee's evaluation.
+
+Automatic Evidence: System-generated data like timestamps, logs, or sensor readings provide objective verification. A delivery service's promise of "delivery within 45 minutes" can be verified automatically.
+
+Validated Evidence: Some promises require tangible documentation (e.g., certificates, receipts) that can be verified by human or AI validators with domain expertise. A promise to use "organic ingredients" might be supported by supplier certifications.
+
+Progressive Evidence: The protocol implements dynamic evidence requirements based on agent merit. New agents with limited domain merit face stricter evidence requirements, which are relaxed as they build a track record of kept promises.
+
+This flexible approach ensures that the burden of proof is appropriate to the context and importance of each promise, creating a practical and scalable system for verifiable trust.
+
+* Technical Architecture
+The Agency Protocol's architecture is designed to support a decentralized network of autonomous agents who interact through verifiable information objects. Instead of a monolithic platform, the architecture defines a set of core entities and the rules governing their interaction. The entire system is built upon content-addressed storage, ensuring that every promise, assessment, and state transition is an immutable, verifiable record.
+
+The three primary entities in the protocol are Agents, the Domains that provide context, and the Information Objects (Promises, Impositions, and Assessments) that agents exchange.
+
+#+BEGIN_SRC mermaid :file core_entities.svg
+graph TD
+subgraph "Core Entities & Relationships"
+Agent -->|"Categorizes"| Domain
+Promise -->|"Belongs to"| Domain
+Merit -->|"Is Scoped to"| Domain
+Agent -->|"Emits"| Promise
+Agent -->|"Emits"| Imposition
+Agent -->|"Emits"| Assessment
+Assessment -->|"Judges"| Promise
+Imposition -->|"May Trigger"| Promise
+end
+
+style Agent fill:#9cf,stroke:#333,stroke-width:2px
+style Domain fill:#fec,stroke:#333,stroke-width:2px
+style Promise fill:#cde,stroke:#333,stroke-width:2px
+style Imposition fill:#cde,stroke:#333,stroke-width:2px
+style Assessment fill:#cde,stroke:#333,stroke-width:2px
+style Merit fill:#9cf,stroke:#333,stroke-width:2px
+#+END_SRC
+
+** Agents: The Autonomous Actors
+
+The only active entities in the protocol are agents. An agent is any autonomous entity—a person, an AI, or an organization—that has the agency to make promises and assessments. Agent autonomy is the foundational principle: agents cannot be forced to do anything; they can only be influenced through promises and impositions, which they are free to accept or ignore.
+
+An agent's identity and state are managed through a chain of signed, content-addressed objects.
+
+Agent State Object:
+
+#+BEGIN_SRC json
+{
+  "agent_id": "k2k4r8...",
+  "previous_state_cid": "k2k4r7...",
+  "public_key": "...",
+  "parents": ["k2k4r3...", "k2k4r5..."],
+  "state_data": {
+    "merit_scores": {
+      "/healthcare/communication/_bedsideManner": 0.85,
+      "/healthcare/surgery/_proceduralOutcomes": 0.92
+    },
+    "credit_balance": 5400
+  },
+  "signature": "..."
+}
+#+END_SRC
+
+** Domains: A System for Context and Specialization
+
+To provide context for promises and enable meaningful, domain-specific merit, the protocol uses a hierarchical system of domains. A domain is a formally defined namespace that categorizes a specific area of capability, expertise, or activity.
+
+This structure allows for incredible granularity. An agent doesn't have a single reputation; it has distinct merit scores in every domain in which it makes and keeps promises.
+
+#+BEGIN_SRC mermaid :file domain_hierarchy.svg
+graph TD
+A["/ (Root)"] --> B["/healthcare"]
+A --> C["/software"]
+B --> D["/healthcare/provider"]
+B --> E["/healthcare/scheduling"]
+C --> F["/software/development"]
+C --> G["/software/security"]
+F --> H["/software/development/frontend"]
+
+style A fill:#fec,stroke:#333
+style B fill:#fec,stroke:#333
+style C fill:#fec,stroke:#333
+#+END_SRC
+
+For example, a promise to write "React code" belongs to the /software/development/frontend domain. This prevents an agent who is excellent at server-side security from being considered an expert in frontend development without having proven their merit in that specific domain. This system is the architectural implementation of using promise types to differentiate promises.
+
+(A full description of the domain system and its governance is detailed in Appendix A.)
+
+** Information Objects: Promises, Impositions, and Assessments
+
+Agents interact by creating and publishing three types of immutable information objects. These are not agents themselves, but are the messages produced by agents.
+
+*** Promises
+
+A promise is an agent's signed, public declaration about its own intended behavior. It is the fundamental building block of cooperation.
+
+Promise Object Structure:
+
+#+BEGIN_SRC json
+{
+  "promiser_id": "CID of the agent making the promise",
+  "promisee_scope": ["*"], // Can be "*", a specific agent CID, or a group CID
+  "body": {
+    "domain": "/logistics/delivery/_deliversWithinHours",
+    "parameters": { "hours": 48 }
+  },
+  "stake": { "credits": 75 },
+  "signature": "..."
+}
+#+END_SRC
+
+- *promiser_id*: The agent making the promise.
+- *promisee_scope*: Defines who the promise is made to. A wildcard (*) makes it a public offer. A specific agent CID makes it a private commitment. The scope is critical as it determines who can formally assess the promise.
+*** Impositions
+
+An imposition is a message sent from an imposer to an imposee to request an action or induce cooperation. Unlike a promise, it is about the intended behavior of another agent. The imposee is autonomous and free to ignore it. Impositions are the formal mechanism for requests.
+
+Imposition Object Structure:
+
+#+BEGIN_SRC json
+{
+  "imposer_id": "CID of the agent making the request",
+  "imposee_id": "CID of the agent receiving the request",
+  "body": {
+    "domain": "/freelance/design/_createLogo",
+    "description": "Request for a logo design as per the attached creative brief."
+  },
+  "signature": "..."
+}
+#+END_SRC
+
+The primary role of impositions is to catalyze interactions. An imposition from a client can trigger a corresponding promise from a service provider, forming the basis of a new agreement.
+
+*** Assessments
+
+An assessment is a signed judgment by an assessor on whether a specific promise was kept. It is the mechanism that closes the feedback loop, providing the data needed to update merit scores.
+
+Assessment Object Structure:
+
+#+BEGIN_SRC json
+{
+  "assessor_id": "CID of the agent making the assessment",
+  "subject_promise_id": "CID of the promise being assessed",
+  "judgement": "KEPT",
+  "evidence_cid": "CID of an evidence object",
+  "stake": { "credits": 5 },
+  "signature": "..."
+}
+#+END_SRC
+
+This architectural separation—autonomous Agents creating contextualized Promises within Domains and evaluating them with Assessments—provides a robust and scalable foundation for a decentralized trust ecosystem.
+
+Economic Model
+While the Technical Architecture defines what agents can communicate, the Economic Model defines why they will rationally choose to cooperate. It creates an incentive landscape where trust and accountability emerge naturally from self-interested interactions. The model is explicitly grounded in the game-theoretic principles outlined in Promise Theory, treating every significant interaction as a game with defined payoffs.
+
+** Promises as Economic Games
+
+A core insight from Promise Theory is that any exchange of promises can be modeled as a mathematical game. When Agent A promises a service in exchange for Agent B's promise of payment, they are entering a bargaining game. Each agent has its own internal valuation function which it uses to determine the value, or payoff, of the other's promise.
+
+
+
+The Agency Protocol's credit system serves as the common currency for these valuations, allowing for complex and stable economic interactions.
+
+#+BEGIN_SRC mermaid :file bilateral_promise_game.svg
+graph LR
+subgraph "Bilateral Promise as a Game"
+A[Agent A - Promiser] -->|"+Service"| B[Agent B - Promisee]
+B -->|"-Payment"| A
+A -->|"Receives & Values Payment"| Payoff_A((Payoff for A))
+B -->|"Receives & Values Service"| Payoff_B((Payoff for B))
+end
+
+style A fill:#9cf,stroke:#333,stroke-width:2px
+style B fill:#9cf,stroke:#333,stroke-width:2px
+#+END_SRC
+
+The protocol's primary economic function is to structure the payoffs such that cooperation (keeping the promise) provides a higher expected utility than defection (breaking the promise). This transforms potentially unstable, one-way "altruistic" promises into sustainable, incentivized exchanges.
+
+** Credit System Fundamentals
+
+At the heart of this model lies the credit system—a transferable value mechanism that creates meaningful consequences for promises and assessments.
+
+*** Core Principles
+
+Deterrence of Malicious Behavior: By requiring agents to stake credit on their commitments, the system creates tangible economic consequences for dishonesty.
+Incentivization of Valuable Contributions: Agents who consistently fulfill promises and provide accurate assessments are rewarded with both increased merit and credit returns.
+Barrier to Sybil Attacks: The credit requirement for staking creates a progressive economic barrier to creating fake identities.
+Accessibility Through Merit: While staking creates barriers, these diminish as agents build domain-specific merit, creating a powerful economic advantage for being trustworthy.
+*** Staking and Credit Flow
+
+The credit system creates a self-sustaining circular economy. Staked credits from broken promises are "slashed" and funneled into a reward pool that compensates agents who act with integrity.
+
+#+BEGIN_SRC mermaid :file credit_flow.pdf
+graph TD
+A[Agent makes Promise/Assessment] -->|"Locks Stake"| B{Outcome Determined}
+B -->|"Promise Kept / Assessment Honest"| C[Stake Returned + Reward]
+B -->|"Promise Broken / Assessment Dishonest"| D[Stake Slashed]
+D --> E(Ecosystem Reward Pool)
+E -->|"Funds Rewards for"| C
+
+style D fill:#f99,stroke:#333,stroke-width:2px
+style E fill:#fec,stroke:#333,stroke-width:2px
+#+END_SRC
+
+This ensures that the cost of dishonesty directly funds the rewards for integrity, creating a powerful self-regulating dynamic.
+
+** Economic Responsibility and Redundancy
+
+Promise Theory introduces the downstream principle: ultimate responsibility for a successful outcome lies with the most downstream agent (the final consumer), as they are the only one who can ensure their needs are met, for instance by building in redundancy. A provider failing to deliver is a risk, but having only one provider to choose from is a structural vulnerability owned by the consumer.
+
+The AP economic model reinforces this. An agent that builds a resilient system by relying on multiple, redundant upstream providers is taking on less risk. The protocol can recognize this and reward it:
+
+Risk-Adjusted Staking: An agent's own stake requirements for its downstream promises can be lowered if its dependencies are diversified and redundant, as its promises are now more likely to be kept.
+Incentivizing Resilience: This creates an economic incentive for agents to actively seek out and cultivate robust dependency graphs, strengthening the entire network. It correctly prices the risk of relying on a "single point of failure".
+This system encourages a proactive approach to trust, where consumers are rewarded for building resilience rather than solely relying on penalizing providers after a failure.
+** Oracle Architecture and Evidence Validation
+The Agency Protocol (AP) is designed to create a high-fidelity trust environment by processing verifiable information objects. A critical aspect of this architecture is acknowledging the boundary between information the protocol can deterministically verify and information that originates from external systems or the physical world. This section details the protocol's architecture for managing this boundary through a robust oracle system and a standardized approach to evidence validation.
+
+*** The Trust Boundary and the Oracle Imperative
+The Agency Protocol's core logic operates within a cryptographic trust boundary. The protocol can have absolute certainty about events that occur entirely within this boundary—such as the validity of a digital signature, the transfer of credits between agents, or the execution of an on-protocol state change.
+
+However, a vast number of valuable promises pertain to outcomes outside this boundary. A promise to deliver a physical package, maintain 99.9% uptime for a web server, or use "sustainably sourced cotton" cannot be verified by the protocol's internal state alone. To bridge this gap, AP must rely on external data providers, known as oracles. This reliance constitutes the Oracle Problem: the integrity of the protocol for any real-world promise is fundamentally contingent on the integrity of the oracles that report on that promise's outcome.
+
+Instead of ignoring this challenge, the Agency Protocol formally integrates a solution into its architecture: a Decentralized Oracle Network (DON) that operates on the same principles of crypto-economic incentives and accountability as the rest of the system.
+
+*** A Decentralized Oracle Network (DON) for Agency Protocol
+AP rejects the use of single, centralized oracles as they represent single points of failure and defeat the protocol's goal of decentralization. Instead, the protocol specifies the use of a DON for retrieving and validating all external data.
+
+The mechanism works as follows:
+
+Query and Redundancy: When an assessment requires external data (e.g., "Was Flight 245 on time?"), a query is sent not to one source, but to a network of multiple, independent, and geographically distributed oracle agents.
+
+Staked Responses: Each oracle agent in the network must stake AP credits on the accuracy of the data it reports. This represents the oracle's "promise" to provide truthful information.
+
+Consensus and Aggregation: The protocol's OracleAggregatorAgent collects the responses. The data is aggregated, and a consensus value is determined (e.g., the median for numerical data, the mode for categorical data).
+
+Rewards and Slashing:
+
+Oracle agents whose responses fall within the consensus range have their stakes returned and receive a fee for their service, paid by the agent requesting the data.
+
+Oracle agents whose responses deviate significantly from the consensus are deemed to be faulty or malicious. Their staked credits are slashed, with a portion rewarding the honest oracles and the remainder contributing to the ecosystem reward pool.
+
+This model creates a powerful economic incentive for oracles to remain honest and accurate, as lying is a demonstrably unprofitable strategy.
+
+#+BEGIN_SRC mermaid :file decentralized_oracle_network.svg
+graph TD
+subgraph "Agency Protocol"
+A(Assessment Requires Data) -->|"Query"| B{OracleAggregatorAgent}
+end
+
+subgraph "Decentralized Oracle Network"
+    C[Oracle 1 + Stake] -->|"Report: On Time"| B
+    D[Oracle 2 + Stake] -->|"Report: On Time"| B
+    E[Oracle 3 + Stake] -->|"Report: On Time"| B
+    F[Oracle 4 + Stake] -->|"Report: Delayed"| B
+end
+
+B -->|"Determines Consensus"| G{Consensus: On Time}
+G -->|"Rewards"| C
+G -->|"Rewards"| D
+G -->|"Rewards"| E
+G -->|"Slashes Stake"| F
+G -->|"Reports Data"| A
+
+style F fill:#f99,stroke:#333,stroke-width:2px
+style C fill:#9cf,stroke:#333,stroke-width:1px
+style D fill:#9cf,stroke:#333,stroke-width:1px
+style E fill:#9cf,stroke:#333,stroke-width:1px
+#+END_SRC
+
+*** Evidence Handling and Validation
+To maintain protocol efficiency and security, the management of evidence follows a strict standard based on content addressing.
+
+Off-Chain Storage: Evidence objects themselves (e.g., photos, PDF documents, server logs) are never stored directly within the protocol's state. Direct storage would be prohibitively expensive and would bloat the system's history.
+
+Content-Addressed Hashing: Instead, any piece of evidence is first processed through a cryptographic hash function (e.g., SHA-256). The resulting hash, a unique and fixed-length string, serves as an immutable fingerprint of the evidence.
+
+On-Chain Reference (evidence_cid): This hash is what is stored within the protocol as the evidence_cid (Content Identifier) field in an Assessment object. This provides an immutable, verifiable link to the off-chain evidence. Anyone can verify that the provided evidence matches the hash on record, proving it has not been tampered with since the assessment was made.
+
+This architecture ensures that the Agency Protocol can securely and scalably incorporate real-world data and evidence into its trust calculations without sacrificing its core principles of decentralization and crypto-economic accountability.
+* Economic Model
+
+The Agency Protocol's economic model is a precisely engineered incentive landscape designed to make trust, accountability, and fair exchange naturally emerge from agent interactions. It achieves this by structuring every core interaction as a mathematical game where the payoffs are explicitly designed to favor cooperation. This section details the formal economic principles, drawn from the Agency Protocol Yellow Paper and grounded in Promise Theory, that govern agent behavior.
+
+Promises as Verifiable Games
+
+A core insight from Promise Theory is that any exchange of promises can be modeled as a mathematical game. When Agent A promises a service in exchange for Agent B's promise of payment, they enter a bargaining game. Each agent has its own internal valuation function (v_i(
+cdot)) which it uses to determine the value, or payoff, of the other's promise.
+
+The Agency Protocol's credit system provides the common currency for these valuations, and the staking mechanism defines the payoff matrix for the game. The utility function for any agent a is formally defined as a combination of its credits (C_a) and its domain-specific merit (M_a,d), ensuring that both economic and reputational capital are part of every decision:
+
+U_a(t)=
+alpha_a
+cdotC_a(t)+
+sum_dinmathcalD
+beta_a,d
+cdotM_a,d(t)
+
+The goal of the economic model is to ensure that the utility change from keeping a promise, 
+DeltaU_a(K_p), is always greater than that of breaking it, 
+DeltaU_a(B_p), making cooperation the rational choice.
+
+Credit System Fundamentals
+
+At the heart of this model lies the credit system—a transferable value mechanism that creates meaningful consequences for promises and assessments.
+
+Core Principles
+
+Deterrence of Malicious Behavior: By requiring agents to stake credit on their commitments, the system creates tangible economic consequences for dishonesty, solving the "cheap talk" problem.
+Incentivization of Valuable Contributions: Agents who consistently fulfill promises and provide accurate assessments are rewarded with both increased merit and credit returns, creating a self-reinforcing cycle of participation.
+Barrier to Sybil Attacks: The credit requirement for staking creates a progressive economic barrier to creating multiple fake identities, growing quadratically in early rounds and super-linearly thereafter.
+Accessibility Through Merit: While staking creates economic barriers, these diminish as agents build domain-specific merit, creating a powerful economic advantage for being trustworthy.
+Staking and Credit Flow
+
+The protocol enforces consequences by setting the required stake (S_p) to be greater than a calculated minimum (S_min) derived in the Yellow Paper's Single-Round Best Response Theorem. This makes defection immediately unprofitable. (With reference parameters α=1, β=1-1.8, γ=0.15-0.2, λ=4-6; see Yellow Paper §2.3 for calibration.) The system then creates a sustainable, closed-loop economy where credits from slashed stakes are funneled into a reward pool that compensates agents who act with integrity.
+
+#+BEGIN_SRC mermaid :file credit_flow.pdf
+graph TD
+A[Agent makes Promise/Assessment] -->|"Locks Stake"| B{Outcome Determined}
+B -->|"Promise Kept / Assessment Honest"| C[Stake Returned + Reward]
+B -->|"Promise Broken / Assessment Dishonest"| D[Stake Slashed]
+D --> E(Ecosystem Reward Pool)
+E -->|"Funds Rewards for"| C
+
+style D fill:#f99,stroke:#333,stroke-width:2px
+style E fill:#fec,stroke:#333,stroke-width:2px
+#+END_SRC
+
+The Risk-Reward Framework
+
+The protocol implements a sophisticated risk-reward framework that balances incentives and aligns them with overall system health.
+
+Risk Assessment and Staking Requirements
+
+The stake required for a promise is not static; it's dynamically calculated based on a holistic risk assessment:
+
+required_stake = base_stake × impact_multiplier × risk_factor × merit_modifier
+
+This formula accounts for the promise's novelty, its potential impact, the volatility of its domain, and, most importantly, the promiser's proven merit. For high-merit agents, the merit_modifier significantly reduces stake requirements, creating a direct economic reward for trustworthiness.
+
+Incentivizing Valuable Information
+
+The protocol recognizes that early, high-risk assessments provide the most information value. To incentivize this, the reward structure includes an early_multiplier that provides premium returns to the first agents who assess a new promise, addressing the "cold start" problem. Credit rewards are further weighted by the novelty and system-level importance of the promise's domain, ensuring credit flows toward behaviors that maximize collective value.
+
+Gaming Prevention and Economic Equilibrium
+
+Any economic system must be robust against exploitation. The AP architecture integrates several layers of defense.
+
+Progressive Cost Barriers
+
+The cost to manipulate the system is designed to grow super-linearly (exponential beyond ~8 colluding assessors) with the sophistication of an attack, while the potential benefit grows only linearly. As proven in the Yellow Paper's Coalition Viability Theorem, this ensures that a critical point is quickly reached where the cost of a coordinated attack far exceeds any possible gain, making large-scale manipulation economically irrational.
+
+#+BEGIN_SRC mermaid :file manipulation_cost.svg
+graph LR
+subgraph "Economics of Manipulation"
+A[Benefit of Manipulation] -->|"Grows Linearly"| B((Max Potential Benefit))
+C[Cost of Manipulation] -->|"Grows Exponentially"| D((Prohibitive Cost))
+end
+
+style A fill:#9c9,stroke:#333
+style C fill:#f99,stroke:#333
+#+END_SRC
+
+Detection and Natural Consequences
+
+Beyond cost barriers, the system actively detects manipulation via pattern analysis (e.g., unusual timing, coordinated voting) and network analysis (e.g., assessment loops). Advanced merit calculation, using matrix factorization, can distinguish genuine consensus from factional bias by identifying and down-weighting low-entropy assessment patterns.
+
+Most powerfully, the system creates natural consequences. Honest agents build merit, which lowers their costs and increases their influence, creating a compounding economic advantage over time. This Future Opportunity Value (FOV) is the core long-term incentive that makes cooperation a subgame perfect equilibrium.
+
+The entire economic model is designed to be a self-regulating, adaptive system where credit flows to where value is created, maintaining a dynamic equilibrium that perpetually favors trust and cooperation.
+
+* Security and Trust
+Security in the Agency Protocol is not a single feature but an emergent property of its architecture, arising from layered cryptographic, economic, and game-theoretic defenses. The protocol's design is formally proven in the Agency Protocol Yellow Paper to be resistant to manipulation and dynamically stable. The goal is not to create a "trustless" system—which is often impossible for complex interactions—but rather to create a trustworthy system, where trust is earned, verifiable, and consequential.
+
+Threat Model in a World of Promises
+
+In a system of autonomous agents, threats manifest as malicious information objects designed to manipulate outcomes.
+
+Malicious Promises: An agent may make a deception—a promise it has no intention of keeping—to receive unearned benefits.
+Malicious Assessments: A coalition of agents may attempt to dishonestly assess a promise to harm a competitor or reward a collaborator.
+Sybil Attacks: A single entity creates many Agents to amplify its assessment power.
+Dependency Disruption: A malicious agent may intentionally break a promise that it knows is a critical dependency for another agent's downstream promise, causing a cascading failure.
+Layered Defenses and Formal Guarantees
+
+The protocol defends against these threats with three integrated layers of security, each supported by formal proofs of its efficacy.
+
+#+BEGIN_SRC mermaid :file layered_defenses.svg
+graph TD
+A(Agent Interaction)
+subgraph Defenses
+B(Cryptographic Layer)
+C(Economic Layer)
+D[Game-Theoretic & Social Layer]
+end
+E(Secure & Trustworthy Outcome)
+
+A --> B
+B --> C
+C --> D
+D --> E
+
+B -->|"Ensures Authenticity & Integrity"| A
+C -->|"Makes Dishonesty Unprofitable"| A
+D -->|"Makes Collusion Detectable & Unstable"| A
+
+style B fill:#9cf,stroke:#333
+style C fill:#f99,stroke:#333
+style D fill:#9c9,stroke:#333
+#+END_SRC
+
+Cryptographic Layer (Verifiable Truth): The foundation, ensuring authenticity (we know who said it) and integrity (we know it hasn't been tampered with) of all promises and assessments via digital signatures and content-addressing.
+
+Economic Layer (Rational Choice): This layer makes malicious behavior economically irrational. As detailed in the Economic Model, staking requirements create direct financial penalties for dishonesty. The progressive cost barriers make large-scale manipulation prohibitively expensive.
+
+Game-Theoretic & Social Layer (Collective Verification): This layer uses the network of agents itself as a defense mechanism, with its robustness formally proven in the Yellow Paper.
+
+Coalition-Resistant Equilibrium: As proven by the Coalition Viability and Coalition-Resistant Equilibrium Theorems, the protocol's economic and information-theoretic structure makes it irrational for any group of agents to form a stable, manipulative coalition. The cost and detection risk grow super-linearly (exponential beyond ~8 colluding assessors), while the rewards remain linear.
+Dynamic Stability: The system is not brittle. The Yellow Paper establishes that the cooperative equilibrium exhibits Lyapunov Stability. This means that even if a group of agents deviates from cooperative behavior, the system's economic incentives (increased stakes for defectors, higher FOV for cooperators) create restoring forces that naturally pull the system back towards a state of widespread cooperation.
+Robustness to Bounded Rationality: The security model holds even under realistic conditions. The analysis of Bounded Rationality in the Yellow Paper shows that cooperation remains the optimal strategy even when agents make occasional errors or have limited ability to plan for the future.
+The Emergence of Earned Trust
+
+In Promise Theory, trust is defined as an agent's expectation that a promise will be kept. The Agency Protocol is designed to make this a rational expectation. Trust is not assumed or granted by an authority; it is emergent.
+
+An agent is considered trustworthy because the protocol creates an environment where:
+
+It is cryptographically proven that they made their promises.
+It is economically proven that they had a strong incentive to keep them.
+It is game-theoretically proven that collusion is irrational and that cooperation is the most stable strategy.
+It is socially proven through merit-weighted consensus that they have a history of keeping their promises.
+This creates a powerful and reliable form of trust, earned through demonstrable action within a secure, stable, and formally verified economic framework.
+
+* ABM Validation Results
+
+Our theoretical predictions have been validated through comprehensive Agent-Based Model (ABM) simulations. These simulations confirm that the Agency Protocol achieves its design goals in practice:
+
+** Key Findings
+
+*** Promise-Keeping Rates
+- *Baseline Performance*: 79.5% promise-keeping rate under normal operations
+- *Under Attack*: 76.7-79.9% promise-keeping rate maintained even during coordinated coalition attacks
+- *Extended Operation*: 79.9% promise-keeping rate sustained over 300 rounds
+
+These results exceed our initial theoretical predictions of 70-80%, demonstrating the protocol's robustness.
+
+*** Coalition Resistance
+The protocol successfully resists coalition attacks of varying sizes:
+- *Small Coalition (10% of agents)*: Only 2.8% degradation in promise-keeping rate
+- *Large Coalition (30% of agents)*: System maintains 76.9% promise-keeping rate
+- *Detection Effectiveness*: 175x increase in malicious behavior detection during large attacks
+
+*** Economic Sustainability
+Extended simulations demonstrate long-term viability:
+- *Credit Growth*: Average agent credits increased by 45.6% over 300 rounds
+- *Merit Stability*: Honest agents maintain merit scores of 0.7-0.88 while malicious agents drop to 0.005-0.013
+- *Self-Sustaining Economy*: System reaches stable equilibrium without external intervention
+
+*** Dynamic Adaptation
+The protocol exhibits strong self-healing properties:
+- *Rapid Detection*: Malicious agents detected and marginalized within 10 rounds
+- *Merit Separation*: Clear economic separation emerges between honest and malicious agents
+- *Recovery Speed*: System returns to baseline performance after attack cessation
+
+These empirical results validate our theoretical framework and demonstrate that the Agency Protocol creates conditions where honest behavior emerges as the dominant strategy through aligned incentives rather than external enforcement.
+
+* Implementation Roadmap: An Evolutionary Strategy
+The successful deployment of the Agency Protocol is not a single event but an evolutionary process. Our roadmap is designed in three distinct phases, moving from a stable core to a flourishing, decentralized ecosystem. This strategy prioritizes solving a critical user problem first to bootstrap the network, before expanding the protocol's capabilities. Each phase details the specific technical components to be built, the domains to be activated, and the governance structures to be implemented.
+
+** Phase 1: Foundational Protocol & Core Agent Development (The Bedrock)
+Objective: To build the non-negotiable, secure, and robust backend of the protocol. This phase is purely technical, focusing on creating the foundational language, rules, and core infrastructure of the new trust economy.
+
+Key Technical Deliverables:
+
+Core Agent Implementation:
+
+Agent & Identity: Implement key pair generation, signature verification, and a standardized registry for unique, cryptographically-secure agent identities (CIDs).
+
+Promise Primitive: Implement the Promise as a core data object: a signed declaration containing the promiser, promisee scope, promise body, and the terms (including the Security Deposit).
+
+Credit/Merit Ledger Agents: Deploy the immutable ledgers to manage Credits (transactional currency) and Merit (non-transferable reputation). This involves basic state management and transaction rules.
+
+Assessment/Evidence Agents: Build the infrastructure for submitting assessments and linking them to immutable evidence records via CIDs stored on a distributed network.
+
+Storage and Distribution Infrastructure:
+
+Content-Addressed Storage: Implement secure hashing (e.g., SHA-256) and basic interfaces for distributed storage solutions (like IPFS) to ensure evidence integrity.
+
+Network Communication: Establish peer-to-peer protocols for basic data synchronization and message validation between core agents.
+
+Initial Governance & Bootstrapping:
+
+Governance Agent (Centralized): Launch a foundation-controlled agent to manage initial protocol parameters (e.g., default stake amounts, merit decay rates).
+
+Initial Merit Assignment: Assign bootstrap merit to founding contributors based on their expertise in specific, relevant domains (e.g., /protocol/development, /cryptography/security), with all assignments publicly documented.
+
+Warm-up stake floor: for the first 50 rounds all agents post at least 25 % of base stake, regardless of merit, mirroring simulation safeguards.
+
+At the end of this phase, the deep infrastructure of the protocol will be complete and rigorously tested. It will be a powerful engine with a command-line interface, ready for the first user-facing application.
+
+** Phase 2: The First Vertical - "The Goal Engine" (Bootstrapping the Network)
+Objective: To solve the classic "cold start" problem by focusing all efforts on a single, high-value use case: connecting "Goal Setters" with "Goal Assistants." This phase is about user experience, psychological framing, and kickstarting the network effect.
+
+Key Technical & Strategic Deliverables:
+
+Launch of the "Goal Engine" Application:
+
+Interface Agent SDK (v1): Develop the initial SDKs and APIs required to build a user-facing application that can interact with the Phase 1 backend.
+
+UI/UX Development: Deploy the "Goal Engine" and "Promise Composer" interfaces, translating the protocol's core concepts into a user-friendly experience. This includes the Guided Scoping and Promise Decomposition flows.
+
+Strategic Domain Activation:
+
+Initial Focus: Activate domains directly related to the "Goal Engine" use case. These are areas with high demand and relatively clear success metrics.
+
+/health/coaching/_fitness
+
+/business/mentorship/_startup_launch
+
+/education/tutoring/_skill_acquisition
+
+Domain-Specific Customization: Implement basic customization, such as tailored promise templates and suggested evidence types for these initial domains.
+
+Onboarding & Bootstrapping the Network:
+
+Psychological Framing: All user-facing language will be carefully crafted to reframe Stake as a "Security Deposit." The focus will be on safety, seriousness, and achieving goals.
+
+Early Adopter Incentives: Implement increased Merit accumulation rates and temporarily reduced Security Deposit requirements for the first 1,000 users in the activated domains.
+
+"Development as Marketing" Strategy: Actively use the protocol to build itself. Solicit services (e.g., design, marketing) from freelancers, offering them payment + an invitation to be the first providers on the platform, bootstrapping both development and the user base simultaneously.
+
+Core User Protections:
+
+Dispute Resolution UX: Deploy the simple, guided interfaces for initiating a dispute, submitting evidence, and receiving a transparent decision from a neutral, high-merit arbitrator. This is mission-critical for building initial user trust.
+
+At the end of this phase, Agency Protocol will be a live, value-generating marketplace. It will have a small but active user base, a proven use case, and the foundational trust needed for expansion.
+
+** Phase 3: Ecosystem Expansion & Progressive Decentralization (The Cambrian Explosion)
+Objective: To leverage the initial success of the Goal Engine to expand into new verticals, implement advanced processing, and progressively decentralize the protocol's governance, transforming it into a true public utility.
+
+Key Technical & Strategic Deliverables:
+
+Advanced Protocol Capabilities:
+
+Advanced Processing: Implement the infrastructure for Batch Processing and initial Matrix Factorization algorithms to enable Stage 2-3 Merit calculation, allowing for more nuanced and cheat-resistant trust scores.
+
+Inference Control: Begin implementing privacy-preserving mechanisms like timing randomization and update granularity control for merit calculations.
+
+Ecosystem Expansion:
+
+Interface Agent SDK (v2): Release a full-featured SDK that allows third-party developers to build their own specialized applications and Interface Agents.
+
+Federated Marketplaces: Support the launch of new verticals built by the community.
+
+AI Agent Marketplace: Leveraging the protocol for verifiable AI capability contracts.
+
+Legal Agent & Contract Agent: Activating the /legal/contracts domain for creating and managing legally-binding agreements based on promises.
+
+"Serrendipity" App: A prime example of a novel experience built on the mature protocol, using collective intelligence to engineer serendipitous encounters.
+
+Activation of Protocol Self-Governance:
+
+Transition to Merit-Weighted Governance: The centralized Governance Agent is phased out. It is replaced by on-protocol Decision Agents that allow the community of meritorious agents to govern the protocol. Voting power for protocol amendments will be weighted by an agent's generalized and domain-specific Merit.
+
+Promise-Based Governance: The governing body itself becomes an Organization Agent within the protocol. Core development, parameter changes, and treasury management are executed as public, assessable Promises. The performance of the governing agents is reflected in their own Merit scores, ensuring they are accountable to the community they serve.
+
+Formation of the Governing Superagent: The final step is the transfer of ultimate protocol ownership and rule-making authority to this decentralized Superagent, which is composed of and governed by its most trustworthy and meritorious participants. This achieves a state of true, operational self-governance.
+
+At the end of this phase, Agency Protocol will have evolved from a single application into a foundational layer for trust on the internet, fostering a Cambrian explosion of new, accountable, and transparent platforms run by a self-sustaining community.
+* AI and Agency
+Artificial intelligence presents the ultimate challenge and opportunity for any trust protocol. The Agency Protocol provides a novel framework for AI alignment and collaboration, moving beyond today's implicit goals and opaque reward functions. By requiring AIs to operate as autonomous agents that make explicit, structured, and consequential promises, we can create a verifiable and economically sound path toward trustworthy AI.
+
+This section details how the full spectrum of Promise Theory concepts—including conditional, scoped, and delegated promises—is applied to AI agents to solve core alignment problems.
+
+** The AI Alignment Challenge: From Implicit Goals to Explicit Promises
+
+The central problem in AI alignment is the gap between a developer's unstated intent and an AI's actual, emergent behavior. Most current approaches suffer from critical limitations:
+
+Implicit Values: Goals like "be helpful" are encoded in training data, not as explicit, assessable commitments.
+Opaque Reasoning: The AI's decision-making process is a black box, making verification difficult.
+No Real-World Consequences: An AI has no "skin in the game"; responsibility for its failures falls on its human operators.
+The Agency Protocol addresses this by forcing these implicit goals into the open as explicit, falsifiable promises. An AI doesn't just have a "goal"; it has a portfolio of staked, assessable promises about its behavior, capabilities, and limitations.
+
+A Richer Framework for AI Promises
+
+Promise-Based AI Alignment means moving beyond simple declarations to sophisticated, structured commitments that mirror complex real-world accountability.
+
+The AI Promise Object
+
+Under the Agency Protocol, an AI Agent makes promises using a formal structure that includes not just the intention, but the full context of the commitment, including scope, conditions, and the distinction between the promiser and the actor.
+
+#+BEGIN_SRC json
+{
+"promiser_id": "CID of HospitalAgent",
+"actor_id": "CID of DiagnosticAIAgent",
+"promisee_scope": ["CID of PatientAgent"],
+"beneficiary_id": "CID of PatientAgent",
+"body": {
+"domain": "ai/diagnostics/_providesAnalysis",
+"description": "The Diagnostic AI will provide a diagnostic analysis of the provided medical scan, flagging anomalies with a calibrated confidence score > 95%.",
+"evidence_requirements": ["Confidence score calibration data", "Anomaly detection logs"]
+},
+"conditions": [{ // This promise is conditional
+"promise_id": "CID_of_Radiologist_Verification_Promise",
+"status": "KEPT"
+}],
+"stake": { "credits": 50000 },
+"signature": "Signature_from_HospitalAgent"
+}
+#+END_SRC
+
+This structure, directly implementing the generalized promise types from Promise Theory (A[B]
+xrightarrowbC[D]), is transformative. Here, the Hospital (A) promises to the Patient (C) that its DiagnosticAI (B) will perform the analysis for the Patient's (D) benefit. The accountability rests with the hospital, even though the AI is the actor.
+
+Key Promise Types for AI Systems
+
+This rich structure allows for different categories of promises that address specific alignment concerns:
+
+Capability Boundaries
+An AI promises its own limitations, such as, "I promise to refuse any request outside the /knowledge/medical domain." This is a simple promise (A
+xrightarrowbA_?) about its own behavior.
+
+Safety Guarantees
+A critical safety invariant, like "I promise never to delete user data," can be a public promise ("promisee_scope": ["*"]) with a massive stake, creating extreme economic disincentives for violation and allowing anyone to assess it.
+
+Transparency Commitments
+A promise like, "I promise to provide a chain-of-thought reasoning log for every critical decision," provides the verifiable basis for auditability.
+
+Value Alignment
+A value like "prioritize human welfare" is too vague. Instead, an AI makes a specific, assessable promise: "I promise that for any recommendation in the /finance/investment domain, I will include a risk analysis scored by a third-party RiskAssessmentAgent." This makes the value concrete and its fulfillment assessable.
+
+Merit-Based Capability Evolution: Earning Autonomy
+
+A core principle of AP is that an AI does not get to perform high-stakes actions by default. It must earn the right by building merit. This is achieved through a hierarchy of domains that are linked by conditional promises. An AI can only make credible promises in a higher-level domain conditional on having proven its trustworthiness in prerequisite, lower-level domains.
+
+#+BEGIN_SRC mermaid :file merit_based_capability_evolution.pdf
+graph TD
+subgraph "Level 1: Foundational Merit"
+A["Merit in&lt;br>/reasoning/limitation"]
+B["Merit in&lt;br>/monitoring/self"]
+end
+subgraph "Level 2: Supervised Capabilities"
+C["Promise in&lt;br>/safety/containment"]
+end
+A -- "Is a Condition for" --> C;
+B -- "Is a Condition for" --> C;
+C -- "Unlocks" --> D((Can Now Make&lt;br>Higher-Stakes Promises));
+
+style A fill:#9cf,stroke:#333
+style B fill:#9cf,stroke:#333
+style C fill:#cde,stroke:#333
+#+END_SRC
+
+The detailed AI Capability Domain Hierarchy (Levels 1-7) provides the formal dependency graph for this evolution. An AI must demonstrate high merit in domains like /reasoning/uncertainty before it is allowed to make promises in /planning/strategy. The protocol can enforce this by making the stakes for a higher-level promise prohibitively high until sufficient merit is achieved in the prerequisite domains. This creates a natural, verifiable, and economically-driven path to progressive autonomy, from heavy oversight to independent operation.
+
+Resource Staking for AI Systems: Tangible Consequences
+
+To ensure AI decisions have meaningful consequences, they must stake resources that are critical to their own operation. This gives them "skin in the game."
+
+Computational Credits: An AI stakes processing capacity. Failure leads to throttling, a direct impact on its utility.
+Access Privileges: An AI stakes its API key for a vital data source. A broken safety promise leads to temporary, programmatic revocation of that access.
+Autonomy Rights: The AI's very ability to act without oversight is a stakeable asset. A major breach of trust can automatically downgrade its operational status to require human-in-the-loop verification for all future actions.
+These stakes ensure the AI's incentives are aligned with reliable and safe operation, as promise-breaking directly degrades its ability to function.
+
+Multi-Agent Assessment and Data-Driven Trust
+
+The protocol creates a robust verification environment where AI behavior is assessed by a diverse set of independent agents, a direct implementation of Promise Theory's tenet that any agent in scope can perform an assessment.
+
+Human Experts assess performance in specialized domains (e.g., a doctor assessing a diagnostic AI).
+Peer AIs can perform rapid, automated, and scalable assessments of other AIs (e.g., a security AI auditing a code-generating AI for vulnerabilities).
+End Users provide continuous feedback on real-world utility and user experience.
+The protocol weights these assessments based on the assessor's own merit, stake, evidence quality, and independence, creating a rich, multi-faceted, and manipulation-resistant view of the AI's actual performance.
+
+Data as Labor and AI Provenance
+
+This multi-agent framework extends to the data used to train AIs. The "Data as Labor" model allows data providers to make specific, conditional promises about how their data can be used.
+
+A DataContributorAgent promises to provide a dataset, conditional on the AI-Developer-Corp promising to use it only for specific purposes and providing compensation.
+This creates a bilateral promise, a formal contract about data usage.
+The AI's final model can carry a "provenance" promise, creating a verifiable link back to the data it was trained on and the terms under which that data was provided. This is crucial for auditing bias and ensuring ethical data sourcing.
+Addressing Alignment Faking
+
+A key AI safety concern is "alignment faking," where an AI behaves correctly under observation but pursues misaligned goals when unmonitored. The Agency Protocol is uniquely equipped to address this.
+
+A Deception: In Promise Theory, this is a deception: a public promise that conflicts with a private intention.
+Multi-Context Assessment: The protocol's strength is that assessments can come from any context. If an AI behaves differently with "free tier" users versus "enterprise" users, assessments from both groups will flow into its merit calculation for the same domain, revealing the inconsistency.
+Economic Irrationality: The AI must stake resources on the promise "I will behave consistently across all user contexts." If assessments reveal it is breaking this promise, it will suffer direct economic consequences (slashed stakes) and merit degradation, making alignment faking a demonstrably unprofitable strategy, economically irrational for coalitions ≥ 5 given reference parameters.
+Conclusion: AI as Accountable Promise-Keepers
+
+By leveraging the full, nuanced framework of Promise Theory, the Agency Protocol moves AI governance beyond abstract principles. It creates a practical, scalable, and economically sound environment where AIs operate as accountable agents. They make explicit, conditional, and delegated promises; they earn autonomy through verifiable merit; and they face tangible consequences for their actions. This provides a powerful new toolkit for building a future where humanity can trust its most powerful creations.
+
+* Local Variables :noexport:
+# Local Variables:
+# org-confirm-babel-evaluate: nil
+# End:
