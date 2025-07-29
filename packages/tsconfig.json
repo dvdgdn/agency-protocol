@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "paths": {
+      "@agency-protocol/agent": ["./agent/src"],
+      "@agency-protocol/merit": ["./merit/src"],
+      "@agency-protocol/credit": ["./credit/src"],
+      "@agency-protocol/coordination": ["./coordination/src"],
+      "@agency-protocol/negotiation": ["./negotiation/src"],
+      "@agency-protocol/commitment": ["./commitment/src"],
+      "@agency-protocol/evidence": ["./evidence/src"],
+      "@agency-protocol/assessment": ["./assessment/src"]
+    }
+  },
+  "references": [
+    { "path": "./agent" },
+    { "path": "./merit" },
+    { "path": "./credit" },
+    { "path": "./coordination" },
+    { "path": "./negotiation" },
+    { "path": "./commitment" },
+    { "path": "./evidence" },
+    { "path": "./assessment" }
+  ]
+}
