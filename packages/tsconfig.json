@@ -23,13 +23,20 @@
     }
   },
   "references": [
-    { "path": "./agent" },
-    { "path": "./merit" },
-    { "path": "./credit" },
-    { "path": "./coordination" },
-    { "path": "./negotiation" },
-    { "path": "./commitment" },
-    { "path": "./evidence" },
-    { "path": "./assessment" }
+    {
+      "path": "./coordination"
+    },
+    {
+      "path": "./negotiation"
+    },
+    {
+      "path": "./commitment"
+    },
+    {
+      "path": "./evidence"
+    },
+    {
+      "path": "./assessment"
+    }
   ]
 }

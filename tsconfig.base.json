@@ -16,6 +16,10 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["development"]
+    "customConditions": ["development"],
+    "paths": {
+      "@agency/*": ["packages/*/src/index.ts"],
+      "@agency-protocol/*": ["packages/*/src/index.ts"]
+    }
   }
 }

@@ -36,3 +36,13 @@ yarn-error.log*
 next-env.d.ts
 
 .nx
+
+# build artifacts
+packages/*/dist
+packages/*/**/*.js
+packages/*/**/*.js.map
+packages/*/**/*.d.ts
+packages/*/**/*.d.ts.map
+!packages/*/jest.config.ts
+!packages/*/**/*.ts
+packages/node_modules
