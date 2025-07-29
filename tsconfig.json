@@ -4,7 +4,7 @@
   "files": [],
   "references": [
     {
-      "path": "./packages/core"
+      "path": "./packages/agent"
     },
     {
       "path": "./packages"
@@ -13,7 +13,10 @@
       "path": "./packages/infrastructure"
     },
     {
-      "path": "./packages/simulations"
-    }
+      "path": "./packages/merit"
+    },
+    {
+      "path": "./packages/credit"
+    }      
   ]
 }
