@@ -1,6 +1,7 @@
 {
   "version": 2,
-  "outputDirectory": "packages/agent-web-ui/.next",
+    "outputDirectory": "packages/agent-web-ui/.next",
+  "buildCommand": "npm run vercel-build",    
   "env": {
     "DATABASE_URL": "@DATABASE_URL",
     "JWT_SECRET": "@JWT_SECRET",
