@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "installCommand": "echo '▲ using vercel.json' && npm install --workspaces --workspaces-root",
-  "buildCommand": "echo '▲ custom build running' && npx -y add-nx-to-monorepo && npx nx run @agency-protocol/agent-web-ui:build",
+  "installCommand": "npm install --workspaces --workspaces-root",
+  "buildCommand": "CI=1 npx nx run @agency-protocol/agent-web-ui:build",
   "outputDirectory": "packages/agent-web-ui/.next"
 }
