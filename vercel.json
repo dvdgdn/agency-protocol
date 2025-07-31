@@ -1,6 +1,5 @@
 {
   "version": 2,
   "installCommand": "npm install --workspaces --workspaces-root",
-  "buildCommand": "CI=1 npx nx run @agency-protocol/agent-web-ui:build",
   "outputDirectory": "packages/agent-web-ui/.next"
 }
