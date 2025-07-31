@@ -1,4 +1,5 @@
 {
   "version": 2,
-    "outputDirectory": "packages/agent-web-ui/.next"
+  "buildCommand": "npx nx run @agency-protocol/agent-web-ui:build",
+  "outputDirectory": "packages/agent-web-ui/.next"
 }
