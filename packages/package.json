@@ -1,0 +1,36 @@
+{
+  "name": "@agency-protocol/packages",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "agent-base",
+    "agent-merit",
+    "agent-credit",
+    "agent-ui-core",
+    "agent-merit-ui",
+    "agent-credit-ui",
+    "agent-registry",
+    "agent-web-ui",
+    "coordination",
+    "negotiation",
+    "commitment",
+    "evidence",
+    "assessment"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "test": "jest",
+    "lint": "eslint . --ext .ts,.tsx",
+    "dev": "cd agent-web-ui && npm run dev"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0"
+  }
+}

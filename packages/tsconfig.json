@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "commonjs",
-    "lib": ["ES2020"],
+    "lib": ["ES2020", "DOM"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -12,9 +12,14 @@
     "declarationMap": true,
     "sourceMap": true,
     "paths": {
-      "@agency-protocol/agent": ["./agent/src"],
-      "@agency-protocol/merit": ["./merit/src"],
-      "@agency-protocol/credit": ["./credit/src"],
+      "@agency-protocol/agent-base": ["./agent-base/src"],
+      "@agency-protocol/agent-merit": ["./agent-merit/src"],
+      "@agency-protocol/agent-credit": ["./agent-credit/src"],
+      "@agency-protocol/agent-ui-core": ["./agent-ui-core/src"],
+      "@agency-protocol/agent-merit-ui": ["./agent-merit-ui/src"],
+      "@agency-protocol/agent-credit-ui": ["./agent-credit-ui/src"],
+      "@agency-protocol/agent-registry": ["./agent-registry/src"],
+      "@agency-protocol/agent-web-ui": ["./agent-web-ui/src"],
       "@agency-protocol/coordination": ["./coordination/src"],
       "@agency-protocol/negotiation": ["./negotiation/src"],
       "@agency-protocol/commitment": ["./commitment/src"],
@@ -23,20 +28,17 @@
     }
   },
   "references": [
-    {
-      "path": "./coordination"
-    },
-    {
-      "path": "./negotiation"
-    },
-    {
-      "path": "./commitment"
-    },
-    {
-      "path": "./evidence"
-    },
-    {
-      "path": "./assessment"
-    }
+    { "path": "./agent-base" },
+    { "path": "./agent-merit" },
+    { "path": "./agent-credit" },
+    { "path": "./agent-ui-core" },
+    { "path": "./agent-merit-ui" },
+    { "path": "./agent-credit-ui" },
+    { "path": "./agent-registry" },
+    { "path": "./coordination" },
+    { "path": "./negotiation" },
+    { "path": "./commitment" },
+    { "path": "./evidence" },
+    { "path": "./assessment" }
   ]
 }
