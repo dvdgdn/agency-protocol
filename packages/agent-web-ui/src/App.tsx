@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+interface Agent {
+  id: string;
+  name: string;
+}
+
 const App: React.FC = () => {
-  const [agents, setAgents] = useState([]);
+  const [agents, setAgents] = useState<Agent[]>([]);
 
   useEffect(() => {
     fetch('/api/agents')

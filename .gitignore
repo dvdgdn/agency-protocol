@@ -46,3 +46,7 @@ packages/*/**/*.d.ts.map
 !packages/*/jest.config.ts
 !packages/*/**/*.ts
 packages/node_modules
+packages/**/.next
+.next
+
+.env
