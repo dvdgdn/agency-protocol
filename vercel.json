@@ -1,5 +1,4 @@
 {
   "version": 2,
     "outputDirectory": "packages/agent-web-ui/.next",
-  "buildCommand": "npm run vercel-build"
 }
