@@ -1,11 +1,5 @@
 {
   "version": 2,
     "outputDirectory": "packages/agent-web-ui/.next",
-  "buildCommand": "npm run vercel-build",    
-  "env": {
-    "DATABASE_URL": "@DATABASE_URL",
-    "JWT_SECRET": "@JWT_SECRET",
-    "SUPABASE_SERVICE_ROLE_KEY": "@SUPABASE_SERVICE_ROLE_KEY",
-    "SUPABASE_ANON_KEY": "@SUPABASE_ANON_KEY"
-  }
+  "buildCommand": "npm run vercel-build"
 }
