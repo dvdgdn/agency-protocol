@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "vercel-build": "nx run @agency-protocol/agent-web-ui:build"
   },
   "private": true,
   "devDependencies": {
