@@ -1,6 +1,6 @@
 {
   "version": 2,
   "installCommand": "env NODE_ENV=development npm install --workspaces --workspaces-root",
-  "buildCommand": "npx -y add-nx-to-monorepo --yes && env CI=1 npx nx run @agency-protocol/agent-web-ui:build",
+  "buildCommand": "env NX_INTERACTIVE=false npx -y add-nx-to-monorepo --yes && env NX_INTERACTIVE=false CI=1 npx nx run @agency-protocol/agent-web-ui:build",
   "outputDirectory": ".next"
 }
