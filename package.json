@@ -18,7 +18,6 @@
     "@types/node": "18.16.9",
     "jest": "^30.0.2",
     "jest-environment-node": "^30.0.2",
-    "nx": "21.3.4",
     "prettier": "^2.6.2",
     "ts-jest": "^29.4.0",
     "ts-node": "10.9.1",
@@ -32,6 +31,7 @@
   ],
   "dependencies": {
     "@types/crypto-js": "^4.2.2",
-    "crypto-js": "^4.2.0"
+      "crypto-js": "^4.2.0",
+    "nx": "21.3.4"      
   }
 }
