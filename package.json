@@ -2,7 +2,10 @@
   "name": "@agency-protocol/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+"scripts": {
+  // runs when Vercel executes `npm run vercel-build`
+  "vercel-build": "nx run @agency-protocol/agent-web-ui:build"
+},
   "private": true,
   "devDependencies": {
     "@nx/eslint": "^21.3.4",
