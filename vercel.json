@@ -1,5 +1,7 @@
 {
-  "version": 2,
+    "version": 2,
+  "framework": "nextjs",
+    
     "installCommand": "env NX_INTERACTIVE=false npm install",
   "buildCommand":   "env NX_INTERACTIVE=false CI=1 npx nx run @agency-protocol/agent-web-ui:build",
 
