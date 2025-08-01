@@ -1,4 +1,4 @@
-import { prisma } from './prisma';
+import { prisma } from '../prisma';
 import type { MeritData, IMeritRepository } from '@agency-protocol/agent-merit';
 
 export class PrismaMeritRepository implements IMeritRepository {

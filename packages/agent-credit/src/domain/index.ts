@@ -5,3 +5,9 @@ export * from './entities/credit-ledger-agent.entity';
 // Value Objects
 export * from './value-objects/credit.value-object';
 export * from './value-objects/transaction.value-object';
+
+// Repository Interface
+export * from './credit.repository';
+
+// Types
+export * from './credit.types';

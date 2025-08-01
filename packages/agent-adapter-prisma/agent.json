@@ -1,0 +1,6 @@
+{
+  "name": "@agency-protocol/agent-adapter-prisma",
+  "type": "adapter",
+  "extends": [],
+  "overrides": "infrastructure"
+}

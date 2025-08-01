@@ -1,0 +1,7 @@
+{
+  "name": "@agency-protocol/agent-merit",
+  "type": "logic",
+  "extends": [
+    "@agency-protocol/agent-base"
+  ]
+}

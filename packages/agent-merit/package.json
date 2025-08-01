@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@agency-protocol/agent-base": "^0.1.0",
-    "@agency-protocol/agent-credit": "^0.1.0"
+    "@agency-protocol/agent-credit": "^0.1.0",
+    "@nestjs/common": "*",
+    "@nestjs/core": "*"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

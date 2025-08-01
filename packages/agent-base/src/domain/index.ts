@@ -10,3 +10,6 @@ export * from './events/domain-event';
 
 // Interfaces
 export * from './interfaces/agent.interfaces';
+
+// Repositories
+export * from './agent.repository';

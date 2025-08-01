@@ -1,0 +1,7 @@
+{
+  "name": "@agency-protocol/agent-registry",
+  "type": "logic",
+  "extends": [
+    "@agency-protocol/agent-base"
+  ]
+}

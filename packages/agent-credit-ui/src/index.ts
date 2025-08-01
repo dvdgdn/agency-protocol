@@ -1,1 +1,1 @@
-export * from './lib/CreditView';
+export * from './interface/components/CreditView';

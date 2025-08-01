@@ -1,0 +1,5 @@
+{
+  "name": "@agency-protocol/agent-server",
+  "type": "server",
+  "extends": []
+}

@@ -2,7 +2,7 @@ import './global.css';
 
 export const metadata = {
   title: 'Agency Protocol Dashboard',
-  description: 'Agency Protocol - Parallel Agent Model',
+  description: 'Agency Protocol',
 };
 
 export default function RootLayout({

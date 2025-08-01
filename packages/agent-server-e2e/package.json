@@ -1,0 +1,27 @@
+{
+  "name": "@agency-protocol/agent-server-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "agent-server-e2e",
+    "implicitDependencies": [
+      "agent-server"
+    ],
+    "targets": {
+      "e2e": {
+        "executor": "@nx/jest:jest",
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "options": {
+          "jestConfig": "packages/agent-server-e2e/jest.config.ts",
+          "passWithNoTests": true
+        },
+        "dependsOn": [
+          "agent-server:build",
+          "agent-server:serve"
+        ]
+      }
+    }
+  }
+}

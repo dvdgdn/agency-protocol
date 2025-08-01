@@ -11,6 +11,10 @@ export * from './domain/merit.types';
 // Application exports
 export * from './application/merit.service';
 
-// Interface exports (to be implemented)
-// export * from './interface/cli/merit-cli';
-// export * from './interface/api/merit-api';
+// Interface exports
+export { MeritModule } from './interface/merit.module';
+export { MeritController } from './interface/api/merit.controller';
+export { MERIT_REPOSITORY_TOKEN } from './interface/merit.module';
+
+// Repository interface
+export * from './domain/merit.repository';

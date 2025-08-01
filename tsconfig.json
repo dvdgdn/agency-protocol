@@ -14,6 +14,12 @@
     },
     {
       "path": "./packages/agent-adapter-prisma"
+    },
+    {
+      "path": "./packages/agent-server-e2e"
+    },
+    {
+      "path": "./packages/agent-server"
     }
   ]
 }

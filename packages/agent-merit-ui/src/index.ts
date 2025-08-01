@@ -1,1 +1,1 @@
-export * from './lib/MeritView';
+export * from './interface/components/MeritView';

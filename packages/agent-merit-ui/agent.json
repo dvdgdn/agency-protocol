@@ -1,0 +1,8 @@
+{
+  "name": "@agency-protocol/agent-merit-ui",
+  "type": "ui",
+  "extends": [
+    "@agency-protocol/agent-ui-core"
+  ],
+  "represents": "@agency-protocol/agent-merit"
+}
