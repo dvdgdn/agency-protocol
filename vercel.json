@@ -1,9 +1,7 @@
 {
   "version": 2,
-
-    "installCommand": "env NX_INTERACTIVE=false NODE_ENV=development npm install --workspaces --workspaces-root && npx --yes npm@latest ls nx @nx/devkit @nx/workspace --depth=0 || true",
-
-  "buildCommand": "env NX_INTERACTIVE=false CI=1 npx nx run @agency-protocol/agent-web-ui:build",
+    "installCommand": "env NX_INTERACTIVE=false npm install",
+  "buildCommand":   "env NX_INTERACTIVE=false CI=1 npx nx run @agency-protocol/agent-web-ui:build",
 
   "outputDirectory": "packages/agent-web-ui/.next"
 }
