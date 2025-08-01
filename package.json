@@ -2,8 +2,7 @@
   "name": "@agency-protocol/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-  },
+  "scripts": {},
   "private": true,
   "devDependencies": {
     "@nx/eslint": "^21.3.4",
@@ -31,7 +30,7 @@
   ],
   "dependencies": {
     "@types/crypto-js": "^4.2.2",
-      "crypto-js": "^4.2.0",
-    "nx": "21.3.4"      
+    "crypto-js": "^4.2.0",
+    "nx": "^21.3.10"
   }
 }
