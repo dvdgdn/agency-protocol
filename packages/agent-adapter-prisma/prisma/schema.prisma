@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model cas_store {
+  cid        String    @id
+  mime_type  String    @default("application/octet-stream")
+  data       Bytes
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+// Define the Merit table
+model Merit {
+  id          String   @id @default(cuid())
+  agentId     String   @unique
+  meritScore  Int
+  lastUpdated DateTime @updatedAt
+  createdAt   DateTime @default(now())
+}

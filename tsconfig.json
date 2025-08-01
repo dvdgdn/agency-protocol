@@ -11,6 +11,9 @@
     },
     {
       "path": "./packages/credit"
-    }      
+    },
+    {
+      "path": "./packages/agent-adapter-prisma"
+    }
   ]
 }
