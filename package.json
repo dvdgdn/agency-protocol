@@ -29,10 +29,10 @@
     "packages"
   ],
   "dependencies": {
-    "@nx/devkit": "^21.3.10",
-    "@nx/workspace": "^21.3.10",
+    "@nx/devkit": "21.3.10",
+    "@nx/workspace": "21.3.10",
     "@types/crypto-js": "^4.2.2",
     "crypto-js": "^4.2.0",
-    "nx": "^21.3.10"
+    "nx": "21.3.10"
   }
 }
