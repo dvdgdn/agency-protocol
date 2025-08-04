@@ -10,5 +10,15 @@
     "types": ["node"]
   },
   "include": ["src/**/*.ts"],
-  "references": []
+  "references": [
+    {
+      "path": "../agent-credit"
+    },
+    {
+      "path": "../agent-base"
+    },
+    {
+      "path": "../agent-merit"
+    }
+  ]
 }

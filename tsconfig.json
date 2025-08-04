@@ -4,22 +4,13 @@
   "files": [],
   "references": [
     {
-      "path": "./packages/agent"
-    },
-    {
-      "path": "./packages/merit"
-    },
-    {
-      "path": "./packages/credit"
-    },
-    {
       "path": "./packages/agent-adapter-prisma"
     },
     {
       "path": "./packages/agent-server-e2e"
     },
     {
-      "path": "./packages/agent-server"
+      "path": "./packages"
     }
   ]
 }

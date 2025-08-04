@@ -22,13 +22,42 @@
     "eslint": "^8.0.0",
     "eslint-config-next": "14.0.0"
   },
-"targets": {
-    "build": {
-      "executor": "@nx/next:build",
-      "options": {
-        "outputPath": "packages/agent-web-ui/.next",
-        "root": "packages/agent-web-ui"
+  "nx": {
+    "name": "agent-web-ui",
+    "targets": {
+      "build": {
+        "executor": "@nx/next:build",
+        "outputs": ["{options.outputPath}"],
+        "defaultConfiguration": "production",
+        "options": {
+          "outputPath": "dist/packages/agent-web-ui"
+        },
+        "configurations": {
+          "development": {
+            "outputPath": "packages/agent-web-ui"
+          },
+          "production": {}
+        }
+      },
+      "serve": {
+        "executor": "@nx/next:server",
+        "defaultConfiguration": "development",
+        "options": {
+          "buildTarget": "agent-web-ui:build",
+          "dev": true,
+          "port": 4200
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "agent-web-ui:build:development",
+            "dev": true
+          },
+          "production": {
+            "buildTarget": "agent-web-ui:build:production",
+            "dev": false
+          }
+        }
       }
     }
-  }    
+  }
 }

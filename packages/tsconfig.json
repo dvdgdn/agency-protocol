@@ -28,17 +28,20 @@
     }
   },
   "references": [
-    { "path": "./agent-base" },
-    { "path": "./agent-merit" },
-    { "path": "./agent-credit" },
-    { "path": "./agent-ui-core" },
-    { "path": "./agent-merit-ui" },
-    { "path": "./agent-credit-ui" },
-    { "path": "./agent-registry" },
-    { "path": "./coordination" },
-    { "path": "./negotiation" },
-    { "path": "./commitment" },
-    { "path": "./evidence" },
-    { "path": "./assessment" }
+    {
+      "path": "./coordination"
+    },
+    {
+      "path": "./negotiation"
+    },
+    {
+      "path": "./commitment"
+    },
+    {
+      "path": "./evidence"
+    },
+    {
+      "path": "./assessment"
+    }
   ]
 }

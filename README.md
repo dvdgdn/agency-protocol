@@ -1,355 +1,111 @@
-# Agency Protocol
+Agency Protocol
+A decentralized, infrastructure-agnostic protocol for building trust among autonomous agents using cryptographically signed promises.
 
-A decentralized trust infrastructure where autonomous agents make explicit, cryptographically-signed promises about their behavior, creating emergent trustworthiness through economic incentives rather than external enforcement.
+The Agency Protocol is a system designed to facilitate trust and coordination between any type of autonomous agent—be it a human, an AI, or an organization. It leverages principles from promise theory to create a network where agents make explicit, stake-backed commitments. The protocol then assesses whether these promises are kept, creating a quantifiable, domain-specific reputation score (merit) for each agent.
 
-## Table of Contents
+Core Principles
+This repository is built on a strict set of architectural principles to ensure clarity, consistency, and maximum modularity. Understanding these principles is key to understanding the codebase.
 
-- [Overview](#overview)
-- [Key Features](#key-features)
-- [Architecture](#architecture)
-- [Getting Started](#getting-started)
-- [Development](#development)
-- [Project Structure](#project-structure)
-- [Core Concepts](#core-concepts)
-- [Contributing](#contributing)
-- [Testing](#testing)
-- [Documentation](#documentation)
-- [License](#license)
+Everything is an Agent: Every package within the packages/ directory is an agent. There are no generic "shared" or "feature" libraries. Each package has a clear, defined role as a specific type of agent.
 
-## Overview
+Consistent Internal Structure: Every agent, regardless of its type, adheres to the same internal Domain-Driven Design (DDD) structure: application/, domain/, infrastructure/, and interface/. This creates a predictable and easy-to-navigate codebase.
 
-The Agency Protocol implements a promise-theoretic approach to decentralized trust, where:
+Explicit Relationships: Every agent contains an agent.json manifest file that explicitly declares its type, its dependencies on other agents (extends), and its relationship to the concepts it represents (represents). This eliminates ambiguity and makes the architecture self-documenting.
 
-- **Agents** are autonomous entities (humans, AIs, organizations) that can only make promises about their own behavior
-- **Promises** are explicit, cryptographically signed commitments with economic stakes
-- **Assessments** evaluate whether promises were kept, creating reputation (merit) and economic consequences
-- **Trust emerges** from aligned incentives rather than central authority
+Composition Over Inheritance: Agents are built by composing functionality from ancestor agents. This is used for both backend logic (e.g., agent-merit extends the domain of agent-base) and frontend components (e.g., agent-merit-ui uses components from agent-ui-core).
 
-### Why Agency Protocol?
+True Infrastructure Agnosticism: The core logic of an agent is completely decoupled from infrastructure concerns like databases. Logic agents define abstract contracts (e.g., IMeritRepository), and a separate adapter agent provides the concrete implementation (e.g., PrismaMeritRepository), which is injected at runtime by the main server agent.
 
-Traditional trust systems rely on central authorities or reputation scores that can be gamed. The Agency Protocol creates a self-enforcing system where:
+Repository Structure: The Parallel Agent Model
+The architecture is designed around a "Parallel Agent Model," which enforces a strict separation of concerns between backend logic, frontend UI, and infrastructure.
 
-1. **Economic alignment**: Breaking promises costs more than keeping them
-2. **Domain-specific trust**: Merit in one domain doesn't transfer to others
-3. **Decentralized verification**: Any agent can assess any promise
-4. **Progressive autonomy**: Agents earn greater capabilities through proven trustworthiness
+.
+└── packages/
+    ├── agent-server/           # RUNNABLE: The NestJS API Host (The Composer Root)
+    ├── agent-web-ui/           # RUNNABLE: The Next.js Web App (The UI Host)
+    │
+    ├── agent-base/             # HEADLESS: Foundational Logic & Contracts
+    ├── agent-merit/            # HEADLESS: Merit Domain Logic
+    │
+    ├── agent-ui-core/          # UI: The Base UI Agent (Design System)
+    ├── agent-merit-ui/         # UI: Extends agent-ui-core for Merit
+    │
+    └── agent-adapter-prisma/   # INFRASTRUCTURE: Concrete DB Implementations
 
-## Key Features
+Agent Types
+Logic Agents (agent-*): Headless packages containing the core DDD business logic for a specific domain (e.g., agent-merit). They are infrastructure-agnostic.
 
-- 🔐 **Cryptographic Identity**: All agents and promises are content-addressed and signed
-- 💰 **Dual Currency System**: Transferable credits for economic stakes, non-transferable merit for reputation
-- 🌳 **Hierarchical Promise Inheritance**: Agents compose promises from their parents in the type hierarchy
-- 🔄 **Cycle Detection**: Prevents circular dependencies in inheritance and promise chains
-- ⚡ **Batch Processing**: Efficient merit and credit updates with configurable intervals
-- 🎯 **Domain Isolation**: Trust is contextual and domain-specific
-- 🛡️ **Multiple Assessment Types**: Different risk/reward profiles for various validation needs
+UI Agents (agent-*-ui): Packages containing only the React components and hooks needed to render a visual representation of a corresponding logic agent.
 
-## Architecture
+Adapter Agents (agent-adapter-*): Infrastructure-specific packages that provide concrete implementations of the abstract repository interfaces defined in the logic agents.
 
-The project follows Domain-Driven Design (DDD) principles with clear separation of concerns:
+Runnable Agents (agent-server, agent-web-ui): These are the only executable packages. They act as hosts, composing the various logic, UI, and adapter agents into a running application.
 
-```
-agency-protocol/
-├── abm/                    # Agent-Based Modeling simulations
-│   ├── tournament-results/ # Tournament simulation outputs
-│   └── *.py               # Various ABM scenarios and tests
-├── agency-protocol/        # Main protocol implementation
-│   ├── packages/          # Core package structure
-│   └── jest/tsconfig      # Testing configuration
-├── coq/                    # Formal verification proofs
-│   └── *.v                # Coq proof files for theorems
-├── docs/                   # Documentation and whitepapers
-│   ├── whitepaper.org     # System design document
-│   └── yellowpaper.org    # Technical specification
-├── features/               # Gherkin specifications
-│   ├── digital_twin/      # Digital twin features
-│   └── *.feature          # Feature specifications
-└── packages/              # Additional packages (empty currently)
-```
+Getting Started
+Follow these steps to get the Agency Protocol platform running on your local machine.
 
-### Technology Stack
+Prerequisites
+Node.js (v18 or later)
 
-- **Framework**: NX Monorepo
-- **Language**: TypeScript
-- **Testing**: Jest
-- **Build**: SWC
-- **Architecture**: Domain-Driven Design (DDD)
+npm (or your preferred package manager)
 
-## Getting Started
+A Supabase account and a new project created.
 
-### Prerequisites
+1. Installation
+Clone the repository and install the dependencies.
 
-- Node.js 18+
-- npm or yarn
-- Git
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/agency-protocol.git
-cd agency-protocol
-
-# Install dependencies in the main protocol directory
+git clone https://github.com/dvdgdn/agency-protocol.git
 cd agency-protocol
 npm install
 
-# Build all packages
-npm run build
-```
-
-### Quick Example
-
-```typescript
-import { Agent, Promise, MeritableAssessment } from '@agency-protocol/domain';
-
-// Create an agent
-const deliveryAgent = new Agent({
-  id: 'delivery-agent-001',
-  public_key: 'pubkey...',
-  signature: 'sig...',
-  agent_type: 'DeliveryAgent',
-  parent_type: 'ServiceAgent'
-});
-
-// Make a promise
-const promise = new Promise({
-  promiser_id: deliveryAgent.id,
-  promisee_scope: ['customer-123'],
-  body: {
-    domain: '/logistics/delivery/_deliversWithinHours',
-    parameters: { hours: 24 }
-  },
-  stake: { credits: 100 },
-  signature: 'promise-sig...'
-});
-
-// Assess the promise
-const assessment = new MeritableAssessment({
-  assessor_id: 'customer-123',
-  subject_promise_id: promise.cid,
-  judgement: 'KEPT',
-  domain_cid: 'domain-cid...',
-  signature: 'assessment-sig...'
-});
-```
-
-## Development
-
-### Running Tests
-
-```bash
-# Run all tests
-npm test
-
-# Run tests for a specific package
-nx test @agency-protocol/domain
-
-# Run tests in watch mode
-nx test @agency-protocol/domain --watch
-```
-
-### Building
+2. Environment Setup
+The project uses a Supabase Postgres database.
 
-```bash
-# Build all packages
-npm run build
-
-# Build specific package
-nx build @agency-protocol/domain
-```
+Create a .env file in the root of the project.
 
-### Linting
-
-```bash
-# Lint all packages
-npm run lint
-
-# Lint specific package
-nx lint @agency-protocol/domain
-```
-
-## Project Structure
-
-### Core Components
-
-#### Agent-Based Modeling (`abm/`)
-
-Python-based simulations for protocol behavior analysis:
-- Tournament simulations with different agent strategies
-- Treasury stress testing
-- Attack scenario modeling
-- Multi-domain asynchronous simulations
-
-#### Protocol Implementation (`agency-protocol/`)
+Go to your Supabase project's Settings > Database page.
 
-The TypeScript/NX implementation:
-- **packages/**: Core domain and infrastructure code
-- **jest.config.ts**: Testing configuration
-- **nx.json**: Monorepo configuration
-
-#### Formal Verification (`coq/`)
+Copy the Connection string and add it to your .env file, replacing [YOUR-PASSWORD] with your database password. You will need two versions: one for Prisma Client (with pg-bouncer) and one for Prisma Migrate.
 
-Mathematical proofs of protocol properties:
-- Consensus detection theorems
-- Merit update correctness
-- Error tolerance bounds
-- Stake function properties
+# .env
+DATABASE_URL="prisma://postgres.[YOUR-SUPABASE-ID].supabase.co:6543/postgres?pg-bouncer=true"
+DIRECT_URL="postgres://postgres:[YOUR-PASSWORD]@[YOUR-SUPABASE-ID].supabase.co:5432/postgres"
 
-#### Feature Specifications (`features/`)
+3. Database Migration
+Run the Prisma migration to create the necessary tables in your Supabase database.
 
-Gherkin specifications defining behavior:
-- Core protocol features (agents, promises, assessments)
-- Digital twin capabilities
-- Domain-specific implementations (healthcare, supply chain)
-- Security and privacy requirements
+npx prisma migrate dev --name "initial-setup" --schema=./packages/agent-adapter-prisma/src/infrastructure/prisma/schema.prisma
 
-## Core Concepts
+4. Running the Platform
+The platform consists of two separate, runnable agents: the backend server and the frontend web app. You will need to run them in two separate terminal windows.
 
-### Promise Lifecycle
+Terminal 1: Start the API Server
 
-```
-Intention → Promise (+ Stake) → Assessment (+ Evidence) → Merit/Credit Update
-```
+nx serve agent-server
 
-### Promise Object Structure
+This will start the NestJS backend on http://localhost:3000.
 
-```json
-{
-  "promiser_id": "agent-cid",
-  "promisee_scope": ["*"],
-  "body": {
-    "domain": "/logistics/delivery/_deliversWithinHours",
-    "parameters": { "hours": 48 }
-  },
-  "stake": { "credits": 75 },
-  "signature": "..."
-}
-```
+Terminal 2: Start the Web App
 
-### Assessment Types
+nx serve agent-web-ui
 
-1. **Meritable**: Standard assessment with merit at risk
-2. **Disputable**: Higher risk/reward for contentious promises
-3. **Creditable**: Credit-staked assessments
-4. **Delayable**: Anonymous assessments with time delay
-5. **Includable**: Pre-authorized assessments
+This will start the Next.js frontend on http://localhost:4200.
 
-### Economic Model
+You can now open http://localhost:4200 in your browser to view the running application.
 
-- **Stake Formula**: `S_p(M) = S_base × (1 - w(M))`
-- **Merit Impact**: 
-  - Keeping promises: `ΔM⁺ = γ_d × (1 - M_a,d)`
-  - Breaking promises: `ΔM⁻ = -λ_d × γ_d × M_a,d`
-- **Asymmetric penalties**: λ ≥ 4 recommended
+Technology Stack
+Monorepo: Nx
 
-## Contributing
+Backend: NestJS
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+Frontend: Next.js & React
 
-### Development Process
+Database ORM: Prisma
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Database: Supabase (Postgres)
 
-### Coding Standards
+Language: TypeScript
 
-- Use TypeScript for all new code
-- Follow the existing code style
-- Write tests for new functionality
-- Update documentation as needed
-- Ensure all tests pass before submitting PR
 
-### Commit Messages
-
-Follow conventional commits:
-- `feat:` New features
-- `fix:` Bug fixes
-- `docs:` Documentation changes
-- `test:` Test additions or changes
-- `refactor:` Code refactoring
-- `chore:` Maintenance tasks
-
-## Testing
-
-The project uses Jest for testing. Tests are colocated with source files.
-
-```bash
-# Run all tests
-npm test
-
-# Run with coverage
-npm run test:coverage
-
-# Run specific test file
-nx test @agency-protocol/domain --testFile=agent.entity.spec.ts
-```
-
-### Test Structure
-
-- Unit tests for domain logic
-- Integration tests for services
-- E2E tests for complete workflows
-
-## Documentation
-
-- [Whitepaper](docs/whitepaper.org) - Comprehensive system design
-- [Yellow Paper](docs/yellowpaper.org) - Technical specification
-- [API Documentation](docs/api/index.md) - Generated API docs
-- [Architecture Decision Records](docs/adr/) - Key design decisions
-
-## Roadmap
-
-### Phase 1: Foundation (Current)
-- ✅ Core domain implementation
-- ✅ Assessment types
-- ✅ Batch processing
-- 🔄 Agent implementations
-- 🔄 Application services
-
-### Phase 2: First Vertical
-- Goal Engine marketplace
-- Dispute resolution system
-- Basic governance
-
-### Phase 3: Ecosystem
-- SDK for third-party developers
-- Advanced merit algorithms
-- Decentralized governance transition
-
-## Security
-
-### Reporting Security Issues
-
-Please report security vulnerabilities to security@agencyprotocol.org. Do not open public issues for security concerns.
-
-### Security Features
-
-- Content-addressed storage prevents tampering
-- Cryptographic signatures on all promises
-- Economic stakes align incentives
-- Cycle detection prevents attack vectors
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Promise Theory by Mark Burgess
-- The broader Web3 and cryptoeconomics community
-- Contributors and early adopters
-
-## Links
-
-- [Website](https://agencyprotocol.org)
-- [Documentation](https://docs.agencyprotocol.org)
-- [Discord Community](https://discord.gg/agencyprotocol)
-- [Twitter](https://twitter.com/agencyprotocol)
-
----
-
-Built with ❤️ for a more trustworthy future
+License
+This project is licensed under the MIT License. See the LICENSE file for details.

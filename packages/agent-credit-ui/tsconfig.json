@@ -16,8 +16,5 @@
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "**/*.test.tsx", "**/*.spec.tsx"],
-  "references": [
-    { "path": "../agent-ui-core" },
-    { "path": "../agent-credit" }
-  ]
+  "references": []
 }

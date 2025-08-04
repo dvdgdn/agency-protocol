@@ -2,7 +2,9 @@
   "name": "@agency-protocol/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "nx run-many --target=dev --projects=agent-server,agent-web-ui --parallel"
+  },
   "private": true,
   "devDependencies": {
     "@nestjs/schematics": "^11.0.0",

@@ -14,5 +14,13 @@
   "include": [
     "src/**/*.ts"
   ],
-  "exclude": []
+  "exclude": [],
+  "references": [
+    {
+      "path": "../agent-adapter-prisma/tsconfig.lib.json"
+    },
+    {
+      "path": "../agent-merit"
+    }
+  ]
 }
