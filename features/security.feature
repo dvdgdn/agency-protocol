@@ -1,5 +1,5 @@
 Feature: Security and Handling Malicious Behavior
-  The Agency Protocol must ensure authenticity and integrity of all operations
+  The Promise Protocol must ensure authenticity and integrity of all operations
   All interactions are based on cryptographically signed promises and assessments
   Merit and credit calculations are verifiable through signed assessment chains
   Batch processing ensures consistent system state updates
@@ -284,3 +284,19 @@ Feature: Security and Handling Malicious Behavior
       | Temporary Suspension | Temporarily block agents involved      |
       | Alert Security   | Notify security teams of potential attacks |
     And ensure the system remains responsive and secure against denial of service attacks via cycles
+
+@phase1 @abuse
+Feature: Abuse resistance and safety limits
+
+  @phase1 @abuse @rate_limit
+  Scenario: Rate limit PromiseCard creation per agent
+    Given "Agent A" has created 100 PromiseCards in the last hour
+    When "Agent A" attempts to create another PromiseCard
+    Then the system rejects it with "RATE_LIMIT_EXCEEDED"
+
+  @phase2 @abuse @collusion
+  Scenario: Detect repeated mutual assessments as a collusion signal
+    Given "Assessor X" has assessed 50 promises for "Agent A"
+    And "Agent A" has assessed 50 promises for "Assessor X"
+    When the system computes reputations
+    Then it emits an anomaly "MUTUAL_ASSESSMENT_CLUSTER"

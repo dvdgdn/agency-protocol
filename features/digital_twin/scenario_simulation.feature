@@ -1,4 +1,4 @@
-Feature: Agency Protocol Governed Scenario Simulation and Model Validation for Digital Twins
+Feature: Promise Protocol Governed Scenario Simulation and Model Validation for Digital Twins
   In order to reliably test hypothetical conditions and validate twin model fidelity using AP
   As an Engineer, interacting with a "Simulation Agent"
   I want to inject scenario parameters, run simulations, and assess the simulation model's predictive promises.

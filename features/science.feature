@@ -4,7 +4,7 @@ Feature: Research Funding Transparency and Accountability
   So that valuable research isn't blocked by profit motives
 
   Background:
-    Given the Agency Protocol is implemented for scientific research
+    Given the Promise Protocol is implemented for scientific research
     And researchers can make promises about their work
     And funding sources are tracked as agents
     And all assessments are publicly recorded

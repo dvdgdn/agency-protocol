@@ -1,4 +1,4 @@
-Feature: Agency Protocol Driven Accountability and Remediation for Digital Twins
+Feature: Promise Protocol Driven Accountability and Remediation for Digital Twins
   In order to ensure Digital Twin Agents maintain their promised performance and address failures
   As a System Operator or affected Stakeholder
   I want to see consequences for broken promises and trigger verifiable remediation actions.

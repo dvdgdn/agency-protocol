@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Build packages in dependency order
-echo "Building Agency Protocol packages..."
+echo "Building Promise Protocol packages..."
 
 cd packages
 

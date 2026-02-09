@@ -1,5 +1,5 @@
 """
-Agency Protocol – Asynchronous, Multi-Domain Repeated Game ABM
+Promise Protocol – Asynchronous, Multi-Domain Repeated Game ABM
 =============================================================
 
 This implementation translates the Coq formalization into a practical ABM that:

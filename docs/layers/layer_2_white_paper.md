@@ -1,4 +1,4 @@
-# The Agency Protocol: Layer 2 - Portfolio Management and Merit-Based Progression
+# The Promise Protocol: Layer 2 - Portfolio Management and Merit-Based Progression
 
 **A Whitepaper on Scaling Individual Agency Through Multiple Concurrent Promise Cycles**
 
@@ -6,7 +6,7 @@
 
 ## Executive Summary
 
-Layer 2 of the Agency Protocol addresses the transition from single promise competency to multi-promise capacity. While Layer 1 establishes the foundational ability to execute individual promise cycles with reliability, Layer 2 develops the capability to manage multiple concurrent commitments across different life domains without coherence collapse or capacity overload.
+Layer 2 of the Promise Protocol addresses the transition from single promise competency to multi-promise capacity. While Layer 1 establishes the foundational ability to execute individual promise cycles with reliability, Layer 2 develops the capability to manage multiple concurrent commitments across different life domains without coherence collapse or capacity overload.
 
 The layer introduces a developmental progression model based on demonstrated merit rather than time-in-practice or self-assessment. Practitioners advance from serial promise-making through parallel promise management to systemic promise orchestration, with each stage gated by evidence of capacity at the previous level. This merit-based approach ensures that complexity increases only when foundation is sufficient, preventing the premature multi-promise attempts that frequently produce failure cascades and undermine agency development.
 
@@ -20,7 +20,7 @@ The layer also establishes the domain-based merit tracking system that enables e
 
 ## Introduction: The Scaling Challenge
 
-Layer 1 of the Agency Protocol focuses on mastering the three-phase promise cycle: Pre-Commit sensemaking and triage, Commit installation and embedding, and Post-Commit execution with learning extraction. Practitioners who complete Layer 1 work demonstrate reliable capacity to make and keep individual promises within the bounds of careful pre-commit assessment. This foundation is necessary but insufficient for the agency that real life demands.
+Layer 1 of the Promise Protocol focuses on mastering the three-phase promise cycle: Pre-Commit sensemaking and triage, Commit installation and embedding, and Post-Commit execution with learning extraction. Practitioners who complete Layer 1 work demonstrate reliable capacity to make and keep individual promises within the bounds of careful pre-commit assessment. This foundation is necessary but insufficient for the agency that real life demands.
 
 Human beings do not operate through single serial commitments. We maintain multiple concurrent obligations across professional, relational, health, creative, civic, and personal development domains. These commitments exist simultaneously and interact in complex ways. A work deadline affects available energy for relationship maintenance. A health crisis disrupts professional commitments. A creative breakthrough requires renegotiating other time allocations. The capacity to manage this complexity while maintaining promise integrity represents a distinct capability beyond single promise execution.
 

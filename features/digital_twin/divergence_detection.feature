@@ -1,4 +1,4 @@
-Feature: Agency Protocol Enhanced Digital Twin Divergence Assessment
+Feature: Promise Protocol Enhanced Digital Twin Divergence Assessment
   In order to assess the synchronization promise of a Digital Twin Agent
   As a Platform Operator, relying on a "Divergence Detection Agent"
   I want automated divergence checks resulting in formal assessments and alerts.

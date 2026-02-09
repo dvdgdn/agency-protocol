@@ -1,6 +1,6 @@
 # Local Development Guide
 
-This guide provides detailed instructions for setting up and running the Agency Protocol platform locally.
+This guide provides detailed instructions for setting up and running the Promise Protocol platform locally.
 
 ## Quick Start
 

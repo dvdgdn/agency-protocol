@@ -1,4 +1,4 @@
-# Agency Protocol Proof Improvements Summary
+# Promise Protocol Proof Improvements Summary
 
 This document summarizes the improvements made to address the gaps identified in the proof audit.
 
@@ -6,27 +6,27 @@ This document summarizes the improvements made to address the gaps identified in
 
 | Area | Previous Status | Current Status | Files Added/Modified |
 |------|----------------|----------------|---------------------|
-| Single-round best-response (Thm 1) | 🟨 Assumed stake formula works | 🟩 Proven with constraints | `AgencyProtocol_StakeFunction.v`, `AgencyProtocol_T1_C1.v` |
-| Merit invariant (Thm 9) | 🟨 Hypothesis merit_bounded | 🟩 Proven via update function | `AgencyProtocol_MeritUpdate.v`, `AgencyProtocol_T9_completed.v` |
-| Coalition-proofness (Thm 10) | 🟩 Toy model only | 🟩 Generalized to heterogeneous agents | `AgencyProtocol_T10_Generalized.v` |
-| Error-tolerance (Thm 11) | 🟨 Abstract ΔC, ΔD | 🟩 Linked to protocol formulas | `AgencyProtocol_ErrorTolerance_Derived.v` |
-| Finite look-ahead (Thm 12) | 🟨 Axiomatized G_max, FOV | 🟩 Derived from protocol parameters | `AgencyProtocol_DerivedConstants.v`, `AgencyProtocol_T12.v` |
-| Information-theoretic detection (Thm 6) | 🟨 Abstract divergence d | 🟩 Derived from consensus algorithm | `AgencyProtocol_ConsensusDetection.v`, `AgencyProtocol_T6.v` |
-| Parameter feasibility | ⬜ No witness | 🟩 Concrete witness provided | `AgencyProtocol_ParamsWitness.v` |
+| Single-round best-response (Thm 1) | 🟨 Assumed stake formula works | 🟩 Proven with constraints | `PromiseProtocol_StakeFunction.v`, `PromiseProtocol_T1_C1.v` |
+| Merit invariant (Thm 9) | 🟨 Hypothesis merit_bounded | 🟩 Proven via update function | `PromiseProtocol_MeritUpdate.v`, `PromiseProtocol_T9_completed.v` |
+| Coalition-proofness (Thm 10) | 🟩 Toy model only | 🟩 Generalized to heterogeneous agents | `PromiseProtocol_T10_Generalized.v` |
+| Error-tolerance (Thm 11) | 🟨 Abstract ΔC, ΔD | 🟩 Linked to protocol formulas | `PromiseProtocol_ErrorTolerance_Derived.v` |
+| Finite look-ahead (Thm 12) | 🟨 Axiomatized G_max, FOV | 🟩 Derived from protocol parameters | `PromiseProtocol_DerivedConstants.v`, `PromiseProtocol_T12.v` |
+| Information-theoretic detection (Thm 6) | 🟨 Abstract divergence d | 🟩 Derived from consensus algorithm | `PromiseProtocol_ConsensusDetection.v`, `PromiseProtocol_T6.v` |
+| Parameter feasibility | ⬜ No witness | 🟩 Concrete witness provided | `PromiseProtocol_ParamsWitness.v` |
 
 ## Key Improvements
 
-### 1. Merit Update Function (`AgencyProtocol_MeritUpdate.v`)
+### 1. Merit Update Function (`PromiseProtocol_MeritUpdate.v`)
 - **Added**: Definition of `update_merit` function that clamps values to [0,1]
 - **Proved**: Merit values remain bounded after any sequence of updates
 - **Impact**: Removes the need to assume `merit_bounded` as a hypothesis
 
-### 2. Stake Function Lemma (`AgencyProtocol_StakeFunction.v`)
+### 2. Stake Function Lemma (`PromiseProtocol_StakeFunction.v`)
 - **Added**: Proof that stake function `S_p = S_base * (1 - w(M))` satisfies required bounds
 - **Identified**: Need for additional constraints when `w` can equal 1
 - **Provided**: Alternative formulations with `w` strictly bounded or merit bonus sufficient
 
-### 3. Generalized Coalition Proof (`AgencyProtocol_T10_Generalized.v`)
+### 3. Generalized Coalition Proof (`PromiseProtocol_T10_Generalized.v`)
 - **Extended**: Coalition-proofness to handle:
   - Heterogeneous payoffs (ΔK_i, ΔB_i)
   - Variable stakes S_i per agent
@@ -35,22 +35,22 @@ This document summarizes the improvements made to address the gaps identified in
 - **Added**: Special case recovering homogeneous result
 
 ### 4. Derived Protocol Constants
-#### Error Tolerance (`AgencyProtocol_ErrorTolerance_Derived.v`)
+#### Error Tolerance (`PromiseProtocol_ErrorTolerance_Derived.v`)
 - **Derived**: ΔC from stake function and merit rewards
 - **Derived**: ΔD from maximum gain and merit penalties
 - **Proved**: Error tolerance improves with higher merit
 
-#### G_max and FOV (`AgencyProtocol_DerivedConstants.v`)
+#### G_max and FOV (`PromiseProtocol_DerivedConstants.v`)
 - **Derived**: G_max from number of domains, task values, commission rates
 - **Derived**: FOV from discount factor, protocol parameters, and threshold
 - **Added**: Concrete parameter relationships
 
-### 5. Consensus Detection (`AgencyProtocol_ConsensusDetection.v`)
+### 5. Consensus Detection (`PromiseProtocol_ConsensusDetection.v`)
 - **Modeled**: Concrete consensus algorithm with noise bounds
 - **Derived**: Minimum KL divergence per dishonest assessor
 - **Connected**: Abstract parameter `d` to concrete algorithm properties
 
-### 6. Parameter Feasibility Witness (`AgencyProtocol_ParamsWitness.v`)
+### 6. Parameter Feasibility Witness (`PromiseProtocol_ParamsWitness.v`)
 - **Provided**: Concrete parameter values that satisfy all constraints
 - **Verified**: Machine-checked proof that constraints are simultaneously satisfiable
 - **Values**: S_base=320, δ=0.96, V_task_max=45, commission_max=0.17, etc.
@@ -86,22 +86,22 @@ The proofs revealed several necessary constraints:
 To verify the improvements:
 ```bash
 # Compile new modules first
-coqc AgencyProtocol_MeritUpdate.v
-coqc AgencyProtocol_StakeFunction.v
-coqc AgencyProtocol_T10_Generalized.v
-coqc AgencyProtocol_ErrorTolerance_Derived.v
-coqc AgencyProtocol_DerivedConstants.v
-coqc AgencyProtocol_ConsensusDetection.v
-coqc AgencyProtocol_ParamsWitness.v
+coqc PromiseProtocol_MeritUpdate.v
+coqc PromiseProtocol_StakeFunction.v
+coqc PromiseProtocol_T10_Generalized.v
+coqc PromiseProtocol_ErrorTolerance_Derived.v
+coqc PromiseProtocol_DerivedConstants.v
+coqc PromiseProtocol_ConsensusDetection.v
+coqc PromiseProtocol_ParamsWitness.v
 
 # Compile the patch file
 coqc agency_protocol_coq_patches.v
 
 # Then compile updated files
-coqc AgencyProtocol_T1_C1.v
-coqc AgencyProtocol_T6.v
-coqc AgencyProtocol_T9_completed.v
-coqc AgencyProtocol_T12.v
+coqc PromiseProtocol_T1_C1.v
+coqc PromiseProtocol_T6.v
+coqc PromiseProtocol_T9_completed.v
+coqc PromiseProtocol_T12.v
 ```
 
 ## Conclusion

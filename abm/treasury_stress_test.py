@@ -201,7 +201,7 @@ class TreasuryTestAnalyzer:
         sweet_spot = self.find_sweet_spot()
         report_lines = []
 
-        report_lines.append("# 📈 Agency Protocol: Treasury Stress Test Report")
+        report_lines.append("# 📈 Promise Protocol: Treasury Stress Test Report")
         report_lines.append("\n## Executive Summary")
         
         if sweet_spot:

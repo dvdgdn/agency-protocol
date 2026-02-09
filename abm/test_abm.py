@@ -8,7 +8,7 @@ import pandas as pd
 # (In practice, this would be an import statement)
 
 class ProtocolValidator:
-    """Test suite to validate Agency Protocol's theoretical claims"""
+    """Test suite to validate Promise Protocol's theoretical claims"""
     
     def __init__(self):
         self.test_results = {}
@@ -361,6 +361,6 @@ if __name__ == "__main__":
     results, validity_score = validator.run_all_tests()
     
     print(f"\n{'='*60}")
-    print(f"FINAL ASSESSMENT: The Agency Protocol demonstrates {validity_score:.1%} validity")
+    print(f"FINAL ASSESSMENT: The Promise Protocol demonstrates {validity_score:.1%} validity")
     print(f"in agent-based simulation testing.")
     print(f"{'='*60}")

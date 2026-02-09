@@ -6,7 +6,7 @@ import { Module, Controller, Get } from '@nestjs/common';
 class AppController {
   @Get()
   getHello(): string {
-    return 'Agency Protocol Server is running!';
+    return 'Promise Protocol Server is running!';
   }
   
   @Get('api/merit')

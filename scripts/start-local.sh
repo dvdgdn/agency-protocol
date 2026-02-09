@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🚀 Starting Agency Protocol Platform..."
+echo "🚀 Starting Promise Protocol Platform..."
 echo ""
 
 # Check if .env file exists

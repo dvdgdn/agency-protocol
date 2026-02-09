@@ -1,5 +1,5 @@
 # features/ap_quickstart.feature
-Feature: Agency Protocol QuickStart Agent
+Feature: Promise Protocol QuickStart Agent
   In order to onboard assets in minutes, not hours
   As a Platform Operator
   I want a QuickStart Agent that auto-wires all registry, metadata and promise events in one step

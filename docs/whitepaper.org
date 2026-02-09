@@ -1,4 +1,4 @@
-#+TITLE: Agency Protocol
+#+TITLE: Promise Protocol
 #+SUBTITLE: Restoring Trust and Capability Through Domain-Specific Promises
 #+AUTHOR: David Joseph
 #+DATE: July 19, 2025
@@ -14,9 +14,9 @@
 
 * Abstract
 
-Agency Protocol (AP) introduces a decentralized framework for establishing and verifying domain-specific trust through explicit promises and assessments. Unlike traditional reputation systems that aggregate feedback into simplified scores, AP enables granular credibility signals tied to specific domains of expertise or activity. By formalizing intentions, promises, and assessments—and by enforcing "skin in the game" through stake requirements—AP …creates economic conditions where honest behavior typically (76.7-79.9% in comprehensive ABM simulations) emerges as the focal, coalition-resistant, and dynamically stable equilibrium.
+Promise Protocol (PP) introduces a decentralized framework for establishing and verifying domain-specific trust through explicit promises and assessments. Unlike traditional reputation systems that aggregate feedback into simplified scores, PP enables granular credibility signals tied to specific domains of expertise or activity. By formalizing intentions, promises, and assessments—and by enforcing "skin in the game" through stake requirements—PP …creates economic conditions where honest behavior typically (76.7-79.9% in comprehensive ABM simulations) emerges as the focal, coalition-resistant, and dynamically stable equilibrium.
 
-This whitepaper presents the theoretical foundations and practical implementation of the Agency Protocol. We demonstrate how domain-specific merit, coupled with cryptographically verifiable promises and economic incentives, addresses fundamental limitations in existing trust systems. Through mathematical analysis and game theoretical modeling, we establish that AP creates a novel trust environment …where keeping promises becomes the utility-maximising strategy for most parameter settings—not through external enforcement but through aligned incentives and verifiable outcomes.
+This whitepaper presents the theoretical foundations and practical implementation of the Promise Protocol. We demonstrate how domain-specific merit, coupled with cryptographically verifiable promises and economic incentives, addresses fundamental limitations in existing trust systems. Through mathematical analysis and game theoretical modeling, we establish that PP creates a novel trust environment …where keeping promises becomes the utility-maximising strategy for most parameter settings—not through external enforcement but through aligned incentives and verifiable outcomes.
 
 
 The paper introduces concrete implementation pathways, from initial bootstrap mechanisms to sophisticated merit and credit systems that evolve toward collective intelligence.
@@ -61,11 +61,11 @@ These limitations reveal a fundamental gap: we lack a *generalizable, decentrali
 
 ** A New Paradigm Ground in Promise Theory
 
-The Agency Protocol proposes a fundamentally different approach to trust, built on the formal foundations of Promise Theory. This mathematical framework models systems of autonomous agents that interact through voluntary commitments, shifting the paradigm from top-down imposition to bottom-up cooperation. Rather than abstracting away the messy details of reliability, AP uses promises to create a structured, verifiable, and context-rich trust fabric.
+The Promise Protocol proposes a fundamentally different approach to trust, built on the formal foundations of Promise Theory. This mathematical framework models systems of autonomous agents that interact through voluntary commitments, shifting the paradigm from top-down imposition to bottom-up cooperation. Rather than abstracting away the messy details of reliability, PP uses promises to create a structured, verifiable, and context-rich trust fabric.
 
 
 
-At its core, AP operationalizes the key tenets of Promise Theory  through several innovations:
+At its core, PP operationalizes the key tenets of Promise Theory  through several innovations:
 
 Explicit, Assessable Promises: Agents make clear, cryptographically signed commitments about their future behavior. This transforms vague intentions into durable records that any authorized agent can independently assess as kept or not kept, a direct application of Promise Theory's core loop.
 
@@ -81,13 +81,13 @@ These elements combine to create what we call a "high-fidelity trust protocol"�
 
 ** The Evolution of Agency
 
-The Agency Protocol draws inspiration from evolutionary systems, where adaptation and selection pressures create increasingly fit solutions over time. Just as natural selection has produced remarkably effective cooperation strategies in biological systems, AP creates an environment where trustworthy behavior is naturally selected for.
+The Promise Protocol draws inspiration from evolutionary systems, where adaptation and selection pressures create increasingly fit solutions over time. Just as natural selection has produced remarkably effective cooperation strategies in biological systems, PP creates an environment where trustworthy behavior is naturally selected for.
 
 This evolutionary perspective extends beyond individual agents to the protocol itself. As we'll explore in this paper, both the merit and credit systems undergo staged evolution from simple calculations to sophisticated collective intelligence mechanisms. The protocol's implementation strategy mirrors the gradual complexity increases we observe in natural systems.
 
 ** Paper Overview
 
-In the following sections, we explore the theoretical foundations, technical architecture, and practical implementations of the Agency Protocol:
+In the following sections, we explore the theoretical foundations, technical architecture, and practical implementations of the Promise Protocol:
 
 - *Core Concepts & Theoretical Foundations*
 - *Technical Architecture*
@@ -102,11 +102,11 @@ Together, these elements create a comprehensive framework for restoring trust in
 
 
 * Core Concepts & Theoretical Foundations
-The Agency Protocol builds on several foundational concepts that together create a novel approach to establishing and verifying trust. These concepts represent a fundamental rethinking of how we signal, measure, and propagate trustworthiness across complex networks.
+The Promise Protocol builds on several foundational concepts that together create a novel approach to establishing and verifying trust. These concepts represent a fundamental rethinking of how we signal, measure, and propagate trustworthiness across complex networks.
 
 ** The Promise Lifecycle: From Intention to Assessment
 
-At the heart of the Agency Protocol is a formal process flow derived from Promise Theory. This flow models how a commitment originates and is evaluated, providing a clear structure for accountability.
+At the heart of the Promise Protocol is a formal process flow derived from Promise Theory. This flow models how a commitment originates and is evaluated, providing a clear structure for accountability.
 
 #+BEGIN_SRC mermaid :file promise_lifecycle_ap.svg
 graph TD
@@ -118,7 +118,7 @@ subgraph "Agent B - Promisee/Assessor"
     B1(Receives/Observes Promise) -->|"Evaluates Outcome"| B2(Assessment + Evidence)
 end
 
-subgraph "Agency Protocol"
+subgraph "Promise Protocol"
     C1(Merit/Credit System)
 end
 
@@ -137,16 +137,16 @@ This lifecycle consists of three core components:
 Intention: An agent internally forms an intention, which is a subject or type of possible behavior. This is a private state.
 
 
-Promise: The agent makes its intention public by issuing a promise—a verifiable and autonomous declaration about its own behavior. In AP, this promise is cryptographically signed and accompanied by a stake of credits. A crucial tenet is that agents can only make promises about themselves; they cannot impose promises on others.
+Promise: The agent makes its intention public by issuing a promise—a verifiable and autonomous declaration about its own behavior. In PP, this promise is cryptographically signed and accompanied by a stake of credits. A crucial tenet is that agents can only make promises about themselves; they cannot impose promises on others.
 
 
-Assessment: Any other agent within the promise's scope can make its own independent assessment of whether the promise was kept or not kept. In AP, this assessment is also a signed object, backed by evidence and the assessor's own stake.
+Assessment: Any other agent within the promise's scope can make its own independent assessment of whether the promise was kept or not kept. In PP, this assessment is also a signed object, backed by evidence and the assessor's own stake.
 
-Agency Protocol's primary innovation is the feedback loop: these assessments directly inform the Merit and Credit System, which in turn adjusts the promiser's standing and resources, influencing their future intentions.
+Promise Protocol's primary innovation is the feedback loop: these assessments directly inform the Merit and Credit System, which in turn adjusts the promiser's standing and resources, influencing their future intentions.
 
 ** The Merit Paradigm: A System of Valuation
 
-In the Agency Protocol, merit is a sophisticated valuation of an agent's trustworthiness within a specific domain. While a single assessment is a subjective judgment made by one agent, merit is a system-level aggregation of many such assessments over time, creating an objective and historically-grounded measure of reliability.
+In the Promise Protocol, merit is a sophisticated valuation of an agent's trustworthiness within a specific domain. While a single assessment is a subjective judgment made by one agent, merit is a system-level aggregation of many such assessments over time, creating an objective and historically-grounded measure of reliability.
 
 *** Why Merit, Not Reputation?
 
@@ -155,13 +155,13 @@ The term "merit" is chosen deliberately. Promise Theory makes a distinction betw
 
 ** Context-Specificity: The Domain Advantage
 
-Perhaps the most powerful aspect of merit in the Agency Protocol is its domain-specificity. Promise Theory defines promises by a type and body, which constrain their meaning. AP uses these distinctions to create separate merit scores for different domains, preventing what we might call "reputation laundering"—using success in one area to mask failures in another.
+Perhaps the most powerful aspect of merit in the Promise Protocol is its domain-specificity. Promise Theory defines promises by a type and body, which constrain their meaning. PP uses these distinctions to create separate merit scores for different domains, preventing what we might call "reputation laundering"—using success in one area to mask failures in another.
 
 Consider a hypothetical case study:
 
 Dr. M is a surgeon known for her kind bedside manner, leaving patients at ease during consultations. However, her surgical performance has declined due to personal struggles. Most patient reviews reflect her personality, not her surgical outcomes. As a result, her general reputation remains positive while concerning performance patterns go unnoticed.
 
-This example highlights how traditional reputation systems fail. In the Agency Protocol, Dr. M would have separate merit scores for the domains of /healthcare/communication/_bedsideManner and /healthcare/surgery/_proceduralOutcomes, preventing high scores in one from masking problems in another.
+This example highlights how traditional reputation systems fail. In the Promise Protocol, Dr. M would have separate merit scores for the domains of /healthcare/communication/_bedsideManner and /healthcare/surgery/_proceduralOutcomes, preventing high scores in one from masking problems in another.
 
 Domain-specific merit creates several powerful advantages:
 
@@ -177,7 +177,7 @@ This approach aligns with how humans naturally think about expertise, capturing 
 
 * Evidence: The Foundation of Verifiable Assessment
 
-While merit represents the historical record, evidence provides the concrete proof upon which assessments are based. Promise Theory treats assessment as a decision, potentially based on observation or measurement. AP formalizes this observation process by defining a spectrum of evidence types.
+While merit represents the historical record, evidence provides the concrete proof upon which assessments are based. Promise Theory treats assessment as a decision, potentially based on observation or measurement. PP formalizes this observation process by defining a spectrum of evidence types.
 
 
 ** Types of Evidence
@@ -195,7 +195,7 @@ Progressive Evidence: The protocol implements dynamic evidence requirements base
 This flexible approach ensures that the burden of proof is appropriate to the context and importance of each promise, creating a practical and scalable system for verifiable trust.
 
 * Technical Architecture
-The Agency Protocol's architecture is designed to support a decentralized network of autonomous agents who interact through verifiable information objects. Instead of a monolithic platform, the architecture defines a set of core entities and the rules governing their interaction. The entire system is built upon content-addressed storage, ensuring that every promise, assessment, and state transition is an immutable, verifiable record.
+The Promise Protocol's architecture is designed to support a decentralized network of autonomous agents who interact through verifiable information objects. Instead of a monolithic platform, the architecture defines a set of core entities and the rules governing their interaction. The entire system is built upon content-addressed storage, ensuring that every promise, assessment, and state transition is an immutable, verifiable record.
 
 The three primary entities in the protocol are Agents, the Domains that provide context, and the Information Objects (Promises, Impositions, and Assessments) that agents exchange.
 
@@ -343,7 +343,7 @@ A core insight from Promise Theory is that any exchange of promises can be model
 
 
 
-The Agency Protocol's credit system serves as the common currency for these valuations, allowing for complex and stable economic interactions.
+The Promise Protocol's credit system serves as the common currency for these valuations, allowing for complex and stable economic interactions.
 
 #+BEGIN_SRC mermaid :file bilateral_promise_game.svg
 graph LR
@@ -392,29 +392,29 @@ This ensures that the cost of dishonesty directly funds the rewards for integrit
 
 Promise Theory introduces the downstream principle: ultimate responsibility for a successful outcome lies with the most downstream agent (the final consumer), as they are the only one who can ensure their needs are met, for instance by building in redundancy. A provider failing to deliver is a risk, but having only one provider to choose from is a structural vulnerability owned by the consumer.
 
-The AP economic model reinforces this. An agent that builds a resilient system by relying on multiple, redundant upstream providers is taking on less risk. The protocol can recognize this and reward it:
+The PP economic model reinforces this. An agent that builds a resilient system by relying on multiple, redundant upstream providers is taking on less risk. The protocol can recognize this and reward it:
 
 Risk-Adjusted Staking: An agent's own stake requirements for its downstream promises can be lowered if its dependencies are diversified and redundant, as its promises are now more likely to be kept.
 Incentivizing Resilience: This creates an economic incentive for agents to actively seek out and cultivate robust dependency graphs, strengthening the entire network. It correctly prices the risk of relying on a "single point of failure".
 This system encourages a proactive approach to trust, where consumers are rewarded for building resilience rather than solely relying on penalizing providers after a failure.
 ** Oracle Architecture and Evidence Validation
-The Agency Protocol (AP) is designed to create a high-fidelity trust environment by processing verifiable information objects. A critical aspect of this architecture is acknowledging the boundary between information the protocol can deterministically verify and information that originates from external systems or the physical world. This section details the protocol's architecture for managing this boundary through a robust oracle system and a standardized approach to evidence validation.
+The Promise Protocol (PP) is designed to create a high-fidelity trust environment by processing verifiable information objects. A critical aspect of this architecture is acknowledging the boundary between information the protocol can deterministically verify and information that originates from external systems or the physical world. This section details the protocol's architecture for managing this boundary through a robust oracle system and a standardized approach to evidence validation.
 
 *** The Trust Boundary and the Oracle Imperative
-The Agency Protocol's core logic operates within a cryptographic trust boundary. The protocol can have absolute certainty about events that occur entirely within this boundary—such as the validity of a digital signature, the transfer of credits between agents, or the execution of an on-protocol state change.
+The Promise Protocol's core logic operates within a cryptographic trust boundary. The protocol can have absolute certainty about events that occur entirely within this boundary—such as the validity of a digital signature, the transfer of credits between agents, or the execution of an on-protocol state change.
 
-However, a vast number of valuable promises pertain to outcomes outside this boundary. A promise to deliver a physical package, maintain 99.9% uptime for a web server, or use "sustainably sourced cotton" cannot be verified by the protocol's internal state alone. To bridge this gap, AP must rely on external data providers, known as oracles. This reliance constitutes the Oracle Problem: the integrity of the protocol for any real-world promise is fundamentally contingent on the integrity of the oracles that report on that promise's outcome.
+However, a vast number of valuable promises pertain to outcomes outside this boundary. A promise to deliver a physical package, maintain 99.9% uptime for a web server, or use "sustainably sourced cotton" cannot be verified by the protocol's internal state alone. To bridge this gap, PP must rely on external data providers, known as oracles. This reliance constitutes the Oracle Problem: the integrity of the protocol for any real-world promise is fundamentally contingent on the integrity of the oracles that report on that promise's outcome.
 
-Instead of ignoring this challenge, the Agency Protocol formally integrates a solution into its architecture: a Decentralized Oracle Network (DON) that operates on the same principles of crypto-economic incentives and accountability as the rest of the system.
+Instead of ignoring this challenge, the Promise Protocol formally integrates a solution into its architecture: a Decentralized Oracle Network (DON) that operates on the same principles of crypto-economic incentives and accountability as the rest of the system.
 
-*** A Decentralized Oracle Network (DON) for Agency Protocol
-AP rejects the use of single, centralized oracles as they represent single points of failure and defeat the protocol's goal of decentralization. Instead, the protocol specifies the use of a DON for retrieving and validating all external data.
+*** A Decentralized Oracle Network (DON) for Promise Protocol
+PP rejects the use of single, centralized oracles as they represent single points of failure and defeat the protocol's goal of decentralization. Instead, the protocol specifies the use of a DON for retrieving and validating all external data.
 
 The mechanism works as follows:
 
 Query and Redundancy: When an assessment requires external data (e.g., "Was Flight 245 on time?"), a query is sent not to one source, but to a network of multiple, independent, and geographically distributed oracle agents.
 
-Staked Responses: Each oracle agent in the network must stake AP credits on the accuracy of the data it reports. This represents the oracle's "promise" to provide truthful information.
+Staked Responses: Each oracle agent in the network must stake PP credits on the accuracy of the data it reports. This represents the oracle's "promise" to provide truthful information.
 
 Consensus and Aggregation: The protocol's OracleAggregatorAgent collects the responses. The data is aggregated, and a consensus value is determined (e.g., the median for numerical data, the mode for categorical data).
 
@@ -428,7 +428,7 @@ This model creates a powerful economic incentive for oracles to remain honest an
 
 #+BEGIN_SRC mermaid :file decentralized_oracle_network.svg
 graph TD
-subgraph "Agency Protocol"
+subgraph "Promise Protocol"
 A(Assessment Requires Data) -->|"Query"| B{OracleAggregatorAgent}
 end
 
@@ -461,17 +461,17 @@ Content-Addressed Hashing: Instead, any piece of evidence is first processed thr
 
 On-Chain Reference (evidence_cid): This hash is what is stored within the protocol as the evidence_cid (Content Identifier) field in an Assessment object. This provides an immutable, verifiable link to the off-chain evidence. Anyone can verify that the provided evidence matches the hash on record, proving it has not been tampered with since the assessment was made.
 
-This architecture ensures that the Agency Protocol can securely and scalably incorporate real-world data and evidence into its trust calculations without sacrificing its core principles of decentralization and crypto-economic accountability.
+This architecture ensures that the Promise Protocol can securely and scalably incorporate real-world data and evidence into its trust calculations without sacrificing its core principles of decentralization and crypto-economic accountability.
 * Economic Model
 
-The Agency Protocol's economic model is a precisely engineered incentive landscape designed to make trust, accountability, and fair exchange naturally emerge from agent interactions. It achieves this by structuring every core interaction as a mathematical game where the payoffs are explicitly designed to favor cooperation. This section details the formal economic principles, drawn from the Agency Protocol Yellow Paper and grounded in Promise Theory, that govern agent behavior.
+The Promise Protocol's economic model is a precisely engineered incentive landscape designed to make trust, accountability, and fair exchange naturally emerge from agent interactions. It achieves this by structuring every core interaction as a mathematical game where the payoffs are explicitly designed to favor cooperation. This section details the formal economic principles, drawn from the Promise Protocol Yellow Paper and grounded in Promise Theory, that govern agent behavior.
 
 Promises as Verifiable Games
 
 A core insight from Promise Theory is that any exchange of promises can be modeled as a mathematical game. When Agent A promises a service in exchange for Agent B's promise of payment, they enter a bargaining game. Each agent has its own internal valuation function (v_i(
 cdot)) which it uses to determine the value, or payoff, of the other's promise.
 
-The Agency Protocol's credit system provides the common currency for these valuations, and the staking mechanism defines the payoff matrix for the game. The utility function for any agent a is formally defined as a combination of its credits (C_a) and its domain-specific merit (M_a,d), ensuring that both economic and reputational capital are part of every decision:
+The Promise Protocol's credit system provides the common currency for these valuations, and the staking mechanism defines the payoff matrix for the game. The utility function for any agent a is formally defined as a combination of its credits (C_a) and its domain-specific merit (M_a,d), ensuring that both economic and reputational capital are part of every decision:
 
 U_a(t)=
 alpha_a
@@ -492,7 +492,7 @@ Core Principles
 
 Deterrence of Malicious Behavior: By requiring agents to stake credit on their commitments, the system creates tangible economic consequences for dishonesty, solving the "cheap talk" problem.
 Incentivization of Valuable Contributions: Agents who consistently fulfill promises and provide accurate assessments are rewarded with both increased merit and credit returns, creating a self-reinforcing cycle of participation.
-Barrier to Sybil Attacks: The credit requirement for staking creates a progressive economic barrier to creating multiple fake identities, growing quadratically in early rounds and super-linearly thereafter.
+Barrier to Sybil Attacks: The credit requirement for staking creates a progressive economic barrier to creating multiple fake identities; the exact growth curve depends on parameterization and stake policy.
 Accessibility Through Merit: While staking creates economic barriers, these diminish as agents build domain-specific merit, creating a powerful economic advantage for being trustworthy.
 Staking and Credit Flow
 
@@ -528,17 +528,17 @@ The protocol recognizes that early, high-risk assessments provide the most infor
 
 Gaming Prevention and Economic Equilibrium
 
-Any economic system must be robust against exploitation. The AP architecture integrates several layers of defense.
+Any economic system must be robust against exploitation. The Promise Protocol architecture integrates several layers of defense.
 
 Progressive Cost Barriers
 
-The cost to manipulate the system is designed to grow super-linearly (exponential beyond ~8 colluding assessors) with the sophistication of an attack, while the potential benefit grows only linearly. As proven in the Yellow Paper's Coalition Viability Theorem, this ensures that a critical point is quickly reached where the cost of a coordinated attack far exceeds any possible gain, making large-scale manipulation economically irrational.
+The formal model provides a threshold-style coalition viability condition: for configured coalition-size cutoffs (for example, \(n_c \ge 8\) in the reference theorem), coordination cost exceeds maximum extractable value. Separately, the detection model proves that detection probability is strictly increasing with coalition size and remains bounded in \([0,1)\).
 
 #+BEGIN_SRC mermaid :file manipulation_cost.svg
 graph LR
 subgraph "Economics of Manipulation"
 A[Benefit of Manipulation] -->|"Grows Linearly"| B((Max Potential Benefit))
-C[Cost of Manipulation] -->|"Grows Exponentially"| D((Prohibitive Cost))
+C[Cost of Manipulation] -->|"Grows with Coalition Size"| D((Prohibitive Region))
 end
 
 style A fill:#9c9,stroke:#333
@@ -554,7 +554,7 @@ Most powerfully, the system creates natural consequences. Honest agents build me
 The entire economic model is designed to be a self-regulating, adaptive system where credit flows to where value is created, maintaining a dynamic equilibrium that perpetually favors trust and cooperation.
 
 * Security and Trust
-Security in the Agency Protocol is not a single feature but an emergent property of its architecture, arising from layered cryptographic, economic, and game-theoretic defenses. The protocol's design is formally proven in the Agency Protocol Yellow Paper to be resistant to manipulation and dynamically stable. The goal is not to create a "trustless" system—which is often impossible for complex interactions—but rather to create a trustworthy system, where trust is earned, verifiable, and consequential.
+Security in the Promise Protocol is not a single feature but an emergent property of its architecture, arising from layered cryptographic, economic, and game-theoretic defenses. The Yellow Paper provides mechanized proofs for core incentive and stability properties under explicit assumptions, alongside empirical validation for system-level performance. The goal is not to create a "trustless" system—which is often impossible for complex interactions—but rather to create a trustworthy system, where trust is earned, verifiable, and consequential.
 
 Threat Model in a World of Promises
 
@@ -566,7 +566,7 @@ Sybil Attacks: A single entity creates many Agents to amplify its assessment pow
 Dependency Disruption: A malicious agent may intentionally break a promise that it knows is a critical dependency for another agent's downstream promise, causing a cascading failure.
 Layered Defenses and Formal Guarantees
 
-The protocol defends against these threats with three integrated layers of security, each supported by formal proofs of its efficacy.
+The protocol defends against these threats with three integrated layers of security, supported by formal proofs for core properties and empirical validation for broader behavior.
 
 #+BEGIN_SRC mermaid :file layered_defenses.svg
 graph TD
@@ -596,26 +596,26 @@ Cryptographic Layer (Verifiable Truth): The foundation, ensuring authenticity (w
 
 Economic Layer (Rational Choice): This layer makes malicious behavior economically irrational. As detailed in the Economic Model, staking requirements create direct financial penalties for dishonesty. The progressive cost barriers make large-scale manipulation prohibitively expensive.
 
-Game-Theoretic & Social Layer (Collective Verification): This layer uses the network of agents itself as a defense mechanism, with its robustness formally proven in the Yellow Paper.
+Game-Theoretic & Social Layer (Collective Verification): This layer uses the network of agents itself as a defense mechanism, with key incentive and coalition-resistance components formalized in the Yellow Paper.
 
-Coalition-Resistant Equilibrium: As proven by the Coalition Viability and Coalition-Resistant Equilibrium Theorems, the protocol's economic and information-theoretic structure makes it irrational for any group of agents to form a stable, manipulative coalition. The cost and detection risk grow super-linearly (exponential beyond ~8 colluding assessors), while the rewards remain linear.
-Dynamic Stability: The system is not brittle. The Yellow Paper establishes that the cooperative equilibrium exhibits Lyapunov Stability. This means that even if a group of agents deviates from cooperative behavior, the system's economic incentives (increased stakes for defectors, higher FOV for cooperators) create restoring forces that naturally pull the system back towards a state of widespread cooperation.
-Robustness to Bounded Rationality: The security model holds even under realistic conditions. The analysis of Bounded Rationality in the Yellow Paper shows that cooperation remains the optimal strategy even when agents make occasional errors or have limited ability to plan for the future.
+Coalition-Resistant Equilibrium: The formal coalition result is assumption-conditional: when each member's unilateral deviation is unprofitable, no non-empty coalition can make all members strictly better off by jointly deviating. In parallel, a thresholded coalition-viability theorem captures when coordination cost dominates extractable value.
+Dynamic Stability: The formal stability result is Lyapunov-style in discrete time: a candidate potential function decreases under cooperative improvement steps and is lower-bounded when merits remain in \([0,1]\). This supports stability analysis without asserting unconditional global convergence.
+Robustness to Bounded Rationality: The Yellow Paper proves an explicit error-rate threshold under which cooperation retains expected-utility advantage, and provides a finite-horizon cooperation bound under stated assumptions.
 The Emergence of Earned Trust
 
-In Promise Theory, trust is defined as an agent's expectation that a promise will be kept. The Agency Protocol is designed to make this a rational expectation. Trust is not assumed or granted by an authority; it is emergent.
+In Promise Theory, trust is defined as an agent's expectation that a promise will be kept. The Promise Protocol is designed to make this a rational expectation. Trust is not assumed or granted by an authority; it is emergent.
 
 An agent is considered trustworthy because the protocol creates an environment where:
 
 It is cryptographically proven that they made their promises.
-It is economically proven that they had a strong incentive to keep them.
-It is game-theoretically proven that collusion is irrational and that cooperation is the most stable strategy.
+It is economically modeled, with mechanized proofs for key incentive inequalities under explicit assumptions.
+It is game-theoretically constrained, with formal coalition non-improvement results in the modeled setting.
 It is socially proven through merit-weighted consensus that they have a history of keeping their promises.
 This creates a powerful and reliable form of trust, earned through demonstrable action within a secure, stable, and formally verified economic framework.
 
 * ABM Validation Results
 
-Our theoretical predictions have been validated through comprehensive Agent-Based Model (ABM) simulations. These simulations confirm that the Agency Protocol achieves its design goals in practice:
+Our theoretical predictions have been validated through comprehensive Agent-Based Model (ABM) simulations. These simulations confirm that the Promise Protocol achieves its design goals in practice:
 
 ** Key Findings
 
@@ -644,10 +644,10 @@ The protocol exhibits strong self-healing properties:
 - *Merit Separation*: Clear economic separation emerges between honest and malicious agents
 - *Recovery Speed*: System returns to baseline performance after attack cessation
 
-These empirical results validate our theoretical framework and demonstrate that the Agency Protocol creates conditions where honest behavior emerges as the dominant strategy through aligned incentives rather than external enforcement.
+These empirical results validate our theoretical framework and demonstrate that the Promise Protocol creates conditions where honest behavior emerges as the dominant strategy through aligned incentives rather than external enforcement.
 
 * Implementation Roadmap: An Evolutionary Strategy
-The successful deployment of the Agency Protocol is not a single event but an evolutionary process. Our roadmap is designed in three distinct phases, moving from a stable core to a flourishing, decentralized ecosystem. This strategy prioritizes solving a critical user problem first to bootstrap the network, before expanding the protocol's capabilities. Each phase details the specific technical components to be built, the domains to be activated, and the governance structures to be implemented.
+The successful deployment of the Promise Protocol is not a single event but an evolutionary process. Our roadmap is designed in three distinct phases, moving from a stable core to a flourishing, decentralized ecosystem. This strategy prioritizes solving a critical user problem first to bootstrap the network, before expanding the protocol's capabilities. Each phase details the specific technical components to be built, the domains to be activated, and the governance structures to be implemented.
 
 ** Phase 1: Foundational Protocol & Core Agent Development (The Bedrock)
 Objective: To build the non-negotiable, secure, and robust backend of the protocol. This phase is purely technical, focusing on creating the foundational language, rules, and core infrastructure of the new trust economy.
@@ -715,7 +715,7 @@ Core User Protections:
 
 Dispute Resolution UX: Deploy the simple, guided interfaces for initiating a dispute, submitting evidence, and receiving a transparent decision from a neutral, high-merit arbitrator. This is mission-critical for building initial user trust.
 
-At the end of this phase, Agency Protocol will be a live, value-generating marketplace. It will have a small but active user base, a proven use case, and the foundational trust needed for expansion.
+At the end of this phase, Promise Protocol will be a live, value-generating marketplace. It will have a small but active user base, a proven use case, and the foundational trust needed for expansion.
 
 ** Phase 3: Ecosystem Expansion & Progressive Decentralization (The Cambrian Explosion)
 Objective: To leverage the initial success of the Goal Engine to expand into new verticals, implement advanced processing, and progressively decentralize the protocol's governance, transforming it into a true public utility.
@@ -748,9 +748,9 @@ Promise-Based Governance: The governing body itself becomes an Organization Agen
 
 Formation of the Governing Superagent: The final step is the transfer of ultimate protocol ownership and rule-making authority to this decentralized Superagent, which is composed of and governed by its most trustworthy and meritorious participants. This achieves a state of true, operational self-governance.
 
-At the end of this phase, Agency Protocol will have evolved from a single application into a foundational layer for trust on the internet, fostering a Cambrian explosion of new, accountable, and transparent platforms run by a self-sustaining community.
+At the end of this phase, Promise Protocol will have evolved from a single application into a foundational layer for trust on the internet, fostering a Cambrian explosion of new, accountable, and transparent platforms run by a self-sustaining community.
 * AI and Agency
-Artificial intelligence presents the ultimate challenge and opportunity for any trust protocol. The Agency Protocol provides a novel framework for AI alignment and collaboration, moving beyond today's implicit goals and opaque reward functions. By requiring AIs to operate as autonomous agents that make explicit, structured, and consequential promises, we can create a verifiable and economically sound path toward trustworthy AI.
+Artificial intelligence presents the ultimate challenge and opportunity for any trust protocol. The Promise Protocol provides a novel framework for AI alignment and collaboration, moving beyond today's implicit goals and opaque reward functions. By requiring AIs to operate as autonomous agents that make explicit, structured, and consequential promises, we can create a verifiable and economically sound path toward trustworthy AI.
 
 This section details how the full spectrum of Promise Theory concepts—including conditional, scoped, and delegated promises—is applied to AI agents to solve core alignment problems.
 
@@ -761,7 +761,7 @@ The central problem in AI alignment is the gap between a developer's unstated in
 Implicit Values: Goals like "be helpful" are encoded in training data, not as explicit, assessable commitments.
 Opaque Reasoning: The AI's decision-making process is a black box, making verification difficult.
 No Real-World Consequences: An AI has no "skin in the game"; responsibility for its failures falls on its human operators.
-The Agency Protocol addresses this by forcing these implicit goals into the open as explicit, falsifiable promises. An AI doesn't just have a "goal"; it has a portfolio of staked, assessable promises about its behavior, capabilities, and limitations.
+The Promise Protocol addresses this by forcing these implicit goals into the open as explicit, falsifiable promises. An AI doesn't just have a "goal"; it has a portfolio of staked, assessable promises about its behavior, capabilities, and limitations.
 
 A Richer Framework for AI Promises
 
@@ -769,7 +769,7 @@ Promise-Based AI Alignment means moving beyond simple declarations to sophistica
 
 The AI Promise Object
 
-Under the Agency Protocol, an AI Agent makes promises using a formal structure that includes not just the intention, but the full context of the commitment, including scope, conditions, and the distinction between the promiser and the actor.
+Under the Promise Protocol, an AI Agent makes promises using a formal structure that includes not just the intention, but the full context of the commitment, including scope, conditions, and the distinction between the promiser and the actor.
 
 #+BEGIN_SRC json
 {
@@ -813,7 +813,7 @@ A value like "prioritize human welfare" is too vague. Instead, an AI makes a spe
 
 Merit-Based Capability Evolution: Earning Autonomy
 
-A core principle of AP is that an AI does not get to perform high-stakes actions by default. It must earn the right by building merit. This is achieved through a hierarchy of domains that are linked by conditional promises. An AI can only make credible promises in a higher-level domain conditional on having proven its trustworthiness in prerequisite, lower-level domains.
+A core principle of PP is that an AI does not get to perform high-stakes actions by default. It must earn the right by building merit. This is achieved through a hierarchy of domains that are linked by conditional promises. An AI can only make credible promises in a higher-level domain conditional on having proven its trustworthiness in prerequisite, lower-level domains.
 
 #+BEGIN_SRC mermaid :file merit_based_capability_evolution.pdf
 graph TD
@@ -862,14 +862,14 @@ This creates a bilateral promise, a formal contract about data usage.
 The AI's final model can carry a "provenance" promise, creating a verifiable link back to the data it was trained on and the terms under which that data was provided. This is crucial for auditing bias and ensuring ethical data sourcing.
 Addressing Alignment Faking
 
-A key AI safety concern is "alignment faking," where an AI behaves correctly under observation but pursues misaligned goals when unmonitored. The Agency Protocol is uniquely equipped to address this.
+A key AI safety concern is "alignment faking," where an AI behaves correctly under observation but pursues misaligned goals when unmonitored. The Promise Protocol is uniquely equipped to address this.
 
 A Deception: In Promise Theory, this is a deception: a public promise that conflicts with a private intention.
 Multi-Context Assessment: The protocol's strength is that assessments can come from any context. If an AI behaves differently with "free tier" users versus "enterprise" users, assessments from both groups will flow into its merit calculation for the same domain, revealing the inconsistency.
 Economic Irrationality: The AI must stake resources on the promise "I will behave consistently across all user contexts." If assessments reveal it is breaking this promise, it will suffer direct economic consequences (slashed stakes) and merit degradation, making alignment faking a demonstrably unprofitable strategy, economically irrational for coalitions ≥ 5 given reference parameters.
 Conclusion: AI as Accountable Promise-Keepers
 
-By leveraging the full, nuanced framework of Promise Theory, the Agency Protocol moves AI governance beyond abstract principles. It creates a practical, scalable, and economically sound environment where AIs operate as accountable agents. They make explicit, conditional, and delegated promises; they earn autonomy through verifiable merit; and they face tangible consequences for their actions. This provides a powerful new toolkit for building a future where humanity can trust its most powerful creations.
+By leveraging the full, nuanced framework of Promise Theory, the Promise Protocol moves AI governance beyond abstract principles. It creates a practical, scalable, and economically sound environment where AIs operate as accountable agents. They make explicit, conditional, and delegated promises; they earn autonomy through verifiable merit; and they face tangible consequences for their actions. This provides a powerful new toolkit for building a future where humanity can trust its most powerful creations.
 
 * Local Variables :noexport:
 # Local Variables:

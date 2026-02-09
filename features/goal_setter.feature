@@ -1,5 +1,5 @@
 Feature: Goal Setter
-  A goal setter is a specialized type of user responsible for setting and managing goals within the Agency Protocol.
+  A goal setter is a specialized type of user responsible for setting and managing goals within the Promise Protocol.
   Goal setters have permissions to create, reference, and oversee goals and associated promises.
   
   Background:

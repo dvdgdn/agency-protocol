@@ -1,4 +1,4 @@
-# The Agency Protocol: Layer 1 - The Promise Cycle
+# The Promise Protocol: Layer 1 - The Promise Cycle
 
 **A Core Framework for Individual Agency Development**
 
@@ -6,7 +6,7 @@
 
 ## Executive Summary
 
-Layer 1 of the Agency Protocol establishes the foundational capacity for making and keeping individual promises. The layer operates through a three-phase cycle—Pre-Commit, Commit, and Post-Commit—that transforms intentions into reliable commitments while extracting systematic learning from each iteration.
+Layer 1 of the Promise Protocol establishes the foundational capacity for making and keeping individual promises. The layer operates through a three-phase cycle—Pre-Commit, Commit, and Post-Commit—that transforms intentions into reliable commitments while extracting systematic learning from each iteration.
 
 The framework begins with an operational definition: **agency is the ability to make and keep promises**. This definition shifts focus from abstract self-improvement to measurable capability development. A person with high agency consistently makes promises aligned with their values and circumstances, then reliably fulfills those commitments. Agency grows through the progressive expansion of what one can commit to and deliver.
 
@@ -22,7 +22,7 @@ This whitepaper establishes the theoretical foundation and operational structure
 
 Most coaching frameworks treat agency as an assumed capacity that practitioners either possess or lack. Practitioners speak of empowering clients or helping them take ownership of their choices, but these formulations leave agency itself undefined and unmeasurable. Without a precise definition, coaching interventions remain vague and outcomes difficult to assess beyond subjective satisfaction.
 
-The Agency Protocol begins with a concrete, operational definition that makes agency both visible and developable. **Agency is the ability to make and keep promises.** This definition shifts focus from internal states like motivation or confidence to observable behaviors that can be systematically improved. A person with high agency consistently makes promises aligned with their values and circumstances, then reliably fulfills those commitments. A person with low agency either makes poor commitment choices or fails to follow through on promises made.
+The Promise Protocol begins with a concrete, operational definition that makes agency both visible and developable. **Agency is the ability to make and keep promises.** This definition shifts focus from internal states like motivation or confidence to observable behaviors that can be systematically improved. A person with high agency consistently makes promises aligned with their values and circumstances, then reliably fulfills those commitments. A person with low agency either makes poor commitment choices or fails to follow through on promises made.
 
 This promise-centered approach recognizes that human development occurs through the progressive expansion of what we can reliably commit to and deliver. The infant cannot promise to walk until motor development reaches the necessary threshold. The novice musician cannot promise a flawless performance until skill development supports that level of execution. Agency grows through the accumulation of successful promise cycles that progressively expand the scope and complexity of commitments we can undertake with confidence.
 

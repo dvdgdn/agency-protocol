@@ -1,4 +1,4 @@
-# The Agency Protocol: Layer 1 - The Commit Phase
+# The Promise Protocol: Layer 1 - The Commit Phase
 
 **A Whitepaper on Promise Installation and Consciousness Embedding**
 
@@ -6,9 +6,9 @@
 
 ## Executive Summary
 
-The Commit Phase represents the transformative center of the Agency Protocol's three-phase promise cycle. While Pre-Commit establishes what intention warrants formalization into promise and Post-Commit generates learning from execution, the Commit Phase bridges intention and action through the installation of promises into the practitioner's consciousness at depths sufficient to influence automatic behavior.
+The Commit Phase represents the transformative center of the Promise Protocol's three-phase promise cycle. While Pre-Commit establishes what intention warrants formalization into promise and Post-Commit generates learning from execution, the Commit Phase bridges intention and action through the installation of promises into the practitioner's consciousness at depths sufficient to influence automatic behavior.
 
-This whitepaper addresses the critical distinction between making a commitment and installing one. Most personal development approaches treat verbal or written commitment as sufficient, assuming that clear intention combined with willpower will produce reliable execution. The Agency Protocol recognizes this assumption as fundamentally flawed. Verbal commitment creates conscious knowledge of what one intends to do, but it does not alter the unconscious patterns, somatic responses, and behavioral defaults that determine actual behavior under conditions of stress, distraction, or competing demands.
+This whitepaper addresses the critical distinction between making a commitment and installing one. Most personal development approaches treat verbal or written commitment as sufficient, assuming that clear intention combined with willpower will produce reliable execution. The Promise Protocol recognizes this assumption as fundamentally flawed. Verbal commitment creates conscious knowledge of what one intends to do, but it does not alter the unconscious patterns, somatic responses, and behavioral defaults that determine actual behavior under conditions of stress, distraction, or competing demands.
 
 The Commit Phase employs advanced techniques from neurolinguistic programming (NLP) and Ericksonian hypnosis to embed promises at neurological and psychological levels where they become part of the practitioner's operating system rather than remaining external obligations requiring constant conscious effort. This installation work operates through several mechanisms including visualization that creates anticipatory neural patterns, somatic anchoring that links promises to physical sensations and gestures, linguistic embedding that reshapes internal narrative, and trance induction that bypasses conscious resistance to access deeper programming layers.
 
@@ -22,7 +22,7 @@ The whitepaper addresses critical ethical considerations around the use of influ
 
 The prevailing approach to commitment in personal development treats verbal declaration or written documentation as sufficient for creating behavioral change. Self-help literature encourages people to "set clear goals," "make firm commitments," and "hold yourself accountable" as if these conscious activities directly translate into altered behavior. This approach produces predictable failure patterns where practitioners experience chronic gap between what they intend and what they actually do.
 
-The Agency Protocol's Commit Phase begins with a different premise: conscious commitment is necessary but insufficient for reliable promise-keeping. Human behavior emerges from complex interaction between conscious intention and unconscious programming, with the unconscious system often exercising veto power over what consciousness decides. A practitioner may consciously commit to daily exercise with complete sincerity, but if unconscious associations link exercise with punishment or if somatic patterns trigger resistance when movement is contemplated, the commitment remains vulnerable to unconscious override.
+The Promise Protocol's Commit Phase begins with a different premise: conscious commitment is necessary but insufficient for reliable promise-keeping. Human behavior emerges from complex interaction between conscious intention and unconscious programming, with the unconscious system often exercising veto power over what consciousness decides. A practitioner may consciously commit to daily exercise with complete sincerity, but if unconscious associations link exercise with punishment or if somatic patterns trigger resistance when movement is contemplated, the commitment remains vulnerable to unconscious override.
 
 The insight driving the Commit Phase derives from recognition that most human behavior operates automatically rather than through conscious decision-making. Research suggests that 88% or more of mental activity occurs outside conscious awareness, with the conscious mind representing a small tip of the iceberg above the vast unconscious system beneath. Attempts to change behavior through conscious willpower alone essentially involve the 12% trying to override the 88%, a strategy that occasionally succeeds through heroic effort but rarely produces sustainable change.
 
@@ -434,7 +434,7 @@ The framework encourages maintaining installation logs that track techniques emp
 
 ## Conclusion
 
-The Commit Phase represents the transformative center of the Agency Protocol where intentions become installed capabilities. The phase recognizes that verbal commitment alone rarely produces sustainable behavioral change and provides explicit protocols for embedding promises at neurological and psychological depths where they influence automatic behavior.
+The Commit Phase represents the transformative center of the Promise Protocol where intentions become installed capabilities. The phase recognizes that verbal commitment alone rarely produces sustainable behavioral change and provides explicit protocols for embedding promises at neurological and psychological depths where they influence automatic behavior.
 
 The installation work employs sophisticated techniques from Ericksonian hypnosis and neurolinguistic programming that operate through utilization of existing resources, permissive suggestion that respects autonomy, and naturalistic approaches that work with rather than against normal consciousness patterns. These techniques create changes in unconscious programming that make promise-keeping progressively less dependent on ongoing willpower expenditure.
 

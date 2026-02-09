@@ -165,3 +165,23 @@ Feature: Merit System
     When the system processes the cycle detection event
     Then the system should log the details of the cycle including involved agents or assessments
     And the system should store the resolution actions taken
+
+@phase2 @reputation
+Feature: Domain-scoped track records
+
+  Background:
+    Given PromiseCards and Assessments exist for multiple agents and domains
+
+  @phase2 @reputation @query
+  Scenario: Compute an agent's track record within a domain
+    Given "Agent A" has 5 assessed PromiseCards in domain "/software"
+    When a requestor queries "Agent A" track record for "/software"
+    Then the system returns counts for KEPT, BROKEN, INCONCLUSIVE, DISPUTED
+    And includes links to the underlying PromiseCards and Assessments
+
+  @phase3 @reputation @assessor_weighting
+  Scenario: Weight assessments by assessor reliability
+    Given assessors have historical accuracy scores
+    When computing "Agent A" reputation
+    Then assessments are weighted by assessor reliability
+    And the weighting rule is deterministic and logged

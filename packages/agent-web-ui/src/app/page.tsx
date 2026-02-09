@@ -128,7 +128,7 @@ export default function Page() {
   return (
     <main style={{ fontFamily: 'sans-serif', padding: '1em 2em' }}>
       <header>
-        <h1>Agency Protocol Dashboard</h1>
+        <h1>Promise Protocol Dashboard</h1>
         <p style={{ color: '#666' }}>Parallel Agent Model Demo</p>
       </header>
       

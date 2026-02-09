@@ -1,8 +1,8 @@
 import './global.css';
 
 export const metadata = {
-  title: 'Agency Protocol Dashboard',
-  description: 'Agency Protocol',
+  title: 'Promise Protocol Dashboard',
+  description: 'Promise Protocol',
 };
 
 export default function RootLayout({

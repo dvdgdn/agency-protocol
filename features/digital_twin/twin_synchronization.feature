@@ -1,4 +1,4 @@
-Feature: Agency Protocol Governed Real-Time Synchronization
+Feature: Promise Protocol Governed Real-Time Synchronization
   In order to ensure digital twin agents accurately reflect their physical counterparts through accountable processes
   As a Data Integrator, interacting with promise-making agents
   I want to ingest live telemetry and apply verifiable reconciliation policies.

@@ -1,5 +1,5 @@
-Feature: Agency Protocol Enhanced Digital Twin Lifecycle Management
-  In order to reliably model and manage physical assets using Agency Protocol
+Feature: Promise Protocol Enhanced Digital Twin Lifecycle Management
+  In order to reliably model and manage physical assets using Promise Protocol
   As a Platform Operator, relying on accountable agents
   I want to register, update, snapshot, and retire digital twins with verifiable commitments.
 

@@ -187,7 +187,7 @@ class HighLoadAnalyzer:
 
     def generate_report_text(self):
         """Generates a full markdown report as a string."""
-        report_lines = ["# ⚙️ Agency Protocol: High-Load Stress Test Report"]
+        report_lines = ["# ⚙️ Promise Protocol: High-Load Stress Test Report"]
         
         report_lines.append("\n## Executive Summary")
         

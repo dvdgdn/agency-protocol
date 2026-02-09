@@ -1,5 +1,5 @@
 # features/ap_analytics.feature
-Feature: Agency Protocol Built-in Analytics Agents
+Feature: Promise Protocol Built-in Analytics Agents
   In order to deliver first-class insights without external tools
   As a Platform Operator
   I want Analytics Agents for anomaly detection, trend-forecasting and predictive maintenance

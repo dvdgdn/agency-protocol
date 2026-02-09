@@ -1,5 +1,5 @@
 (*---------------------------------------------------------------------
-  AgencyProtocol_ParamsWitness.v
+  PromiseProtocol_ParamsWitness.v
   -------------------------------------------------------------
   A **concrete, machine‑checked witness** that all of the economic
   and stake‑related inequalities used in the Agency‑Protocol proofs
@@ -33,7 +33,7 @@ Definition beta          : R := 1 / 2.           (* 0.5   *)
 Definition ΔM_gap        : R := 3 / 10.          (* 0.30  *)
 
 (* ----------------------------------------------------------------- *)
-(** Derived constant (matches AgencyProtocol_DerivedConstants.v) *)
+(** Derived constant (matches PromiseProtocol_DerivedConstants.v) *)
 Definition G_max : R := INR n_domains * V_task_max * commission_max.
 
 (* ----------------------------------------------------------------- *)

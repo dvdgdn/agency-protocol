@@ -1,4 +1,4 @@
-# The Agency Protocol: Layer 3 - Convergence and Collective Composition
+# The Promise Protocol: Layer 3 - Convergence and Collective Composition
 
 **A Whitepaper on Coordinated Agency Development Through Shared Vision and Backward Induction**
 
@@ -6,7 +6,7 @@
 
 ## Executive Summary
 
-This whitepaper introduces Layer 3 of the Agency Protocol, which addresses the coordination of multiple agents working toward shared or complementary futures. While Layers 1 and 2 focus on individual promise-making and portfolio management, Layer 3 provides the architecture for collective agency development through two primary mechanisms: Future Life Progression for vision articulation and Backward Induction for pathway mapping.
+This whitepaper introduces Layer 3 of the Promise Protocol, which addresses the coordination of multiple agents working toward shared or complementary futures. While Layers 1 and 2 focus on individual promise-making and portfolio management, Layer 3 provides the architecture for collective agency development through two primary mechanisms: Future Life Progression for vision articulation and Backward Induction for pathway mapping.
 
 Layer 3 recognizes that individual agency development without collective coordination creates isolated capability that cannot address systemic challenges. Conversely, collective action without individual capability development produces brittle commitments that collapse under pressure. The convergence layer bridges this gap by enabling multiple agents to align their development trajectories while maintaining individual autonomy and accountability.
 
@@ -20,7 +20,7 @@ The whitepaper addresses critical implementation challenges including vision con
 
 ## Introduction: The Limits of Individual Agency
 
-The first two layers of the Agency Protocol establish individual capability for promise-making and promise-keeping. Layer 1 teaches practitioners to execute single promise cycles with high reliability through structured sensemaking, installation, and learning extraction. Layer 2 develops capacity for managing multiple concurrent promises through merit-based progression and portfolio coordination. These layers produce individuals with expanding agency who can reliably deliver on increasingly complex commitments.
+The first two layers of the Promise Protocol establish individual capability for promise-making and promise-keeping. Layer 1 teaches practitioners to execute single promise cycles with high reliability through structured sensemaking, installation, and learning extraction. Layer 2 develops capacity for managing multiple concurrent promises through merit-based progression and portfolio coordination. These layers produce individuals with expanding agency who can reliably deliver on increasingly complex commitments.
 
 However, individual agency development reaches natural limits when addressing challenges that require coordinated action across multiple agents. Consider a practitioner who has developed strong promise-keeping capacity and wants to contribute to environmental restoration in their bioregion. Their individual promises might address personal consumption patterns, local habitat restoration, or community education. These commitments have value, but the bioregion's ecological health depends on coordinated action across hundreds or thousands of agents making complementary commitments about land use, resource extraction, pollution control, and habitat connectivity.
 
@@ -250,11 +250,11 @@ Exit protocols allow members to leave networks voluntarily when coordination no 
 
 ## Integration Across Layers: The Complete Architecture
 
-Layer 3 completes the Agency Protocol by connecting individual capability development through coordinated action toward shared futures. The three layers function as an integrated system where each level provides foundation for the next while remaining valuable independently.
+Layer 3 completes the Promise Protocol by connecting individual capability development through coordinated action toward shared futures. The three layers function as an integrated system where each level provides foundation for the next while remaining valuable independently.
 
 ### The Developmental Progression
 
-Practitioners typically begin their engagement with the Agency Protocol at Layer 1, developing foundational capacity for making and keeping individual promises. This initial work focuses on single promise cycles that teach the mechanics of pre-commit sensemaking, installation through consciousness embedding, and post-commit learning extraction. During this phase, practitioners develop accurate self-knowledge about their capacity, learn which installation techniques work for their particular psychology, and build the track record of reliable promise-keeping that creates confidence in their capability.
+Practitioners typically begin their engagement with the Promise Protocol at Layer 1, developing foundational capacity for making and keeping individual promises. This initial work focuses on single promise cycles that teach the mechanics of pre-commit sensemaking, installation through consciousness embedding, and post-commit learning extraction. During this phase, practitioners develop accurate self-knowledge about their capacity, learn which installation techniques work for their particular psychology, and build the track record of reliable promise-keeping that creates confidence in their capability.
 
 Layer 2 engagement begins when practitioners demonstrate sufficient consistency in single promise cycles to warrant adding complexity. The merit-based progression system ensures that practitioners do not attempt portfolio management before they have developed the foundation it requires. At Layer 2, practitioners learn to manage multiple concurrent promises, recognize interaction effects between commitments, and develop principles for capacity allocation across different life domains. This work remains individually focused but introduces the systems thinking required for coordination.
 
@@ -376,11 +376,11 @@ After two years, the cooperative has deployed its first production application s
 
 ## Conclusion: The Promise of Collective Agency
 
-Layer 3 completes the Agency Protocol by providing the architecture through which individual capability development connects to collective capacity for addressing systemic challenges. The convergence mechanisms—Future Life Progression and Backward Induction—enable practitioners to articulate compelling visions and map viable pathways while the promise coordination protocols create accountability structures that make collective action reliable rather than aspirational.
+Layer 3 completes the Promise Protocol by providing the architecture through which individual capability development connects to collective capacity for addressing systemic challenges. The convergence mechanisms—Future Life Progression and Backward Induction—enable practitioners to articulate compelling visions and map viable pathways while the promise coordination protocols create accountability structures that make collective action reliable rather than aspirational.
 
 The framework's power derives from its integration across scales. Individual promise-keeping at Layer 1 provides the foundation for portfolio management at Layer 2, which enables the coordinated networks at Layer 3. Each layer remains valuable independently while also serving as infrastructure for the next level of complexity. This architecture allows practitioners to develop capability progressively rather than requiring mastery of the complete system before beginning practice.
 
-Layer 3 work represents the most ambitious aspect of the Agency Protocol because it addresses coordination challenges that have historically constrained social transformation efforts. Movements articulate inspiring visions but struggle to execute reliably on the promises required to manifest them. Organizations achieve local success but cannot coordinate at scales necessary for systemic impact. Communities experience shared values but lack mechanisms for translating alignment into coordinated capability development.
+Layer 3 work represents the most ambitious aspect of the Promise Protocol because it addresses coordination challenges that have historically constrained social transformation efforts. Movements articulate inspiring visions but struggle to execute reliably on the promises required to manifest them. Organizations achieve local success but cannot coordinate at scales necessary for systemic impact. Communities experience shared values but lack mechanisms for translating alignment into coordinated capability development.
 
 The convergence protocols provide tested mechanisms for addressing these coordination challenges through promise networks grounded in verified individual capacity. By maintaining the connection between collective vision and individual accountability, the framework avoids both the diffusion of responsibility that plagues many collective efforts and the isolation of individual capability development that limits impact.
 

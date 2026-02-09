@@ -1,5 +1,5 @@
 # features/ap_connector_integration.feature
-Feature: Agency Protocol Connector Agent Integration
+Feature: Promise Protocol Connector Agent Integration
   In order to ingest from diverse systems out-of-the-box
   As a Data Engineer
   I want Connector Agents for MQTT, OPC-UA, REST, SNMP, and JDBC

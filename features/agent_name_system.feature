@@ -1,7 +1,7 @@
 Feature: Agent Name System (ANS)
 
   Background:
-    Given the Agent Name System is operational within the Agency Protocol
+    Given the Agent Name System is operational within the Promise Protocol
     And agents can register with names and tags
     And tags can inherit from other tags to form a hierarchy
     And namespaces are used to organize and resolve agent names

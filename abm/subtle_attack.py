@@ -250,7 +250,7 @@ class SubtleAttackAnalyzer:
         print("\n📊 Analysis charts saved to 'subtle_attack_analysis.png'")
 
     def generate_report_text(self):
-        report_lines = ["# 🕵️ Agency Protocol: Subtle Attack Simulation Report"]
+        report_lines = ["# 🕵️ Promise Protocol: Subtle Attack Simulation Report"]
         
         # --- Praise Bombing Analysis ---
         history_praise = self.results['praise_bombing']

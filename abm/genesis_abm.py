@@ -192,7 +192,7 @@ class GenesisAnalyzer:
         return self.plot_results()
 
     def generate_report_text(self):
-        report_lines = ["# 🌱 Agency Protocol: Genesis & Bootstrap Simulation Report"]
+        report_lines = ["# 🌱 Promise Protocol: Genesis & Bootstrap Simulation Report"]
         
         report_lines.append("\n## Executive Summary")
         

@@ -1,4 +1,4 @@
-Feature: Agency Protocol Governed Digital Twin Health Assessment, KPI Monitoring & Accountability
+Feature: Promise Protocol Governed Digital Twin Health Assessment, KPI Monitoring & Accountability
   In order to verifiably track twin fidelity, system performance, and ensure accountability
   As a Platform Operator, relying on a "Twin Health Monitoring Agent"
   I want continuous health assessments, KPI calculations tied to promises, and threshold-based alerting.

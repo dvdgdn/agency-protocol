@@ -1,6 +1,6 @@
 Feature: Decision Failure Mode Resolution
   Decision-making processes often fail in predictable ways
-  Agency Protocol combines Consensus, Meritocratic, and Democratic mechanisms
+  Promise Protocol combines Consensus, Meritocratic, and Democratic mechanisms
   to address common failure modes while maintaining transparency and accountability
 
   Background:
@@ -115,7 +115,7 @@ Feature: Decision Failure Mode Resolution
   Scenario: Neutralizing hidden power dynamics
     Given an organization has both formal and informal power structures
     And some members have disproportionate influence despite limited expertise
-    When decisions are processed through the Agency Protocol system
+    When decisions are processed through the Promise Protocol system
     Then the Meritocratic Agent weights input based on demonstrated expertise
     And the Democratic Agent maintains equality in procedural rights
     And the Consensus Agent ensures all voices are heard and considered
@@ -125,7 +125,7 @@ Feature: Decision Failure Mode Resolution
   Scenario: Matching decision methods to appropriate situations
     Given different decisions require different levels of consensus and speed
     And organizations often apply one-size-fits-all decision processes
-    When the Agency Protocol system is configured for a decision
+    When the Promise Protocol system is configured for a decision
     Then domain-specific protocols determine the appropriate decision mechanism:
       | Decision Type     | Primary Agent    | Secondary Agent  | Threshold    |
       | Crisis response   | Meritocratic     | Democratic       | Low          |

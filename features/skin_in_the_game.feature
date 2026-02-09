@@ -1,5 +1,5 @@
 Feature: Skin in the Game
-  The Agency Protocol uses merit and credit to incentivize good faith participation
+  The Promise Protocol uses merit and credit to incentivize good faith participation
   Merit is domain-specific and updated in batches based on assessments
   Credit is transferrable and used for staking on promises
   All actions have consequences through credit stakes and merit effects

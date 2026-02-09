@@ -1,4 +1,4 @@
-# The Agency Protocol: Layer 1 - The Post-Commit Phase
+# The Promise Protocol: Layer 1 - The Post-Commit Phase
 
 **A Whitepaper on Execution, Verification, and Learning Extraction**
 
@@ -6,7 +6,7 @@
 
 ## Executive Summary
 
-The Post-Commit Phase represents the integration and learning component of the Agency Protocol's three-phase promise cycle. While Pre-Commit establishes what warrants commitment and Commit installs promises into consciousness, Post-Commit encompasses the execution period, outcome documentation, learning extraction, and continuation decisions that transform individual promise cycles into cumulative capability development.
+The Post-Commit Phase represents the integration and learning component of the Promise Protocol's three-phase promise cycle. While Pre-Commit establishes what warrants commitment and Commit installs promises into consciousness, Post-Commit encompasses the execution period, outcome documentation, learning extraction, and continuation decisions that transform individual promise cycles into cumulative capability development.
 
 This whitepaper addresses the reality that promise outcomes—whether kept or broken—generate value primarily through the learning they produce rather than through simple success or failure. The framework treats each promise cycle as an experiment that tests hypotheses about capacity, installation effectiveness, and the relationship between commitment and circumstance. Post-Commit protocols extract maximum learning from these experiments, feeding insights back into future Pre-Commit decisions and installation refinements.
 
@@ -24,7 +24,7 @@ Post-Commit concludes with explicit continuation decisions about whether to reco
 
 The Post-Commit Phase begins when promise execution starts and continues through the conclusion of the commitment period and subsequent reflection work. This phase transforms the promise from installed intention into lived experience, generating the empirical data that grounds all subsequent promise work in reality rather than theory.
 
-Most personal development approaches focus overwhelmingly on goal-setting and action planning, treating execution as straightforward implementation and evaluation as simple assessment of whether goals were achieved. The Agency Protocol recognizes execution as complex interaction between installed intentions, actual capacity, environmental conditions, and emergent circumstances that cannot be fully anticipated during planning. This complexity makes the execution period a rich source of learning that superficial success/failure assessment cannot capture.
+Most personal development approaches focus overwhelmingly on goal-setting and action planning, treating execution as straightforward implementation and evaluation as simple assessment of whether goals were achieved. The Promise Protocol recognizes execution as complex interaction between installed intentions, actual capacity, environmental conditions, and emergent circumstances that cannot be fully anticipated during planning. This complexity makes the execution period a rich source of learning that superficial success/failure assessment cannot capture.
 
 The phase's dual emphasis on verification and learning reflects the framework's broader integration of external accountability and internal development. Verification through the Promise Protocol creates public or private evidence of promise-keeping, generating reputation signals that enable coordination and trust-building at individual and collective levels. Learning extraction through reflection protocols develops the self-knowledge and pattern recognition that improve future promise-making capability. Both functions prove essential—verification without learning produces compliance without growth, while learning without verification enables self-deception about actual performance.
 
@@ -406,7 +406,7 @@ The continuation decision framework maintains promise integrity while acknowledg
 
 Post-Commit work requires different competencies than other phases demand—honest self-observation, pattern recognition, learning orientation, and capacity to examine disappointment without defensiveness or success without complacency. These capabilities develop through practice across multiple promise cycles, becoming increasingly sophisticated over time.
 
-The phase completes the three-phase cycle that forms the core of the Agency Protocol. Pre-Commit establishes what warrants commitment through rigorous triage and architecture. Commit installs promises into consciousness through sophisticated embedding techniques. Post-Commit generates learning from execution that feeds back into progressively more accurate pre-commit assessment and more effective installation approaches.
+The phase completes the three-phase cycle that forms the core of the Promise Protocol. Pre-Commit establishes what warrants commitment through rigorous triage and architecture. Commit installs promises into consciousness through sophisticated embedding techniques. Post-Commit generates learning from execution that feeds back into progressively more accurate pre-commit assessment and more effective installation approaches.
 
 The complete cycle creates an upward capability spiral where each promise iteration produces learning that improves subsequent cycles. Over time, practitioners develop increasingly accurate capacity assessment, more sophisticated installation approaches, deeper pattern recognition about personal dynamics, and calibrated understanding of how to structure promises for success across varying domains and circumstances.
 

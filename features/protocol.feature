@@ -1,5 +1,5 @@
 Feature: Protocol
-  A protocol defines the structured methods and rules for achieving specific types of goals within the Agency Protocol.
+  A protocol defines the structured methods and rules for achieving specific types of goals within the Promise Protocol.
   Protocols are immutable and referenced by promises to ensure consistency and accountability.
   Updating protocols involves creating new protocols that replace previous ones without modifying existing protocols.
   

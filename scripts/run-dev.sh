@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🚀 Starting Agency Protocol Platform (Development Mode)..."
+echo "🚀 Starting Promise Protocol Platform (Development Mode)..."
 echo ""
 echo "This script will help you run the platform using the standard npm scripts."
 echo ""

@@ -1,10 +1,10 @@
 #+OPTIONS: toc:nil num:nil
 #+LATEX_HEADER: \usepackage{amsmath}
 
-#+TITLE: Promise-Based Healthcare Network (PBHN): An Agency Protocol Healthcare Architecture
+#+TITLE: Promise-Based Healthcare Network (PBHN): An Promise Protocol Healthcare Architecture
 
 * Executive Summary
-The Promise-Based Healthcare Network (PBHN) leverages Agency Protocol's promise-assessment-merit framework to create a self-optimizing healthcare ecosystem where every stakeholder—providers, patients, payers, pharmacies, and AI systems—operates as autonomous agents making explicit, staked promises about healthcare delivery. This creates unprecedented accountability, automatic quality improvement, and aligned incentives that directly optimize the scoring metrics.
+The Promise-Based Healthcare Network (PBHN) leverages Promise Protocol's promise-assessment-merit framework to create a self-optimizing healthcare ecosystem where every stakeholder—providers, patients, payers, pharmacies, and AI systems—operates as autonomous agents making explicit, staked promises about healthcare delivery. This creates unprecedented accountability, automatic quality improvement, and aligned incentives that directly optimize the scoring metrics.
 
 * Core Architecture
 ** 1. Multi-Stakeholder Agent Network
@@ -223,4 +223,4 @@ Each promise is conditional on upstream promises being kept, creating clear acco
 * Conclusion
 This PBHN architecture transforms healthcare from a system of implicit expectations and retrospective blame to one of explicit commitments and prospective accountability. By making every stakeholder an autonomous agent with skin in the game, it creates powerful economic forces that naturally optimizes for the outcomes we measure while allowing these measurements to evolve with ease.
 
-The key insight is that healthcare's trust problem isn't just about technology or payment models—it's about creating credible commitments where every party's success depends on helping others succeed. Agency Protocol provides exactly this framework, turning healthcare into a self-improving ecosystem where excellence is rewarded, failure has consequences, and trust is earned through demonstrable action.
+The key insight is that healthcare's trust problem isn't just about technology or payment models—it's about creating credible commitments where every party's success depends on helping others succeed. Promise Protocol provides exactly this framework, turning healthcare into a self-improving ecosystem where excellence is rewarded, failure has consequences, and trust is earned through demonstrable action.

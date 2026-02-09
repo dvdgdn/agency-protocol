@@ -1,5 +1,5 @@
 # features/ap_telemetry_performance.feature
-Feature: Agency Protocol High-Performance Telemetry Ingestion
+Feature: Promise Protocol High-Performance Telemetry Ingestion
   In order to support industrial-scale streams
   As a Data Integrator
   I want ingestion agents to guarantee >10k msgs/sec and <50 ms end-to-end latency

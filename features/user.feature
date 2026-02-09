@@ -1,5 +1,5 @@
 Feature: User
-  A user is an immutable agent within the Agency Protocol responsible for setting and managing goals.
+  A user is an immutable agent within the Promise Protocol responsible for setting and managing goals.
   Users interact by creating promises that reference intentions, ensuring accountability for their commitments.
   
   Background:

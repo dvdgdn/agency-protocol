@@ -1,4 +1,4 @@
-# The Agency Protocol: Layer 1 - The Pre-Commit Phase
+# The Promise Protocol: Layer 1 - The Pre-Commit Phase
 
 **A Whitepaper on Sensemaking Triage and Promise Architecture**
 
@@ -6,7 +6,7 @@
 
 ## Executive Summary
 
-The Pre-Commit Phase represents the foundation of the Agency Protocol's three-phase promise cycle. While the Commit Phase installs promises into consciousness and Post-Commit extracts learning from execution, Pre-Commit determines which intentions warrant formalization into promises and structures those commitments for success. The quality of Pre-Commit work determines whether subsequent phases have adequate foundation or whether practitioners attempt to install and execute promises that were poorly conceived from the start.
+The Pre-Commit Phase represents the foundation of the Promise Protocol's three-phase promise cycle. While the Commit Phase installs promises into consciousness and Post-Commit extracts learning from execution, Pre-Commit determines which intentions warrant formalization into promises and structures those commitments for success. The quality of Pre-Commit work determines whether subsequent phases have adequate foundation or whether practitioners attempt to install and execute promises that were poorly conceived from the start.
 
 This whitepaper addresses the reality that human beings face overwhelming arrays of possible commitments at any moment. Should one invest in health practices, career development, relationship deepening, creative projects, or community contribution? Each possibility presents itself as potentially valuable, yet pursuing all simultaneously guarantees failure through capacity fragmentation. The Pre-Commit Phase provides structured triage that separates high-value commitment opportunities from poor investments of limited capacity.
 
@@ -158,7 +158,7 @@ Verification mechanisms should be specified during architecture phase. Will the 
 
 ### Domain Mapping
 
-Every promise maps to one or more domains within the hierarchical domain system that structures the Agency Protocol. This mapping serves multiple functions including providing context for what the promise entails, connecting the promise to established standards for performance in particular areas, enabling merit tracking and capability assessment, and facilitating coordination with other practitioners working in similar domains.
+Every promise maps to one or more domains within the hierarchical domain system that structures the Promise Protocol. This mapping serves multiple functions including providing context for what the promise entails, connecting the promise to established standards for performance in particular areas, enabling merit tracking and capability assessment, and facilitating coordination with other practitioners working in similar domains.
 
 Domain mapping requires understanding the domain taxonomy and selecting mappings that accurately represent the promise's nature. A promise about daily exercise might map to `/health/fitness/_adheresToExerciseFrequency` with parameters specifying the frequency and duration. A promise about relationship communication might map to `/relationships/partnership/_initiatesWeeklyCheckIns`.
 
@@ -400,6 +400,6 @@ The Pre-Commit Phase requires investment of time and cognitive effort that initi
 
 The phase establishes the foundation upon which Commit Phase installation and Post-Commit execution depend. Without adequate Pre-Commit work, installation attempts to embed poorly specified commitments that were inappropriate from the start, producing failures that reflect inadequate foundation rather than insufficient willpower or installation skill. The complete three-phase cycle functions as integrated system where each phase depends on the others being executed well.
 
-Pre-Commit discipline distinguishes the Agency Protocol from approaches that treat commitment as simple decision to pursue particular goals. The framework recognizes that commitment quality determines outcomes more reliably than commitment quantity or execution intensity. Making fewer, better-founded promises produces more agency development than making numerous poorly-assessed commitments that fail and generate discouragement.
+Pre-Commit discipline distinguishes the Promise Protocol from approaches that treat commitment as simple decision to pursue particular goals. The framework recognizes that commitment quality determines outcomes more reliably than commitment quantity or execution intensity. Making fewer, better-founded promises produces more agency development than making numerous poorly-assessed commitments that fail and generate discouragement.
 
 The phase's emphasis on honest assessment over reassuring confirmation reflects the framework's broader commitment to developing genuine capability rather than comfortable self-deception. Practitioners serve their own flourishing by declining to promise when assessment reveals inadequate foundation, by acknowledging capacity limits rather than pretending they don't exist, and by addressing internal conflicts rather than attempting to override them through force. This honest foundation creates the stability from which sustainable growth emerges.

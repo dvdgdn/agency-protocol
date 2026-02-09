@@ -1,7 +1,7 @@
 {
   "name": "@agency-protocol/agent-ui-core",
   "version": "0.1.0",
-  "description": "Core UI components and design system for Agency Protocol",
+  "description": "Core UI components and design system for Promise Protocol",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

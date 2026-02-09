@@ -1,5 +1,5 @@
 # features/ap_compliance_and_certification.feature
-Feature: Agency Protocol Compliance & Certification Agents
+Feature: Promise Protocol Compliance & Certification Agents
   In order to meet enterprise audit and regulatory needs
   As a Compliance Officer
   I want agents that stake on ISO-27001, SOC2, HIPAA controls and emit audit artifacts

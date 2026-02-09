@@ -1,9 +1,9 @@
 """
-Agency Protocol Simulation Analysis
+Promise Protocol Simulation Analysis
 ===================================
 
 This script analyzes the results from our agent-based model to provide
-insights about the Agency Protocol's real-world viability.
+insights about the Promise Protocol's real-world viability.
 """
 
 import numpy as np
@@ -229,7 +229,7 @@ EXECUTIVE SUMMARY
         insights = []
         
         if validity_score > 0.8:
-            insights.append("✓ The Agency Protocol demonstrates strong theoretical validity")
+            insights.append("✓ The Promise Protocol demonstrates strong theoretical validity")
             insights.append("✓ Core game-theoretic properties hold under simulation")
         elif validity_score > 0.6:
             insights.append("◐ The Protocol shows promise but needs refinement")
@@ -273,7 +273,7 @@ EXECUTIVE SUMMARY
         # Conclusion
         report += f"\nCONCLUSION\n"
         report += f"----------\n"
-        report += f"The Agency Protocol shows {validity_score:.0%} theoretical validity in simulation. "
+        report += f"The Promise Protocol shows {validity_score:.0%} theoretical validity in simulation. "
         
         if validity_score > 0.8:
             report += "The protocol is ready for limited real-world trials with careful monitoring."

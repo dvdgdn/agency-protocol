@@ -130,3 +130,28 @@ Feature: Promise Evidence Requirements
       | Public        | Public evidence only                |
       | Validators    | Based on domain merit              |
       | Admins        | Based on sensitivity               |
+
+@phase1 @evidence
+Feature: Evidence artifacts are content-addressed and pointer-grounded
+
+  Background:
+    Given an Evidence Store exists
+    And evidence artifacts are stored by SHA-256 hash
+
+  @phase1 @evidence @submit
+  Scenario: Submit an evidence artifact and reference it from a PromiseCard
+    Given PromiseCard "P1" requires evidence type "message_timestamp_log"
+    When "Agent A" submits an evidence artifact "E1" with hash "H1"
+    Then "E1" is retrievable by "H1"
+    And "Agent A" can append an EvidenceReference to "P1" containing:
+      | evidence_id | pointer   | span_start | span_end |
+      | H1          | $.items[0] | 0          | 128      |
+
+  @phase2 @entailment @deterministic
+  Scenario: Deterministic entailment for a structured evidence rule
+    Given an entailment rule "message_within_24h" exists
+    And evidence artifact "E1" contains a response timestamp "T_response"
+    And the PromiseCard deadline timestamp is "T_deadline"
+    When entailment is computed for "message_within_24h"
+    Then the entailment result is ENTAILS if T_response <= T_deadline
+    And CONTRADICTS if T_response > T_deadline

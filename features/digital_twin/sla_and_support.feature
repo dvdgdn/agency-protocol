@@ -1,5 +1,5 @@
 # features/ap_sla_and_support.feature
-Feature: Agency Protocol SLA & Support Agents
+Feature: Promise Protocol SLA & Support Agents
   In order to guarantee enterprise-grade uptime and response
   As a Platform Customer
   I want SLA Agents that stake on RTO/RPO and escalate to human teams

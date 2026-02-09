@@ -1,5 +1,5 @@
 # features/ap_visualization.feature
-Feature: Agency Protocol Real-Time Visualization Agent
+Feature: Promise Protocol Real-Time Visualization Agent
   In order to deliver snappy dashboards
   As an Operator
   I want a Visualization Agent that guarantees >30 fps rendering of twin-state UIs

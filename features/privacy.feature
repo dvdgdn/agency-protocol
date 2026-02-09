@@ -1,7 +1,7 @@
 Feature: Data Management and Privacy
 
   Agents can manage access to their data, ensuring privacy and control within the decentralized system.
-  The Agency Protocol allows agents to include data in their promises and agent states, with mechanisms for secure sharing.
+  The Promise Protocol allows agents to include data in their promises and agent states, with mechanisms for secure sharing.
 
   Background:
     Given agents can include data references in their promises and agent states

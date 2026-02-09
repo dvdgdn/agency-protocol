@@ -1,10 +1,10 @@
-# Agency Protocol ABM Simulation Results Summary
+# Promise Protocol ABM Simulation Results Summary
 
 *Last updated: July 5, 2025 at 16:24:45*
 
 ## Executive Summary
 
-The Agent-Based Model (ABM) simulations validate the Agency Protocol's theoretical claims about emergent cooperation and coalition resistance. Across multiple scenarios, the protocol demonstrates robust promise-keeping rates (76.7-79.9%) under normal conditions and effective detection of malicious behavior when coalitions form.
+The Agent-Based Model (ABM) simulations validate the Promise Protocol's theoretical claims about emergent cooperation and coalition resistance. Across multiple scenarios, the protocol demonstrates robust promise-keeping rates (76.7-79.9%) under normal conditions and effective detection of malicious behavior when coalitions form.
 
 ## Key Findings
 
@@ -95,4 +95,4 @@ The separation between honest and malicious agents emerges naturally without cen
 
 ## Conclusion
 
-The ABM simulations provide strong empirical support for the Agency Protocol's theoretical framework. The emergence of cooperation as the dominant strategy, resistance to coordinated attacks, and economic sustainability validate the protocol's design as a practical solution for decentralized trust establishment.
+The ABM simulations provide strong empirical support for the Promise Protocol's theoretical framework. The emergence of cooperation as the dominant strategy, resistance to coordinated attacks, and economic sustainability validate the protocol's design as a practical solution for decentralized trust establishment.

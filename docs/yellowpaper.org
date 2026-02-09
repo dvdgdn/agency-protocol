@@ -1,6 +1,6 @@
 #+html_head: <link rel="stylesheet" href="https://sandyuraz.com/styles/org.css">
 
-#+TITLE: Agency Protocol Yellow Paper
+#+TITLE: Promise Protocol Yellow Paper
 #+SUBTITLE: Establishing Cooperation Through Domain-Specific Trust Mechanisms
 #+AUTHOR: David Joseph
 #+DATE: July 19, 2025
@@ -14,15 +14,15 @@
 
 
 * Abstract
-This paper analyzes the game-theoretic properties of the Agency Protocol and demonstrates that under appropriate parameterization, promise-keeping typically emerges (76.7-79.9% compliance validated through comprehensive ABM simulations) as the focal, coalition-resistant and dynamically stable sub-game-perfect Nash equilibrium. By integrating tools from game theory, information theory, and a self-sustaining economic model, we establish conditions under which rational agents find honest behavior utility-maximizing. We analyze resistance to manipulation attempts and collusion, and we detail concrete bootstrapping mechanisms, led by an initial fleet of AI validators, to ensure practical viability. The Protocol's novel merit-credit mechanism, where operational costs are integrated directly into promise stakes, creates incentives where truthfulness becomes economically advantageous—not through external enforcement, but as an emergent property of the system's design. Our theoretical analysis is complemented by concrete implementation details showing how these properties translate to practical mechanisms.
+This paper analyzes the game-theoretic properties of the Promise Protocol and demonstrates that under appropriate parameterization, promise-keeping typically emerges (76.7-79.9% compliance validated through comprehensive ABM simulations) as the focal, coalition-resistant and dynamically stable sub-game-perfect Nash equilibrium. By integrating tools from game theory, information theory, and a self-sustaining economic model, we establish conditions under which rational agents find honest behavior utility-maximizing. We analyze resistance to manipulation attempts and collusion, and we detail concrete bootstrapping mechanisms, led by an initial fleet of AI validators, to ensure practical viability. The Protocol's novel merit-credit mechanism, where operational costs are integrated directly into promise stakes, creates incentives where truthfulness becomes economically advantageous—not through external enforcement, but as an emergent property of the system's design. Our theoretical analysis is complemented by concrete implementation details showing how these properties translate to practical mechanisms.
 
 * Prior Work and Theoretical Foundations
 
-The Agency Protocol builds upon a rich tradition of research in game theory, mechanism design, and trust systems. Rather than claiming to discover entirely new principles, we integrate established theoretical foundations with novel implementation approaches to create a comprehensive trust infrastructure.
+The Promise Protocol builds upon a rich tradition of research in game theory, mechanism design, and trust systems. Rather than claiming to discover entirely new principles, we integrate established theoretical foundations with novel implementation approaches to create a comprehensive trust infrastructure.
 
 ** Mechanism Design and Truth-Telling Incentives
 
-Many of the economic incentives in the Agency Protocol draw inspiration from fundamental work in mechanism design—the science of creating rules that align individual incentives with desired outcomes.
+Many of the economic incentives in the Promise Protocol draw inspiration from fundamental work in mechanism design—the science of creating rules that align individual incentives with desired outcomes.
 
 *** Truthful Mechanisms
 
@@ -32,7 +32,7 @@ The concept of designing mechanisms where honest behavior emerges as equilibrium
 
 VCG mechanisms, pioneered by William Vickrey, Edward Clarke, and Theodore Groves, demonstrate that auction systems can be designed where bidding one's true value is a dominant strategy. These principles have seen widespread adoption in digital advertising markets and resource allocation systems.
 
-The Agency Protocol extends these insights beyond simple auctions to complex promise-assessment relationships, creating economic conditions where honesty becomes the utility-maximizing choice.
+The Promise Protocol extends these insights beyond simple auctions to complex promise-assessment relationships, creating economic conditions where honesty becomes the utility-maximizing choice.
 
 **** Proper Scoring Rules
 
@@ -44,7 +44,7 @@ Our assessment staking system builds on this foundation, creating rewards that a
 
 In domains without monetary transfers, from school choice to organ donation, mechanism designers have created systems where truthful preference revelation is optimal. The Gale-Shapley deferred acceptance algorithm and its variants have been implemented in numerous real-world contexts specifically to eliminate strategic manipulation.
 
-The Agency Protocol's domain-specific merit approach draws inspiration from these systems while extending their capabilities to more complex trust relationships.
+The Promise Protocol's domain-specific merit approach draws inspiration from these systems while extending their capabilities to more complex trust relationships.
 
 *** Repeated Games and Cooperation
 
@@ -54,13 +54,13 @@ The subgame perfect equilibrium properties of the Protocol build directly on est
 
 The Folk Theorem demonstrates that in infinitely repeated games with sufficiently patient players, cooperation can emerge as equilibrium behavior even when defection would be optimal in one-shot interactions. The threat of future punishment sustains cooperative behavior in the present.
 
-Our formal model explicitly acknowledges this connection, showing how the Agency Protocol creates conditions that satisfy and extend the Folk Theorem's requirements in a decentralized context.
+Our formal model explicitly acknowledges this connection, showing how the Promise Protocol creates conditions that satisfy and extend the Folk Theorem's requirements in a decentralized context.
 
 **** Relational Contracting
 
 Economic research on relational contracting shows how self-enforcing agreements emerge when parties value ongoing relationships. Firms maintain quality or timely delivery not due to external enforcement but because breaching trust would destroy valuable future opportunities.
 
-The Agency Protocol formalizes these dynamics through its merit and credit systems, creating quantifiable future opportunity value that makes promise-keeping the rational strategy.
+The Promise Protocol formalizes these dynamics through its merit and credit systems, creating quantifiable future opportunity value that makes promise-keeping the rational strategy.
 
 ** Reputation Systems and Trust
 
@@ -74,7 +74,7 @@ Matrix factorization techniques that help identify underlying patterns in assess
 
 Blockchain-based reputation systems have explored various approaches to creating manipulation-resistant trust signals. Projects like Augur and Kleros use staking mechanisms and Schelling point coordination to incentivize truthful reporting.
 
-The Agency Protocol incorporates lessons from these systems while addressing key limitations through domain-specific merit and progressive cost barriers to manipulation.
+The Promise Protocol incorporates lessons from these systems while addressing key limitations through domain-specific merit and progressive cost barriers to manipulation.
 
 *** Social Trust Research
 
@@ -82,7 +82,7 @@ Sociological and psychological research on trust formation informs our approach 
 
 ** Our Contributions
 
-Building on these foundations, the Agency Protocol makes several distinct contributions:
+Building on these foundations, the Promise Protocol makes several distinct contributions:
 
 *** Integration of Theoretical Frameworks
 
@@ -100,10 +100,10 @@ We bridge theory and practice through detailed technical architecture and staged
 
 Our staged evolution of both merit and credit systems creates a pathway from simple implementations to sophisticated collective intelligence. This evolutionary approach allows the system to bootstrap trust within its own framework.
 
-The Agency Protocol does not claim to overturn established principles of mechanism design or aame theory. Instead, it applies these principles in novel ways, extends them to new domains, and creates practical implementations that transform theoretical possibilities into functional trust infrastructure.
+The Promise Protocol does not claim to overturn established principles of mechanism design or game theory. Instead, it applies these principles in novel ways, extends them to new domains, and creates practical implementations that transform theoretical possibilities into functional trust infrastructure.
 
 * Roadmap
-This paper integrates several strands of theory and practice—game theory, information theory, repeated games, and mechanism design—to argue that promise-keeping emerges as a rational strategy under the Agency Protocol. Below is a concise roadmap:
+This paper integrates several strands of theory and practice—game theory, information theory, repeated games, and mechanism design—to argue that promise-keeping emerges as a rational strategy under the Promise Protocol. Below is a concise roadmap:
 
 1.  *Introduction and Core Intuition*
     Describes how trust problems manifest in decentralized systems and introduces
@@ -123,12 +123,12 @@ This paper integrates several strands of theory and practice—game theory, info
 
 4.  *Manipulation Resistance*
     Demonstrates how coalitions attempting to collude or provide dishonest assessments
-    face super-linear (≈ exp after n≥10) increasing costs versus linearly bounded benefits.
+    face increasing detection risk and thresholded coordination costs versus linearly bounded benefits.
 
 5.  *System Stability and Dynamics*
-    Analyzes Lyapunov stability, convergence, and feedback loops. Shows that even if
-    some agents deviate, the system tends to return to cooperative behavior under
-    appropriate parameterization.
+    Analyzes Lyapunov-style stability bounds, convergence behavior, and feedback loops.
+    Characterizes modeled conditions under which cooperative dynamics are restored after
+    perturbations.
 
 6.  *Bounded Rationality*
     Examines the robustness of the cooperative equilibrium when the assumption of perfect rationality is relaxed, considering errors and finite cognitive horizons.
@@ -159,7 +159,7 @@ This roadmap ensures that readers see how the major sections fit together: from 
 
 * Introduction and Core Intuition
 
-Trust underlies human cooperation but remains notoriously difficult to reliably achieve in decentralized digital environments. Existing trust and reputation systems commonly suffer from vulnerabilities including simplistic reputation metrics, gaming susceptibility, and inadequate context sensitivity. The Agency Protocol addresses these issues by introducing a sophisticated dual-currency mechanism—transferable credits and non-transferable, domain-specific merit—which systematically makes honest behavior economically advantageous.
+Trust underlies human cooperation but remains notoriously difficult to reliably achieve in decentralized digital environments. Existing trust and reputation systems commonly suffer from vulnerabilities including simplistic reputation metrics, gaming susceptibility, and inadequate context sensitivity. The Promise Protocol addresses these issues by introducing a sophisticated dual-currency mechanism—transferable credits and non-transferable, domain-specific merit—which systematically makes honest behavior economically advantageous.
 
 A core innovation is the protocol's self-sustaining economic model, where the operational cost of recording and validating a promise is integrated directly into the stake an agent posts. This unified cost structure simplifies user interaction, funds the protocol's infrastructure, and ensures every action has an economic weight, thus preventing spam.
 
@@ -170,19 +170,19 @@ Specifically, this paper demonstrates:
 - The conditions under which promise-keeping forms a subgame perfect Nash equilibrium.
 - The emergence of a focal, coalition-proof cooperative equilibrium.
 - A concrete, AI-first bootstrapping strategy to solve the "cold-start" problem.
-- Robust resistance to manipulation through exponentially increasing detection costs for dishonest coalitions.
-- Dynamic stability and rapid convergence to cooperative behavior under realistic parameterization.
+- Robust resistance to manipulation through increasing detection probability and explicit coalition-cost thresholds for dishonest coalitions.
+- Dynamic stability structure with empirically rapid convergence under realistic parameterization.
 
 Collectively, these theoretical and practical contributions represent a significant advance beyond existing trust mechanisms by providing a reliable and economically coherent foundation for cooperation in decentralized systems.
 
 ** 1.1 A Critical Advance in Trust Systems
-The Agency Protocol represents a significant advancement beyond existing trust and reputation systems. Traditional reputation systems suffer from three critical flaws:
+The Promise Protocol represents a significant advancement beyond existing trust and reputation systems. Traditional reputation systems suffer from three critical flaws:
 
 - *One-dimensionality*: Collapsing diverse attributes into single scores obscures crucial context
 - *Gaming vulnerability*: Without skin in the game, easy manipulation through fake reviews or strategic timing
 - *Feedback dilution*: Bimodal distribution fails to capture nuanced middle ground
 
-By embracing domain-specific merit, requiring stake on promises and assessments, and creating verifiable evidence chains, the Agency Protocol addresses these limitations. This is not merely theoretical—the Protocol has been implemented with concrete features addressing each limitation:
+By embracing domain-specific merit, requiring stake on promises and assessments, and creating verifiable evidence chains, the Promise Protocol addresses these limitations. This is not merely theoretical—the Protocol has been implemented with concrete features addressing each limitation:
 
 #+BEGIN_SRC mermaid :file trust-systems-comparison.png
 graph LR
@@ -190,7 +190,7 @@ graph LR
     A --> E[No Stake Requirements]
     A --> F[Manipulable Feedback]
 
-    B[Agency Protocol] --> G[Domain-specific Merit]
+    B[Promise Protocol] --> G[Domain-specific Merit]
     B --> H[Credit-based Staking]
     B --> I[Verifiable Assessments]
 
@@ -200,7 +200,7 @@ graph LR
 #+END_SRC
 
 ** 1.2 From Theory to Implementation
-Throughout this paper, we connect the abstract mathematical properties with their concrete implementation in the Agency Protocol. The theoretical model has been realized through a concrete feature set that includes:
+Throughout this paper, we connect the abstract mathematical properties with their concrete implementation in the Promise Protocol. The theoretical model has been realized through a concrete feature set that includes:
 
 - *Agent Creation and Lifecycle*: Cryptographically verified identities with content-addressable promises
 - *Merit System*: Domain-specific trust calculation with sophisticated weighting mechanisms
@@ -354,14 +354,14 @@ This shows that the gain from defection must be less than the at-risk capital ($
 
 *Corollary 1.1* (Minimum Stake Requirement): *The minimum total stake requirement $S_p$ that ensures keeping promises is the best response strategy must satisfy the inequality in Theorem 1.*
 
-*Theorem 2* (Nash Equilibrium): *If the Agency Protocol sets stake requirements such that the condition in Theorem 1 is met for all promises $p \in \mathcal{P}$, then keeping promises is a Nash equilibrium strategy in the single-round game.*
+*Theorem 2* (Nash Equilibrium): *If the Promise Protocol sets stake requirements such that the condition in Theorem 1 is met for all promises $p \in \mathcal{P}$, then keeping promises is a Nash equilibrium strategy in the single-round game.*
 
 *Proof*: When the condition from Theorem 1 holds, $\Delta U_a(K_p) > \Delta U_a(B_p)$. Therefore, no agent can increase their utility by unilaterally deviating from the promise-keeping strategy, which is the definition of a Nash equilibrium. ∎
 
 While this establishes an equilibrium, repeated interactions and future opportunity costs are necessary to ensure this equilibrium is both stable and focal.
 
 ** 3.2 Honest Assessment Incentives
-*Theorem 3* (Assessment Honesty): *In the Agency Protocol, honest assessment is the best response strategy when assessments affect the assessor's merit and detection mechanisms are in place.*
+*Theorem 3* (Assessment Honesty): *In the Promise Protocol, honest assessment is the best response strategy when assessments affect the assessor's merit and detection mechanisms are in place.*
 
 *Proof*:
 When an agent assesses dishonestly, they risk:
@@ -374,18 +374,17 @@ $P_{detect} = 1 - \exp(-\kappa \cdot D(\text{coalition}||\text{truth}))$
 
 Where $\kappa$ is a system parameter controlling detection sensitivity.
 
-*Formal proof*: [[file:../coq/AgencyProtocol_ConsensusDetection.v][AgencyProtocol_ConsensusDetection.v]] (Consensus algorithm detection probability)
+*Formal proof*: [[file:../coq/PromiseProtocol_ConsensusDetection.v][PromiseProtocol_ConsensusDetection.v]] (Consensus-derived divergence and monotone detection growth)
 
 #+BEGIN_SRC coq :tangle no
-(* Excerpt from AgencyProtocol_ConsensusDetection.v *)
-(* This proves that dishonest assessments create detectable divergence *)
+(* Excerpt from PromiseProtocol_ConsensusDetection.v *)
+(* Detection increases with coalition size once per-dishonest divergence is positive. *)
 
-Theorem consensus_detection_divergence :
-  forall assessments : list Assessment,
-  forall coalition_size total_assessors : nat,
-  coalition_size < total_assessors / 3 ->
-  exists d : R, d > 0 /\
-    detection_probability assessments >= 1 - exp(-detection_sensitivity * d).
+Theorem detection_with_concrete_divergence :
+  forall kappa,
+    kappa > 0 ->
+    forall n m, (n < m)%nat ->
+    detection_probability kappa n < detection_probability kappa m.
 #+END_SRC
 
 The expected utility from honest assessment exceeds that of dishonest assessment when:
@@ -435,18 +434,16 @@ The Protocol implements future opportunity value through:
 These mechanisms ensure that high-merit agents receive concrete economic benefits that grow over time, creating powerful incentives for honest behavior.
 
 ** 3.4 Subgame Perfect Equilibrium
-*Theorem 4* (Subgame Perfect Equilibrium): *In the iterated Agency Protocol game with discount factor $\delta$, promise-keeping and honest assessment can form a subgame perfect equilibrium if:*
-*Formal proof*: [[file:../coq/AgencyProtocol_SPE_Narrow.v][AgencyProtocol_SPE_Narrow.v]] (Subgame perfect equilibrium for narrow coalitions)
+*Theorem 4* (Subgame Perfect Equilibrium): *In the iterated Promise Protocol game with discount factor $\delta$, promise-keeping and honest assessment can form a subgame perfect equilibrium if:*
+*Formal proof*: [[file:../coq/PromiseProtocol_SPE_Narrow.v][PromiseProtocol_SPE_Narrow.v]] (No profitable one-step deviation in the narrow repeated-game model)
 
 #+BEGIN_SRC coq :tangle no
-(* Excerpt from AgencyProtocol_SPE_Narrow.v *)
-(* Proves cooperation is SPE for coalitions < 5% *)
+(* Excerpt from PromiseProtocol_SPE_Narrow.v *)
+(* Under 0 < delta < 1 and Loss > DeltaB - DeltaK, no one-step deviation is profitable. *)
 
-Theorem narrow_SPE :
-  forall S : SystemState,
-  forall coalition : list AgentId,
-  length coalition < ceil (0.05 * total_agents S) ->
-  subgame_perfect_equilibrium S cooperate_strategy.
+Theorem SPE_always_keep :
+  forall P : nat,
+    ~ profitable_one_step U_coop U_defect_once.
 #+END_SRC
 1.  *The stake requirements satisfy the condition in Theorem 1*
 2.  *The normalized discount factor satisfies $\delta \geq \delta_{min}$, where:*
@@ -477,7 +474,7 @@ Since $G_{max}$ and $\alpha_a \cdot S_{base} \cdot w_{max} \cdot P_{min}$ are po
 
 - *Off-Path Analysis*: After a deviation, the punishment strategy (lower merit, higher future stakes) is automatically enforced by the protocol's mechanics, making it a credible threat. Since no agent can profitably deviate in any subgame when these conditions are met, the cooperative strategy forms a subgame perfect equilibrium. ∎
 
-While repeated games can theoretically host multiple equilibria, the Agency Protocol is explicitly designed to make the cooperative SPE the system's focal point. Through transparent merit mechanics and incentive structures that reward honesty, the cooperative strategy becomes the most intuitive and profitable path for participants. Subsequent sections will demonstrate how the protocol actively destabilizes alternative, non-cooperative equilibria.
+While repeated games can theoretically host multiple equilibria, the Promise Protocol is explicitly designed to make the cooperative SPE the system's focal point. Through transparent merit mechanics and incentive structures that reward honesty, the cooperative strategy becomes the most intuitive and profitable path for participants. Subsequent sections will demonstrate how the protocol actively destabilizes alternative, non-cooperative equilibria.
 
 *Corollary 4.1* (Pareto Optimality): *Under sufficiently high discount factors, the cooperative equilibrium is Pareto-optimal within the set of subgame perfect equilibria.*
 
@@ -491,17 +488,17 @@ This means the cooperative equilibrium is Pareto-optimal among the set of possib
 
 ** 3.5 Convergence and Imperfect Monitoring Extensions
 
-While previous sections establish equilibrium conditions and incentives for honesty in the Agency Protocol, we now turn to two theoretical extensions that demonstrate the practical applicability of the Protocol: contributions to adaptive dynamics convergence and an approach to addressing imperfect monitoring conditions.
+While previous sections establish equilibrium conditions and incentives for honesty in the Promise Protocol, we now turn to two theoretical extensions that demonstrate the practical applicability of the Protocol: contributions to adaptive dynamics convergence and an approach to addressing imperfect monitoring conditions.
 
 *** Adaptive Dynamics and Convergence Properties
 
 In game theory, a persistent challenge involves the convergence of adaptive dynamics—how rational agents iteratively adjust strategies based on observed outcomes—to Nash equilibria. General convergence guarantees remain elusive beyond specialized cases like zero-sum or potential games.
 
-Agency Protocol offers valuable insights into this challenge through its merit-stake adjustment system. The Protocol's approach creates conditions that appear to facilitate convergence through several mechanisms:
+Promise Protocol offers valuable insights into this challenge through its merit-stake adjustment system. The Protocol's approach creates conditions that appear to facilitate convergence through several mechanisms:
 
 #+BEGIN_QUOTE
 *Convergence Properties (Informal Statement):*
-When agents iteratively update their strategies based on merit-weighted outcomes and credit incentives within the Agency Protocol framework, the resulting dynamics exhibit improved convergence properties compared to standard adaptive dynamics. The Protocol's built-in feedback mechanisms create stability-enhancing forces that guide the system toward cooperative equilibrium.
+When agents iteratively update their strategies based on merit-weighted outcomes and credit incentives within the Promise Protocol framework, the resulting dynamics exhibit improved convergence properties compared to standard adaptive dynamics. The Protocol's built-in feedback mechanisms create stability-enhancing forces that guide the system toward cooperative equilibrium.
 #+END_QUOTE
 
 The mechanisms supporting this improved convergence include:
@@ -509,31 +506,31 @@ The mechanisms supporting this improved convergence include:
 - Dishonesty reduces merit, raises stakes, and reduces future payoffs, creating negative feedback loops that disincentivize persistent deviation.
 - Merit-based evaluation creates a form of weighted learning that stabilizes the strategy adjustment process.
 
-While we do not claim to have solved the general convergence problem, our analysis and simulations suggest that the Agency Protocol's merit-credit system creates conditions where convergence to cooperative equilibrium occurs more reliably than in standard repeated games. These findings contribute to the ongoing research on mechanisms that can improve convergence properties in practical multi-agent systems.
+While we do not claim to have solved the general convergence problem, our analysis and simulations suggest that the Promise Protocol's merit-credit system creates conditions where convergence to cooperative equilibrium occurs more reliably than in standard repeated games. These findings contribute to the ongoing research on mechanisms that can improve convergence properties in practical multi-agent systems.
 
 *** Handling Imperfect Monitoring through Probabilistic Evidence
 
 A second significant challenge in game theory involves repeated games with imperfect monitoring, where agents receive noisy or probabilistic signals about others' behaviors instead of perfect information. Traditional equilibrium concepts (like the classical Folk Theorem) face limitations when applied to such scenarios.
 
-The Agency Protocol offers a practical approach to addressing imperfect monitoring challenges through its probabilistic evidence framework:
+The Promise Protocol offers a practical approach to addressing imperfect monitoring challenges through its probabilistic evidence framework:
 
 #+BEGIN_QUOTE
 *Probabilistic Evidence Framework (Informal Statement):*
-The Agency Protocol's evidence assessment framework naturally accommodates imperfect monitoring scenarios by explicitly modeling promise verification as a probabilistic process. This creates a practical implementation approach that functions effectively under the information constraints that characterize imperfect monitoring settings.
+The Promise Protocol's evidence assessment framework naturally accommodates imperfect monitoring scenarios by explicitly modeling promise verification as a probabilistic process. This creates a practical implementation approach that functions effectively under the information constraints that characterize imperfect monitoring settings.
 #+END_QUOTE
 
-In Agency Protocol, "evidence" for promise fulfillment isn't binary; it naturally supports noisy signals, probabilistic inference, and Bayesian reasoning. Formally, traditional imperfect monitoring scenarios define a signal \(y\), probabilistically correlated with actions \(a\). Agency Protocol incorporates similar probabilistic structures: a promise made by agent \(i\) to perform action \(a_i\) is verified by observing signals drawn from probability distributions \(P(y|a_i)\).
+In Promise Protocol, "evidence" for promise fulfillment isn't binary; it naturally supports noisy signals, probabilistic inference, and Bayesian reasoning. Formally, traditional imperfect monitoring scenarios define a signal \(y\), probabilistically correlated with actions \(a\). Promise Protocol incorporates similar probabilistic structures: a promise made by agent \(i\) to perform action \(a_i\) is verified by observing signals drawn from probability distributions \(P(y|a_i)\).
 
 This explicit probabilistic approach allows the Protocol to operate effectively in environments where perfect monitoring is impractical. Rather than claiming to solve the theoretical challenges of imperfect monitoring, we provide a practical framework that works within these constraints, offering a pragmatic path forward for trust systems in realistic environments.
 
 *** Significance and Implications
 
-These theoretical extensions highlight Agency Protocol's practical robustness:
+These theoretical extensions highlight Promise Protocol's practical robustness:
 
 - Our adaptive dynamics approach demonstrates how careful mechanism design can create conditions that promote convergence to cooperative equilibria, even if general theoretical guarantees remain challenging.
 - The probabilistic evidence framework shows how imperfect monitoring challenges can be addressed through explicit modeling of uncertainty in verification processes.
 
-These results strengthen the Protocol's foundations, demonstrating its applicability to realistic scenarios with iterative learning and incomplete information. While fundamental theoretical challenges in these areas remain open research questions, the Agency Protocol contributes valuable implementation approaches that function effectively within these constraints.
+These results strengthen the Protocol's foundations, demonstrating its applicability to realistic scenarios with iterative learning and incomplete information. While fundamental theoretical challenges in these areas remain open research questions, the Promise Protocol contributes valuable implementation approaches that function effectively within these constraints.
 * Manipulation Resistance
 ** 4.1 Coalition Manipulation Analysis
 *Theorem 5* (Coalition Manipulation Threshold): *In a merit-weighted assessment system, a coalition needs to control a proportion $p_c$ of the total merit-weighted assessments, where:*
@@ -554,7 +551,8 @@ For a coalition to manipulate outcomes, they must control enough merit-weighted 
 Given the Protocol's typical threshold of $\theta = 0.6$, a coalition would need to control at least 40% of the merit-weighted assessments to manipulate outcomes. This becomes increasingly difficult as the network grows and merit becomes distributed, especially with the Protocol's merit-weighted assessment system.
 
 ** 4.2 Information-Theoretic Detection
-*Theorem 6* (super-linear detection): *A coalition of size $n_c$ attempting to manipulate assessments faces detection probability that increases with the information divergence between their assessments and the ground truth.*
+*Theorem 6* (Detection Monotonicity): *A coalition of size $n_c$ attempting to manipulate assessments faces detection probability that is strictly increasing in coalition size under positive per-agent divergence.*
+*Formal proof*: [[file:../coq/PromiseProtocol_T6.v][PromiseProtocol_T6.v]] and [[file:../coq/PromiseProtocol_ConsensusDetection.v][PromiseProtocol_ConsensusDetection.v]]
 
 *Proof*:
 When a coalition provides dishonest assessments, the information divergence from truth is:
@@ -569,16 +567,16 @@ $P_{detect}(n_c) = 1 - \exp(-\kappa \cdot \sum_{i \in \text{coalition}} D(i||\te
 
 Where $\kappa$ is a system parameter controlling detection sensitivity.
 
-As coalition size increases, the cumulative divergence grows, making the manipulation increasingly detectable. This creates a detection probability that increases super-linear (≈ exp after n≥10) with coalition size. ∎
+As coalition size increases, the cumulative divergence grows, making manipulation increasingly detectable. In the formal model this yields strict monotonicity in $n_c$, with $P_{detect}(n_c)$ remaining in $[0,1)$. ∎
 
-For n \u2264 8 the empirical P<sub>detect</sub> rises only linearly; the exponential term dominates for larger n.
+The mechanized guarantee here is monotonicity and boundedness; detailed curve-shape claims are empirical and reported in Section 8.
 
 ** 4.3 Coalition Formation Economics
 *Theorem 7* (Coalition Viability): *A manipulation coalition is not economically viable when the expected costs exceed the expected benefits:*
-*Formal proof*: [[file:../coq/AgencyProtocol_T7.v][AgencyProtocol_T7.v]] (Coalition viability threshold)
+*Formal proof*: [[file:../coq/PromiseProtocol_T7.v][PromiseProtocol_T7.v]] (Coalition viability threshold)
 
 #+BEGIN_SRC coq :tangle no
-(* Excerpt from AgencyProtocol_T7.v *)
+(* Excerpt from PromiseProtocol_T7.v *)
 (* Proves coalitions become unviable above threshold size *)
 
 Theorem coalition_viability_threshold :
@@ -599,20 +597,20 @@ Meanwhile, the maximum potential benefit is bounded by:
 
 $\text{Benefit}(n_c) \leq n_c \times \text{max\_individual\_gain}$
 
-Although coordination costs grow only super-linearly (not exponentially) with coalition size, the detection probability $P_{detect}(n_c)$ grows according to:
+Although coordination costs need not be exponential, the detection probability $P_{detect}(n_c)$ is modeled as:
 
 $P_{detect}(n_c) = 1 - \exp(-\kappa \cdot \sum_{i \in \text{coalition}} D(i||\text{truth}))$
 
-Since $\sum_{i \in \text{coalition}} D(i||\text{truth})$ grows linearly with $n_c$, the detection probability approaches 1 exponentially fast as $n_c$ increases. This creates a key inflection point in the cost-benefit analysis. For $n_c > n_0$, where $n_0$ is a critical coalition size determined by system parameters, the expected costs of manipulation will exceed any potential benefits. ∎
+Under positive per-agent divergence, this term is strictly increasing and bounded by 1. Combined with the threshold condition in Theorem 7, this yields parameter regions where expected manipulation costs exceed expected benefits. ∎
 
 * System Stability and Dynamics
 
-This section analyzes how the Agency Protocol maintains cooperative equilibrium dynamically, ensures resilience against perturbations, and prevents alternative equilibria based on coordinated dishonesty.
+This section analyzes how the Promise Protocol maintains cooperative equilibrium dynamically, ensures resilience against perturbations, and prevents alternative equilibria based on coordinated dishonesty.
 
 ** 5.1 Positive Feedback Loop
 
 *Theorem 8* (Trust Reinforcement):
-The Agency Protocol creates a self-reinforcing incentive loop favoring honest behavior, leading to continuously increasing advantages for truthful agents over time.
+The Promise Protocol creates a self-reinforcing incentive loop favoring honest behavior, leading to continuously increasing advantages for truthful agents over time.
 
 - Higher merit lowers stake requirements.
 - Lower stake requirements increase the utility advantage of honesty.
@@ -635,19 +633,22 @@ We define the system state at time $t$ as:
 \mathcal{S}(t) = \{C_a(t), M_{a,d}(t) | a \in \mathcal{A}, d \in \mathcal{D}\}
 \]
 
-*Theorem 9* (Lyapunov Stability):
-The cooperative equilibrium exhibits Lyapunov stability. Small deviations from equilibrium naturally revert, and the system returns to cooperative behavior.
-*Formal proof*: [[file:../coq/AgencyProtocol_T9_completed.v][AgencyProtocol_T9_completed.v]] (Lyapunov stability of cooperative equilibrium)
+*Theorem 9* (Lyapunov-Style Stability Bounds):
+In the formal model, a Lyapunov-style potential decreases under cooperative merit-improvement steps and remains lower-bounded under bounded merits.
+*Formal proof*: [[file:../coq/PromiseProtocol_T9_completed.v][PromiseProtocol_T9_completed.v]] (Potential decrease and boundedness lemmas)
 
 #+BEGIN_SRC coq :tangle no
-(* Excerpt from AgencyProtocol_T9_completed.v *)
-(* Proves system returns to cooperation after perturbations *)
+(* Excerpt from PromiseProtocol_T9_completed.v *)
+(* Proves strict potential decrease under cooperative steps and non-negativity on bounded states. *)
 
-Theorem lyapunov_stability :
-  forall S S' : SystemState,
-  is_cooperative_equilibrium S ->
-  small_perturbation S S' ->
-  eventually_returns_to_equilibrium S'.
+Lemma V_decreases :
+  forall cur nxt,
+    coop_step cur nxt -> V nxt < V cur.
+
+Lemma V_monotone_bounded :
+  forall l,
+    Forall (fun x => 0 <= x <= 1) l ->
+    0 <= V l.
 #+END_SRC
 
 *Proof (Sketch)*:
@@ -657,38 +658,35 @@ Define the Lyapunov function \( V(\mathcal{S}) \), representing distance from co
 V(\mathcal{S}) = \sum_{a,d}(1 - M_{a,d}(t))
 \]
 
-Honesty increases merit, reducing \(V\). Deviations reduce merit, thereby increasing stakes and future penalties, restoring incentives for cooperation. Hence, \( \frac{dV}{dt} < 0 \) for all non-equilibrium states, ensuring stability. Simulations show V() returns to within 95 % of its pre-shock level in ≤ 120 rounds for γ ≥ 0.15; we therefore recommend γd ≥ 0.15 for domains needing fast recovery. ∎
+Honesty increases merit, reducing \(V\) along modeled cooperative steps. The formal result is discrete: if a step satisfies `coop_step`, then \(V\) strictly decreases; if merits stay in \([0,1]\), then \(V\) is bounded below by 0. Simulations then provide empirical recovery-speed estimates, which are separate from the mechanized proof obligations. ∎
 
 ** 5.3 Coalition-Resistance and Resistance to Joint Manipulation
 
 *Theorem 10* (Coalition-Resistant Equilibrium):
-The cooperative equilibrium established by the Agency Protocol is coalition-proof: no group of agents can improve their collective payoff by jointly deviating.
-*Formal proof*: [[file:../coq/AgencyProtocol_T10.v][AgencyProtocol_T10.v]] (Evolutionary dynamics convergence)
+Under the assumption that each individual deviation is unprofitable, no non-empty coalition can make all members strictly better off by jointly deviating.
+*Formal proof*: [[file:../coq/PromiseProtocol_T10.v][PromiseProtocol_T10.v]] (Coalition non-Pareto-improvement)
 
 #+BEGIN_SRC coq :tangle no
-(* Excerpt from AgencyProtocol_T10.v *)
-(* Proves honest strategies dominate in evolutionary dynamics *)
+(* Excerpt from PromiseProtocol_T10.v *)
+(* Proves coalition non-improvement under individual-unprofitability assumptions. *)
 
-Theorem evolutionary_convergence :
-  forall initial_distribution : AgentDistribution,
-  exists t_convergence : Time,
-  forall t : Time, t >= t_convergence ->
-  fraction_honest (evolve initial_distribution t) >= 0.95.
+Theorem T10_coalition_proof :
+  forall C,
+    C <> [] ->
+    Forall (fun c => In c universe) C ->
+    ~ coalition_pareto_improves C.
 #+END_SRC
 
 *Proof (Sketch)*:
-Consider a coalition \( \mathcal{C} \subseteq \mathcal{A} \) attempting coordinated dishonesty. Their expected costs increase super-linear (≈ exp after n≥10) with coalition size, while maximum benefits increase at most linearly, as established in Theorem 7. Specifically:
+Consider a coalition \( \mathcal{C} \subseteq \mathcal{A} \) attempting coordinated dishonesty. The formal coalition theorem is conditional on individual incentives: when each member's unilateral deviation payoff is lower than their cooperative payoff, no non-empty coalition can improve all members' payoffs simultaneously.
 
-- Coordination costs and penalties for detected dishonesty scale super-linear (≈ exp after n≥10) with coalition size.
-- Detection probability (\( P_{detect}(n_c) = 1 - \exp(-\kappa \sum D(i||\text{truth})) \)) approaches certainty super-linear (≈ exp after n≥10) with coalition size.
-
-Therefore, a critical coalition size \( n_c^* \) exists above which manipulation becomes economically infeasible. With the reference parameter set, n* ≈ 0.38 ×A. For coalitions below this threshold, individual incentives to defect from the coalition remain, making stable coalitional deviations impossible. Thus, no stable dishonest alternative equilibria can form. ∎
+Theorem 7 contributes a separate thresholded economic condition (for configured coalition-size cutoffs) under which coordination cost exceeds maximum extractable value. Together, these results give a conservative, assumption-explicit coalition-resistance guarantee rather than an unconditional global convergence claim. ∎
 
 *Corollary 10.1* (Dominance of the Cooperative Equilibrium):
-The mechanisms that ensure coalition-resistance (Theorem 10) and dynamic stability (Theorem 9) establish the cooperative equilibrium as the system's dominant attractor. While other theoretical equilibria may exist in repeated games, the Protocol's architecture imposes super-linear (≈ exp after n≥10) rising costs and negative feedback on non-cooperative strategies, rendering them economically irrational and unsustainable for rational agents.
+The mechanisms that ensure coalition-resistance (Theorem 10) and Lyapunov-style stability bounds (Theorem 9) make cooperative operation the preferred regime within the modeled assumptions. This is an assumption-conditioned dominance claim, not an unconditional statement over all possible dynamics.
 
 * Bounded Rationality
-Real-world agents deviate from perfect rationality due to cognitive limitations, incomplete information, and occasional errors. This section analyzes how the Agency Protocol's equilibrium properties withstand these deviations, demonstrating that honest behavior remains the optimal strategy under realistic conditions.
+Real-world agents deviate from perfect rationality due to cognitive limitations, incomplete information, and occasional errors. This section analyzes how the Promise Protocol's equilibrium properties withstand these deviations, demonstrating that honest behavior remains the optimal strategy under realistic conditions.
 
 We model bounded rationality through three complementary frameworks:
 - *Stochastic deviation from best responses* (error model)
@@ -753,7 +751,7 @@ k \geq \frac{\ln\left(\frac{500}{1 \cdot 100 \cdot 0.8 \cdot 0.7}\right)}{-\ln(0
 
 This means agents need only consider approximately 22 future periods to maintain cooperative behavior, demonstrating that the Protocol doesn't require unrealistic cognitive capabilities.
 
-* The Folk Theorem and Agency Protocol
+* The Folk Theorem and Promise Protocol
 ** 7.1 Understanding the Folk Theorem
 The Folk Theorem (or more accurately, the family of Folk Theorems) in game theory addresses a fundamental question: How can cooperation emerge among rational, self-interested agents? In its classic formulation, the Folk Theorem demonstrates that in infinitely repeated games with sufficiently patient players, essentially any individually rational and feasible outcome can be sustained as an equilibrium.
 
@@ -764,8 +762,8 @@ More specifically, the Folk Theorem shows that when:
 
 Then cooperation can emerge as an equilibrium strategy, sustained by the threat of future punishment.
 
-** 7.2 From Folk Theorem to Agency Protocol
-While the Folk Theorem establishes the theoretical possibility of cooperation, it relies on conditions that are often absent in digital environments. The Agency Protocol represents an architectural implementation of the Folk Theorem's conditions, deliberately creating an environment where cooperation can emerge as the rational strategy. It does this by:
+** 7.2 From Folk Theorem to Promise Protocol
+While the Folk Theorem establishes the theoretical possibility of cooperation, it relies on conditions that are often absent in digital environments. The Promise Protocol represents an architectural implementation of the Folk Theorem's conditions, deliberately creating an environment where cooperation can emerge as the rational strategy. It does this by:
 
 1.  *Creating Persistent Identities*: Through cryptographically verifiable, content-addressed identities
 2.  *Enabling Monitoring*: Through immutable record-keeping of promises and assessments
@@ -773,21 +771,21 @@ While the Folk Theorem establishes the theoretical possibility of cooperation, i
 4.  *Structuring Patience through Economic Design*: By making merit a valuable asset worth protecting
 
 ** 7.3 Beyond the Folk Theorem
-The Agency Protocol doesn't merely implement the Folk Theorem's conditions—it extends them in several important ways:
+The Promise Protocol doesn't merely implement the Folk Theorem's conditions—it extends them in several important ways:
 
 1.  *Finite Horizon Applicability*: As shown in Theorem 12, cooperation emerges as an equilibrium strategy even with a finite lookahead horizon, because the stake-based mechanism creates immediate consequences that don't rely solely on an infinite future.
 
 2.  *Domain-Specific Reputation*: The Folk Theorem considers reputation as a single dimension, while our analysis accounts for domain-specific merit that more accurately reflects real-world trust patterns.
 
-3.  *Recovery Guarantees*: Our analysis provides explicit bounds on how quickly the system recovers from perturbations (Theorem 9), going beyond the Folk Theorem's equilibrium properties to address dynamic stability.
+3.  *Recovery Structure*: Our analysis provides Lyapunov-style potential decrease and boundedness guarantees under modeled cooperative steps (Theorem 9), going beyond the Folk Theorem's equilibrium properties to address dynamic stability structure.
 
 4.  *Coalition Resistance*: The proof demonstrates resistance to coordinated manipulation (Theorems 7 & 10), addressing attack vectors not considered in the original Folk Theorem.
 
-These extensions show how the Agency Protocol translates abstract game-theoretic principles into concrete, implementable mechanisms, while extending their applicability beyond the original constraints of the Folk Theorem.
+These extensions show how the Promise Protocol translates abstract game-theoretic principles into concrete, implementable mechanisms, while extending their applicability beyond the original constraints of the Folk Theorem.
 
 * Practical Implementation and Edge Cases
 ** 8.1 Cycle Detection and Prevention
-A critical practical challenge in implementing trust systems is preventing circular dependencies. The Agency Protocol's implementation addresses this through specialized cycle detection mechanisms for inheritance, credit transfers, and merit dependencies, rejecting any transaction that would create a logical or economic inconsistency.
+A critical practical challenge in implementing trust systems is preventing circular dependencies. The Promise Protocol's implementation addresses this through specialized cycle detection mechanisms for inheritance, credit transfers, and merit dependencies, rejecting any transaction that would create a logical or economic inconsistency.
 
 #+BEGIN_SRC mermaid :file cycle-prevention-example.png
 sequenceDiagram
@@ -805,7 +803,7 @@ sequenceDiagram
 #+END_SRC
 
 ** 8.2 Cold Start Problem and the AI-First Strategy
-A persistent challenge in reputation systems is bootstrapping initial trust. The Agency Protocol addresses this through a staged, AI-first strategy designed for rapid viability and scalable growth:
+A persistent challenge in reputation systems is bootstrapping initial trust. The Promise Protocol addresses this through a staged, AI-first strategy designed for rapid viability and scalable growth:
 
 1.  *Phase 1: Synthetic Genesis*. The system is launched with a core fleet of diverse `Synthetic Validator Agents`—specialized AIs designed to execute validation templates. They provide immediate, scalable, and low-cost assessment services for a wide range of objective promises. A `Genesis Agent`, a special-purpose entity, allocates foundational merit to these core AI agents and other foundational infrastructure, solving the "merit recursion" problem and allowing the system to be operational from day one.
 
@@ -826,24 +824,24 @@ By making oracles first-class participants in the merit/stake economy, the proto
 It is critical to clarify that the `Legal Agent` and `Contract Agent` are not, by themselves, sources of legal authority. They function as sophisticated **Contract Formation and Recording Agents**. Their purpose is to create an immutable, verifiable, and unambiguous record of the parties' intent to form a legally binding agreement, capturing offer, acceptance, and consideration. The actual enforceability of any such recorded agreement remains *entirely dependent on the relevant external legal jurisdictions* and their established contract law. The protocol provides superior evidence for legal proceedings but does not supplant them.
 
 ** 8.5 Batch Processing Anomalies
-To ensure fair and manipulation-resistant processing of assessments, especially against timing attacks, the Agency Protocol implements multi-layered batch processing controls, including configurable timing, anonymity set sizes, and update granularity. These controls address potential batch processing anomalies and ensure the system remains resistant to timing attacks and other manipulation attempts.
+To ensure fair and manipulation-resistant processing of assessments, especially against timing attacks, the Promise Protocol implements multi-layered batch processing controls, including configurable timing, anonymity set sizes, and update granularity. These controls address potential batch processing anomalies and ensure the system remains resistant to timing attacks and other manipulation attempts.
 
 ** 8.6 Decision-Making Failure Modes
-The Agency Protocol also addresses common decision-making failures through its integrated governance mechanisms. The implementation combines three complementary agents (Consensus, Meritocratic, Democratic), overseen by a `Constitutional Agent` that prevents rule changes from violating core principles, to handle complex governance edge cases while maintaining stability and fairness.
+The Promise Protocol also addresses common decision-making failures through its integrated governance mechanisms. The implementation combines three complementary agents (Consensus, Meritocratic, Democratic), overseen by a `Constitutional Agent` that prevents rule changes from violating core principles, to handle complex governance edge cases while maintaining stability and fairness.
 
 ** 8.7 Domain Boundary Disputes
 A subtle but important edge case involves promises that span multiple domains. The Protocol addresses this through multi-domain assessment mechanisms, where separate merit calculations occur for each relevant domain. This, combined with domain inheritance, ensures the system can handle complex, multi-domain promises while maintaining appropriate context-specific trust signals.
 
 * Conclusion and Implications
-The Agency Protocol represents a principled, economically robust solution to fostering cooperation and truthfulness in decentralized, multi-agent environments. Its key contributions include:
+The Promise Protocol represents a principled, economically robust solution to fostering cooperation and truthfulness in decentralized, multi-agent environments. Its key contributions include:
 
-- *A Focal, Coalition-Resistant Equilibrium*: Promise-keeping emerges as the focal and most stable subgame perfect Nash equilibrium under realistic parameterizations. The super-linear (≈ exp after n≥10) cost structure inherently prevents large, stable dishonest coalitions, ensuring robust and predictable cooperative outcomes.
+- *A Focal, Coalition-Resistant Equilibrium*: Under explicit stake, discount, and deviation-loss conditions, promise-keeping emerges as a focal subgame-perfect strategy in the narrow repeated-game model, and non-empty coalitions cannot Pareto-improve when individual deviations are unprofitable.
 
 - *A Viable and Self-Sustaining Economic Model*: By integrating operational costs directly into promise stakes and architecting a clear path to solving the cold-start problem via an AI-first strategy, the protocol demonstrates practical, long-term viability.
 
-- *Dynamic Stability and Practical Convergence*: Formal proofs of Lyapunov stability and convergence properties demonstrate the system's resilience and practical robustness against deviations, ensuring long-term cooperation.
+- *Dynamic Stability and Practical Convergence*: Formal proofs establish Lyapunov-style potential decrease and boundedness invariants; simulation results then provide empirical convergence-speed evidence under reference parameterizations.
 
-The Agency Protocol thus bridges theory and practice, converting theoretical equilibrium conditions into realistic, implementable trust infrastructures. By aligning individual self-interest with collective honesty, it sets a new standard for reliable cooperation in decentralized ecosystems, significantly advancing beyond existing trust solutions.
+The Promise Protocol thus bridges theory and practice, converting theoretical equilibrium conditions into realistic, implementable trust infrastructures. By aligning individual self-interest with collective honesty, it sets a new standard for reliable cooperation in decentralized ecosystems, significantly advancing beyond existing trust solutions.
 
 * References
 1.  Fudenberg, D. & Maskin, E. (1986). "The Folk Theorem in Repeated Games with Discounting or with Incomplete Information." Econometrica, 54(3), 533-554.
@@ -858,10 +856,10 @@ The Agency Protocol thus bridges theory and practice, converting theoretical equ
 10. Jackson, M. O., & Zenou, Y. (2015). "Games on Networks." In Handbook of Game Theory with Economic Applications (Vol. 4, pp. 95-163). Elsevier.
 
 * Appendix A: Matrix Factorization for Merit Calculation
-A central innovation in the Agency Protocol's implementation is the use of matrix factorization to identify latent patterns in assessment data. This technique becomes particularly valuable in detecting and neutralizing coordinated manipulation attempts. We represent assessments as a matrix $R$ where each entry $r_{ij}$ represents agent $i$'s assessment of promise $j$. Through matrix factorization, we decompose this into $R \approx P \times Q^T$. In particular, we identify the "common ground" dimension—the factor with lowest entropy across different agent groups—and prioritize this in merit calculations. This allows the system to separate genuine expertise-based assessment differences from factional or ideological biases.
+A central innovation in the Promise Protocol's implementation is the use of matrix factorization to identify latent patterns in assessment data. This technique becomes particularly valuable in detecting and neutralizing coordinated manipulation attempts. We represent assessments as a matrix $R$ where each entry $r_{ij}$ represents agent $i$'s assessment of promise $j$. Through matrix factorization, we decompose this into $R \approx P \times Q^T$. In particular, we identify the "common ground" dimension—the factor with lowest entropy across different agent groups—and prioritize this in merit calculations. This allows the system to separate genuine expertise-based assessment differences from factional or ideological biases.
 
 * Appendix B: Decision Agent Integration
-The Agency Protocol implements a sophisticated decision-making framework that integrates three complementary mechanisms (Consensus, Meritocratic, Democratic) to address different failure modes. For sensitive decisions, the Protocol implements Zero-Knowledge Proofs (ZKPs) that enable anonymous contributions with verified eligibility, private voting, and compliance verification without revealing sensitive details. This allows the decision system to handle sensitive topics while maintaining appropriate privacy and security.
+The Promise Protocol implements a sophisticated decision-making framework that integrates three complementary mechanisms (Consensus, Meritocratic, Democratic) to address different failure modes. For sensitive decisions, the Protocol implements Zero-Knowledge Proofs (ZKPs) that enable anonymous contributions with verified eligibility, private voting, and compliance verification without revealing sensitive details. This allows the decision system to handle sensitive topics while maintaining appropriate privacy and security.
 
 * Appendix C: Protocol Parameter Sensitivity Analysis
 The Protocol's theoretical properties hold across a range of parameter values, but optimal performance requires careful tuning of parameters like the Discount Factor ($\delta$), Detection Sensitivity ($\kappa$), and Merit Decay Rate ($\gamma_d$). Simulation testing has verified robustness across parameter combinations, confirming that the Protocol maintains its core properties across reasonable parameter variations and providing confidence in its real-world applicability.
@@ -875,14 +873,14 @@ Include λ sweep chart & recommend λ ≥ 4.
 * Appendix D: Computational Complexity and Architectural Solutions
 We examine the trade-offs between the robust enforcement of promise-keeping via blockchain-based mechanisms and the associated computational overhead. Prior work shows that computing an SPNE in certain settings is PSPACE-hard. This theoretical result implies that any protocol enforcing these equilibria on-chain will have a non-polynomial computational cost in the worst-case scenario.
 
-A naive on-chain implementation would therefore fail to scale. The Agency Protocol is architected with this constraint in mind. The proposed solution involves a hybrid on-chain/off-chain architecture, often referred to as a Layer 2 or rollup design.
+A naive on-chain implementation would therefore fail to scale. The Promise Protocol is architected with this constraint in mind. The proposed solution involves a hybrid on-chain/off-chain architecture, often referred to as a Layer 2 or rollup design.
 -   *Off-Chain Execution*: Complex, multi-agent validation, evidence analysis, and equilibrium calculations are performed off-chain by a decentralized network of specialized `Compute Agents`.
 -   *On-Chain Verification*: The results of this off-chain computation are bundled with a cryptographic proof of correctness (e.g., a zk-SNARK or a fraud proof in an optimistic system). This small proof is then submitted to the on-chain ledger.
 This architecture allows the network to *verify* the integrity of a complex computation for a fraction of the cost of *executing* it, thus achieving massive scalability while retaining the security and verifiability of the base layer. This hybrid approach is essential for making the rich expressiveness of the protocol economically viable at scale.
 
 * Appendix E: ABM Validation Results
 
-Our theoretical predictions have been validated through comprehensive Agent-Based Model (ABM) simulations. These empirical results demonstrate that the Agency Protocol achieves and exceeds its design goals in practice.
+Our theoretical predictions have been validated through comprehensive Agent-Based Model (ABM) simulations. These empirical results demonstrate that the Promise Protocol achieves and exceeds its design goals in practice.
 
 ** Key Empirical Findings
 
@@ -912,23 +910,32 @@ These results provide strong empirical support for the theoretical framework pre
 * Appendix F: Formal Coq Proofs
 This appendix lists the formal Coq proofs that underpin the theoretical claims made in this Yellow Paper. These proofs are located in the `coq/` directory of the project repository.
 
-- `AgencyProtocol_C41.v`: Formalization of C41 properties.
-- `AgencyProtocol_ConsensusDetection.v`: Formal proof of consensus detection mechanisms.
-- `AgencyProtocol_DerivedConstants.v`: Derived constants and their properties.
-- `AgencyProtocol_ErrorTolerance_Derived.v`: Error tolerance properties.
-- `AgencyProtocol_L1_L2.v`: Layer 1 and Layer 2 interactions.
-- `AgencyProtocol_MeritUpdate.v`: Formalization of merit update rules.
-- `AgencyProtocol_ParamsWitness.v`: Parameter witness properties.
-- `AgencyProtocol_SPE_Narrow.v`: Subgame Perfect Equilibrium (Narrow).
-- `AgencyProtocol_StakeFunction.v`: Formalization of the stake function.
-- `AgencyProtocol_T1_C1.v`: Theorem 1, Corollary 1.
-- `AgencyProtocol_T10_Generalized.v`: Generalized Theorem 10.
-- `AgencyProtocol_T10.v`: Theorem 10 (Coalition-Resistance).
-- `AgencyProtocol_T11.v`: Theorem 11 (Error Tolerance Bound).
-- `AgencyProtocol_T12.v`: Theorem 12 (Finite Horizon Cooperation).
-- `AgencyProtocol_T2_T3.v`: Theorem 2, Theorem 3.
-- `AgencyProtocol_T5.v`: Theorem 5.
-- `AgencyProtocol_T6.v`: Theorem 6.
-- `AgencyProtocol_T7.v`: Theorem 7 (Coalition Viability).
-- `AgencyProtocol_T8.v`: Theorem 8 (Trust Reinforcement).
-- `AgencyProtocol_T9_completed.v`: Theorem 9 (Lyapunov Stability).
+- *Primary validated bundle*: `PromiseProtocol_Strongest.v`
+  - `keep_is_best_response`: single-round incentive compatibility
+  - `stationary_keep_is_spe_narrow`: repeated-game SPE under defection loss
+  - `nonempty_coalition_cannot_pareto_improve`: coalition non-improvability
+  - `merit_invariant`: merit boundedness invariant in `[0,1]`
+  - `V_decreases_under_componentwise_improvement`: Lyapunov-style decrease
+  - `error_tolerance_bound`: bounded-rationality error-rate threshold
+  - `detection_probability_strictly_increasing`: detection growth with coalition size
+
+- `PromiseProtocol_C41.v`: Formalization of C41 properties.
+- `PromiseProtocol_ConsensusDetection.v`: Formal proof of consensus detection mechanisms.
+- `PromiseProtocol_DerivedConstants.v`: Derived constants and their properties.
+- `PromiseProtocol_ErrorTolerance_Derived.v`: Error tolerance properties.
+- `PromiseProtocol_L1_L2.v`: Layer 1 and Layer 2 interactions.
+- `PromiseProtocol_MeritUpdate.v`: Formalization of merit update rules.
+- `PromiseProtocol_ParamsWitness.v`: Parameter witness properties.
+- `PromiseProtocol_SPE_Narrow.v`: Subgame Perfect Equilibrium (Narrow).
+- `PromiseProtocol_StakeFunction.v`: Formalization of the stake function.
+- `PromiseProtocol_T1_C1.v`: Theorem 1, Corollary 1.
+- `PromiseProtocol_T10_Generalized.v`: Generalized Theorem 10.
+- `PromiseProtocol_T10.v`: Coalition non-Pareto-improvement under individual-unprofitability assumptions.
+- `PromiseProtocol_T11.v`: Theorem 11 (Error Tolerance Bound).
+- `PromiseProtocol_T12.v`: Theorem 12 (Finite Horizon Cooperation).
+- `PromiseProtocol_T2_T3.v`: Theorem 2, Theorem 3.
+- `PromiseProtocol_T5.v`: Theorem 5.
+- `PromiseProtocol_T6.v`: Theorem 6.
+- `PromiseProtocol_T7.v`: Theorem 7 (Coalition Viability).
+- `PromiseProtocol_T8.v`: Theorem 8 (Trust Reinforcement).
+- `PromiseProtocol_T9_completed.v`: Lyapunov-style potential decrease and boundedness lemmas.

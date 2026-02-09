@@ -1,4 +1,4 @@
-Feature: Agency Protocol Governed Data Ingestion, Mapping & Transformation Pipelines with Accountability
+Feature: Promise Protocol Governed Data Ingestion, Mapping & Transformation Pipelines with Accountability
   In order to ensure reliable and accurate data feeding for Digital Twin Agents through accountable processes
   As a Data Engineer, relying on a "Data Ingestion Agent"
   I want declarative mappings, verifiable schema validation, and trustworthy transformations.

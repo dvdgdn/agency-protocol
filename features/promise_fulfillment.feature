@@ -1,11 +1,11 @@
 @current
 Feature: Promise Fulfillment and Merit Calculation
-  As an agent in the Agency Protocol
+  As an agent in the Promise Protocol
   I want to make promises and have them assessed
   So that I can build merit in specific domains
 
   Background:
-    Given a clean Agency Protocol environment
+    Given a clean Promise Protocol environment
     And an agent named "Alice" exists
     And an agent named "Bob" exists
     And an agent named "Charlie" exists

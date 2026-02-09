@@ -1,4 +1,4 @@
-Feature: Agency Protocol Enhanced Digital Twin Versioning, Rollback & Verifiable Audit Trail
+Feature: Promise Protocol Enhanced Digital Twin Versioning, Rollback & Verifiable Audit Trail
   In order to maintain a clear, immutable history of Digital Twin Agent model changes with AP guarantees
   As a System Auditor, relying on the "Digital Twin Registry Agent"
   I want immutable versioning with clear accountability, trustworthy rollbacks, and complete audit logs.

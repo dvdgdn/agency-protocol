@@ -265,7 +265,7 @@ class AdversaryTestAnalyzer:
     def generate_report_text(self):
         """Generates a full markdown report as a string."""
         profitability = self.analyze_profitability()
-        report_lines = ["# 🛡️ Agency Protocol: Advanced Adversary Simulation Report"]
+        report_lines = ["# 🛡️ Promise Protocol: Advanced Adversary Simulation Report"]
         
         report_lines.append("\n## Executive Summary")
         top_performer = profitability.index[0]

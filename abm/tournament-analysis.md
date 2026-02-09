@@ -1,8 +1,8 @@
-# Agency Protocol Tournament Analysis
+# Promise Protocol Tournament Analysis
 
 ## Tournament Results Summary
 
-The Agency Protocol was benchmarked against 10 classic game theory strategies in an Axelrod Tournament with the following configuration:
+The Promise Protocol was benchmarked against 10 classic game theory strategies in an Axelrod Tournament with the following configuration:
 - 200 rounds per match
 - 5 tournament repetitions for statistical significance
 - 5% noise level to simulate real-world mistakes
@@ -15,10 +15,10 @@ The Agency Protocol was benchmarked against 10 classic game theory strategies in
 2. **AlwaysDefect** - 2.513 average payoff
 3. **Random (30% cooperation)** - 2.458 average payoff
 ...
-10. **Agency Protocol** - 2.169 average payoff 
+10. **Promise Protocol** - 2.169 average payoff 
 11. **AlwaysCooperate** - 1.953 average payoff
 
-### Agency Protocol Performance Metrics
+### Promise Protocol Performance Metrics
 - **Cooperation Rate**: 84.0% (highest among all strategies)
 - **Credit ROI**: 103.7% (doubled initial credit stake)
 - **Forgiveness Score**: 0.669 (balanced approach)
@@ -28,13 +28,13 @@ The Agency Protocol was benchmarked against 10 classic game theory strategies in
 ## Key Insights
 
 ### 1. Credit Economy Works
-Despite ranking 10th in raw payoff, Agency Protocol achieved a 103.7% return on its credit economy, proving that stake-based commitments create sustainable value even when exploited by defectors.
+Despite ranking 10th in raw payoff, Promise Protocol achieved a 103.7% return on its credit economy, proving that stake-based commitments create sustainable value even when exploited by defectors.
 
 ### 2. High Cooperation Rate
-With an 84% cooperation rate, Agency Protocol demonstrated its core design principle: building trust through consistent, merit-based decisions. This was the highest cooperation rate among all strategies.
+With an 84% cooperation rate, Promise Protocol demonstrated its core design principle: building trust through consistent, merit-based decisions. This was the highest cooperation rate among all strategies.
 
 ### 3. Balanced Forgiveness
-The forgiveness score of 0.669 shows Agency Protocol successfully balances between being too trusting (like AlwaysCooperate) and too vengeful (like Grudger).
+The forgiveness score of 0.669 shows Promise Protocol successfully balances between being too trusting (like AlwaysCooperate) and too vengeful (like Grudger).
 
 ### 4. The Exploitation Challenge
 The current implementation is vulnerable to exploitation by pure defectors. The 0.545 exploitability score indicates that merit adjustments need to be more aggressive against consistent defectors.
@@ -48,9 +48,9 @@ The current implementation is vulnerable to exploitation by pure defectors. The 
 
 ## LinkedIn Post
 
-🚀 **Agency Protocol vs Game Theory Classics: Surprising Results from Axelrod Tournament**
+🚀 **Promise Protocol vs Game Theory Classics: Surprising Results from Axelrod Tournament**
 
-We put our Agency Protocol to the ultimate test - competing against 10 classic strategies in a 121,000-round tournament. The results? Both challenging and enlightening.
+We put our Promise Protocol to the ultimate test - competing against 10 classic strategies in a 121,000-round tournament. The results? Both challenging and enlightening.
 
 📊 **The Numbers:**
 • Ranked 10/11 in raw payoff
@@ -58,7 +58,7 @@ We put our Agency Protocol to the ultimate test - competing against 10 classic s
 • Highest cooperation rate at 84% 🤝
 • Maintained consistent trust-building behavior
 
-💡 **Key Insight**: While aggressive strategies like Grudger dominated short-term payoffs, Agency Protocol proved that credit-based trust systems create sustainable value networks. Our agents doubled their initial credit stakes despite facing exploitation.
+💡 **Key Insight**: While aggressive strategies like Grudger dominated short-term payoffs, Promise Protocol proved that credit-based trust systems create sustainable value networks. Our agents doubled their initial credit stakes despite facing exploitation.
 
 🔬 **What We Learned**:
 1. Merit-based decisions work - but need faster adaptation against bad actors

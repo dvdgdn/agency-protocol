@@ -1,7 +1,7 @@
-Agency Protocol
+Promise Protocol
 A decentralized, infrastructure-agnostic protocol for building trust among autonomous agents using cryptographically signed promises.
 
-The Agency Protocol is a system designed to facilitate trust and coordination between any type of autonomous agent—be it a human, an AI, or an organization. It leverages principles from promise theory to create a network where agents make explicit, stake-backed commitments. The protocol then assesses whether these promises are kept, creating a quantifiable, domain-specific reputation score (merit) for each agent.
+The Promise Protocol is a system designed to facilitate trust and coordination between any type of autonomous agent—be it a human, an AI, or an organization. It leverages principles from promise theory to create a network where agents make explicit, stake-backed commitments. The protocol then assesses whether these promises are kept, creating a quantifiable, domain-specific reputation score (merit) for each agent.
 
 Core Principles
 This repository is built on a strict set of architectural principles to ensure clarity, consistency, and maximum modularity. Understanding these principles is key to understanding the codebase.
@@ -42,7 +42,7 @@ Adapter Agents (agent-adapter-*): Infrastructure-specific packages that provide 
 Runnable Agents (agent-server, agent-web-ui): These are the only executable packages. They act as hosts, composing the various logic, UI, and adapter agents into a running application.
 
 Getting Started
-Follow these steps to get the Agency Protocol platform running on your local machine.
+Follow these steps to get the Promise Protocol platform running on your local machine.
 
 Prerequisites
 Node.js (v18 or later)

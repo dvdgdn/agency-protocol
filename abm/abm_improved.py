@@ -701,7 +701,7 @@ class OracleAgent:
 
 # Example usage
 if __name__ == "__main__":
-    print("=== Improved Agency Protocol Simulation ===\n")
+    print("=== Improved Promise Protocol Simulation ===\n")
     
     # Run simulation with fixed seed for reproducibility
     print("Scenario 1: Normal operation with improved mechanisms")
